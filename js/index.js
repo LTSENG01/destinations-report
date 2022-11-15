@@ -1,26 +1,28 @@
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+const MSLabels = [
+    'Continuing Education',
+    'Working',
+    'Still Looking',
+    'Unknown'
 ];
 
 const data = {
-    labels: labels,
+    labels: MSLabels,
     datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [10, 10, 5, 2, 20, 30, 45],
+        label: 'MS Dataset',
+        data: [17, 104, 15, 1],
+        backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(300, 100, 50)'
+        ],
+        hoverOffset: 4
     }]
 };
 
 const config = {
-    type: 'line',
+    type: 'doughnut',
     data: data,
-    options: {}
 };
 
 const myChart = new Chart(
