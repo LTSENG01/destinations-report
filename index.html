@@ -2,25 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CICS Careers | Destinations Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CICS Careers | Destinations Report Beta</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-<h1>Hello there.</h1>
-<p>Destinations Dashboard</p>
-<div>
-    <canvas id="myChart">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/CICSCareers_Logo.png" height="35" alt="CICS Careers Logo">
+                Destinations Report
+            </a>
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--                <div class="navbar-nav">-->
+<!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--                    <a class="nav-link" href="#">Features</a>-->
+<!--                    <a class="nav-link" href="#">Pricing</a>-->
+<!--                    <a class="nav-link disabled">Disabled</a>-->
+<!--                </div>-->
+<!--            </div>-->
+            <span class="badge bg-secondary rounded-pill">Beta</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="mt-4 mb-3">
+            <h4>About Destinations Report</h4>
+            <p>Welcome blah blah intro text. How do you use this website?</p>
+        </div>
 
-    </canvas>
-</div>
+        <div class="mt-4 mb-3">
+            <h3>Class of 2022 — Masters Report</h3>
 
-<!-- Scripts for JS Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://apis.google.com/js/api.js"></script>
+            <canvas id="myChart" class="w-100">
 
-<script src="./js/index.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+            </canvas>
+        </div>
 
+        <div class="mt-4 mb-3">
+            <h4>Headlines</h4>
+            <h6>Dream Jobs at Big Tech</h6>
+            <div class="row mt-3">
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Meta_Platforms_Inc._logo.svg.png" class="img-fluid p-2" alt="Meta">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
+                </div>
+                <div class="col-4 col-md-2">Google</div>
+                <div class="col-4 col-md-2">Salesforce</div>
+                <div class="col-4 col-md-2">TikTok</div>
+                <div class="col-4 col-md-2">Uber</div>
+                <div class="col-4 col-md-2">Oracle</div>
+                <div class="col-4 col-md-2">Apple</div>
+            </div>
+        </div>
+
+        <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
+aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
+MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
+Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
+Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
+Median starting salary = $129,000
+12% getting their PhD
+-->
+    </div>
+
+
+    <!-- Scripts for JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>

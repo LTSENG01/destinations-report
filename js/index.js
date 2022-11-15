@@ -30,3 +30,9 @@ const myChart = new Chart(
 
 // Use GAPI for Google Sheets
 // https://github.com/google/google-api-javascript-client/blob/master/docs/start.md
+
+
+/** Data for Headlines */
+const headlines = [
+
+]
