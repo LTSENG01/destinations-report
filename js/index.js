@@ -1,6 +1,19 @@
+const UMassColors = {
+    MAROON: 'rgb(136, 28, 28)',
+    BLACK: 'rgb(33, 39, 33)',
+    LIGHTGRAY: 'rgb(162, 170, 173)',
+    ORANGE: 'rgb(255, 158, 27)',
+    YELLOW: 'rgb(255, 199, 44)',
+    DARKBLUE: 'rgb(0, 27, 84)',
+    BROWN: 'rgb(94, 75, 60)',
+    LIMEGREEN: 'rgb(196, 214, 0)',
+    AQUA: 'rgb(134, 200, 188)',
+    TEAL: 'rgb(0, 174, 199)'
+}
+
 const MSLabels = [
-    'Continuing Education',
     'Working',
+    'Continuing Education',
     'Still Looking',
     'Unknown'
 ];
@@ -8,13 +21,13 @@ const MSLabels = [
 const data = {
     labels: MSLabels,
     datasets: [{
-        label: 'MS Dataset',
-        data: [17, 104, 15, 1],
+        label: ' Count',
+        data: [104, 17, 15, 1],
         backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(300, 100, 50)'
+            UMassColors.MAROON,
+            UMassColors.TEAL,
+            UMassColors.DARKBLUE,
+            UMassColors.LIGHTGRAY
         ],
         hoverOffset: 4
     }]
