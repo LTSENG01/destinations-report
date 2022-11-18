@@ -42,14 +42,15 @@ const headlines = [
 // https://www.geeksforgeeks.org/how-to-adjust-the-width-and-height-of-iframe-to-fit-with-content-in-it/
 // https://stackoverflow.com/questions/9153445/how-to-communicate-between-iframe-and-the-parent-site
 window.addEventListener("load", (e) => {
-    if (e.origin !== "https://cics.umass.edu") {
-        return;
-    }
+    // if (e.origin !== "https://www.cics.umass.edu") {
+    //     console.log("DEBUG: Website is not https://www.cics.umass.edu, so not posting message.");
+    //     return;
+    // }
 
     const message = {
         height: window.document.body.scrollHeight,
         width: window.document.body.scrollWidth
     }
-    window.top.postMessage(message, "https://cics.umass.edu");
+    window.top.postMessage(message, "*");
 });
 
