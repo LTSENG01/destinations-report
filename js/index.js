@@ -8,39 +8,65 @@ const UMassColors = {
     BROWN: 'rgb(94, 75, 60)',
     LIMEGREEN: 'rgb(196, 214, 0)',
     AQUA: 'rgb(134, 200, 188)',
-    TEAL: 'rgb(0, 174, 199)'
+    TEAL: 'rgb(0, 174, 199)',
+    GREEN: 'rgb(46,139,87)'
 }
 
-const MSLabels = [
+const Labels = [
     'Working',
     'Continuing Education',
     'Still Looking',
     'Unknown'
 ];
 
-const data = {
-    labels: MSLabels,
+const MSdata = {
+    labels: Labels,
     datasets: [{
         label: ' Count',
         data: [104, 17, 15, 1],
         backgroundColor: [
-            UMassColors.MAROON,
+            UMassColors.GREEN,
             UMassColors.TEAL,
-            UMassColors.DARKBLUE,
+            UMassColors.MAROON,
             UMassColors.LIGHTGRAY
         ],
         hoverOffset: 4
     }]
 };
 
-const config = {
-    type: 'doughnut',
-    data: data,
+const UGdata = {
+    labels: Labels,
+    datasets: [{
+        label: ' Count',
+        data: [263, 80, 55, 19],
+        backgroundColor: [
+            UMassColors.GREEN,
+            UMassColors.TEAL,
+            UMassColors.MAROON,
+            UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
 };
 
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
+const configMS = {
+    type: 'doughnut',
+    data: MSdata,
+};
+
+const configUG = {
+    type: 'doughnut',
+    data: UGdata,
+};
+
+const MSChart = new Chart(
+    document.getElementById('MSChart'),
+    configMS
+);
+
+const UGChart = new Chart(
+    document.getElementById('UGChart'),
+    configUG
 );
 
 // Use GAPI for Google Sheets
