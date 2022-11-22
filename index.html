@@ -7,54 +7,75 @@
     <title>CICS Careers | Destinations Report Beta</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-<!--            <a class="navbar-brand" href="#">-->
-<!--                <img src="img/CICSCareers_Logo.png" height="35" alt="CICS Careers Logo">-->
-<!--                Destinations Report-->
-<!--            </a>-->
-<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
-<!--            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
-<!--                <div class="navbar-nav">-->
-<!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-<!--                    <a class="nav-link" href="#">Features</a>-->
-<!--                    <a class="nav-link" href="#">Pricing</a>-->
-<!--                    <a class="nav-link disabled">Disabled</a>-->
-<!--                </div>-->
-<!--            </div>-->
-            <span class="badge bg-secondary rounded-pill">Beta</span>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <!--            <a class="navbar-brand" href="#">-->
+        <!--                <img src="img/CICSCareers_Logo.png" height="35" alt="CICS Careers Logo">-->
+        <!--                Destinations Report-->
+        <!--            </a>-->
+        <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+        <!--                <span class="navbar-toggler-icon"></span>-->
+        <!--            </button>-->
+        <!--            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+        <!--                <div class="navbar-nav">-->
+        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+        <!--                    <a class="nav-link" href="#">Features</a>-->
+        <!--                    <a class="nav-link" href="#">Pricing</a>-->
+        <!--                    <a class="nav-link disabled">Disabled</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <span class="badge bg-secondary rounded-pill">Beta</span>
+    </div>
+</nav>
+
+<div class="container">
+    <div>
+        <div class="mt-4 mb-3">
+            <h3>Class of 2022 — Undergraduate Report</h3>
         </div>
-    </nav>
-
-    <div class="container">
         <div>
-            <div class="mt-4 mb-3">
-                <h3>Class of 2022 — Undergraduate Report</h3>
-                <div>
-                    <p><i class="fa-solid fa-user-graduate" style="color: rgb(136, 28, 28)"></i> <span style="color: rgb(136, 28, 28); font-weight: bold">440 UGrad students</span> in the Class of 2022</p>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">Outcome status known for 96% of Class of 2022</div>
-                    <!--                <div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>-->
-                </div>
-
-                <div class="row">
-                    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                        <canvas id="UGChart"></canvas>
+            <ul class="list-unstyled">
+                <li><i class="fa-solid fa-user-graduate fa-fw" style="color: rgb(136, 28, 28)"></i> <span
+                        style="color: rgb(136, 28, 28); font-weight: bold">440 Undergraduate students</span> in the
+                    Class of 2022
+                </li>
+                <li><i class="fa-solid fa-laptop fa-fw" style="color: rgb(136, 28, 28)"></i> <span
+                        style="color: rgb(136, 28, 28); font-weight: bold">371</span> Computer Science B.S.
+                </li>
+                <li><i class="fa-solid fa-code-branch fa-fw" style="color: rgb(136, 28, 28)"></i> <span
+                        style="color: rgb(136, 28, 28); font-weight: bold">19</span> Computer Science B.A.
+                </li>
+                <li><i class="fa-solid fa-circle-info fa-fw" style="color: rgb(136, 28, 28)"></i> <span
+                        style="color: rgb(136, 28, 28); font-weight: bold">58</span> Informatics B.S.
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <canvas id="UGChart"></canvas>
+                <div class="progress mb-3 mt-3">
+                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)"
+                         aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">Outcome status known for 96% of Class
+                        of 2022
                     </div>
+                    <!--<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>-->
                 </div>
             </div>
 
-
-            <div class="mt-4 mb-3">
+            <div class="mt-5 mb-2">
                 <h4>Headlines</h4>
-                <h6>Dream Jobs at Partner Companies</h6>
+            </div>
+
+            <h6>Dream Jobs at Partner Companies</h6>
+            <div class="mt-4 mb-3">
+
                 <h6>Tech:</h6>
                 <div class="row mt-3">
                     <div class="col-4 col-md-2 d-flex align-items-center">
@@ -97,29 +118,29 @@
 
             </div>
 
-                <h6>aMAzing Employers</h6>
-                <div class="row mt-3">
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/athena-health-logo.png" class="img-fluid p-2" alt="Athenahealth">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/optum-logo-296D11161F-seeklogo.com.png" class="img-fluid p-2" alt="Optum">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/staples.png" class="img-fluid p-2" alt="Staples">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/TJX_Companies-Logo.wine.png" class="img-fluid p-2" alt="TJX">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/advisor360.png" class="img-fluid p-2" alt="Advisor360">
-                    </div>
+            <h6>aMAzing Employers</h6>
+            <div class="row mt-3">
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/athena-health-logo.png" class="img-fluid p-2" alt="Athenahealth">
                 </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/optum-logo-296D11161F-seeklogo.com.png" class="img-fluid p-2" alt="Optum">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/staples.png" class="img-fluid p-2" alt="Staples">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/TJX_Companies-Logo.wine.png" class="img-fluid p-2" alt="TJX">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/advisor360.png" class="img-fluid p-2" alt="Advisor360">
+                </div>
+            </div>
 
-                <h6>Computing for the Common Good</h6>
+            <h6>Computing for the Common Good</h6>
             <div class="row mt-3">
                 <div class="col-4 col-md-2 d-flex align-items-center">
                     <img src="img/mrc_color_wo_name.png" class="img-fluid p-2" alt="MASS MRC">
@@ -174,142 +195,173 @@
                     <img src="img/UT_Dallas_-_Full_Mark_Texas_Logo.jpg" class="img-fluid p-2" alt="UT Dallas">
                 </div>
             </div>
-            </div>
-
         </div>
 
-    <div class="container">
-        <div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <div class="progress mt-3 mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)"
+                         aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">96% Knowledge Rate
+                    </div>
+                    <!--                <div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div>
         <div class="mt-4 mb-3">
             <h3>Class of 2022 — Masters Report</h3>
             <div>
-                <p><i class="fa-solid fa-user-graduate" style="color: rgb(136, 28, 28)"></i> <span style="color: rgb(136, 28, 28); font-weight: bold">137 MS students</span> in the Class of 2022</p>
+                <p><i class="fa-solid fa-user-graduate" style="color: rgb(136, 28, 28)"></i> <span
+                        style="color: rgb(136, 28, 28); font-weight: bold">137 MS students</span> in the Class of 2022</p>
             </div>
             <div class="progress mb-3">
-                <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class of 2022</div>
-<!--                <div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>-->
+                <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)"
+                     aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class of 2022
+                </div>
+                <!--                <div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>-->
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <canvas id="MSChart"></canvas>
                 </div>
             </div>
-<!--            <div class="card bg-success text-white text-center p-3 mt-4">-->
-<!--                <h2><i class="fa-solid fa-sack-dollar"></i> $119,000</h2>-->
-<!--                <p>Median Starting Salary</p>-->
-<!--            </div>-->
+            <!--            <div class="card bg-success text-white text-center p-2 mt-4">-->
+            <!--                <h2><i class="fa-solid fa-sack-dollar"></i> $119,000</h2>-->
+            <!--                <p>Median Starting Salary</p>-->
+            <!--            </div>-->
         </div>
 
-        <div class="mt-4 mb-3">
-            <h4>Headlines</h4>
+        <div class="mt-5 mb-3">
+            <h4 class="mb-4">Headlines</h4>
             <h6>Dream Jobs at Big Tech</h6>
-            <div class="row mt-3">
-                <div class="col-4 col-md-2 d-flex align-items-center">
+            <div class="row mb-4">
+                <div class="col-4 col-sm-3 col-md-2  d-flex align-items-center">
                     <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Meta_Platforms_Inc._logo.svg.png" class="img-fluid p-2" alt="Meta">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Intel_logo.svg.png" class="img-fluid p-2" alt="Intel">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Salesforce_logo.svg.png" class="img-fluid p-2" alt="Salesforce">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/TikTok_logo.svg.png" class="img-fluid p-2" alt="Tiktok">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Uber_logo.svg.png" class="img-fluid p-2" alt="Uber">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Oracle-Logo.png" class="img-fluid p-2" alt="Oracle">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Apple-Logo.png" class="img-fluid p-2" alt="Apple">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/Adobe-logo.png" class="img-fluid p-2" alt="Adobe">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/snapchat-logo-png-0.png" class="img-fluid p-2" alt="Snapchat">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
                     <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
                 </div>
             </div>
 
-            <h6>aMAzing Employers</h6>
-                <div class="row mt-3">
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Liberty-Mutual-Logo.png" class="img-fluid p-2" alt="Liberty Mutual">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
-                    </div>
+            <div class="d-inline">
+                <h6 class="d-inline">aMAzing Employers</h6>
+                <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/Liberty-Mutual-Logo.png" class="img-fluid p-2" alt="Liberty Mutual">
                 </div>
-
-            <h6>Data Science and Machine Learning Engineers getting their start at...</h6>
-                <div class="row mt-3">
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Microsoft_logo_(2012).svg.png" class="img-fluid p-2" alt="Microsoft">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Glassdoor-Logo-2007.png" class="img-fluid p-2" alt="Glassdoor">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/the-hanover-insurance-group-vector-logo.png" class="img-fluid p-2" alt="The Hanover Insurance Group">
-                    </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center">
-                        <img src="img/Autodesk-Logo.wine.png" class="img-fluid p-2" alt="Autodesk">
-                    </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
                 </div>
-
-            <div>
-
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/HanoverInsuranceGroup.svg" class="img-fluid p-2" alt="The Hanover Insurance Group">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center">
+                    <img src="img/Mapfre_logo.svg.png" class="img-fluid p-2" alt="MAPFRE">
+                </div>
             </div>
 
-        </div>
+            <h6>Data Science and Machine Learning Engineers getting their start at...</h6>
+            <div class="row mt-3">
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Microsoft_logo_(2012).svg.png" class="img-fluid p-2" alt="Microsoft">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Glassdoor-Logo-2007.png" class="img-fluid p-2" alt="Glassdoor">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/the-hanover-insurance-group-vector-logo.png" class="img-fluid p-2"
+                         alt="The Hanover Insurance Group">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center">
+                    <img src="img/Autodesk-Logo.wine.png" class="img-fluid p-2" alt="Autodesk">
+                </div>
+            </div>
+
+            <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
+    aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
+    MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
+    Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
+    Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
+    Median starting salary = $129,000
+    12% getting their PhD
+    -->
+
+            <div class="blockquote-footer mt-5 mb-5">
+                <h3 class="text-center">We help alumni for life. Thanks for being part of our CICS Career Community!</h3>
+            </div>
         </div>
     </div>
 
-        <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
-aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
-MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
-Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
-Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
-Median starting salary = $129,000
-12% getting their PhD
--->
+
+</div>
 
 
-    <!-- Scripts for JS Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js" integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+<!-- Scripts for JS Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
+        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="./js/index.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
