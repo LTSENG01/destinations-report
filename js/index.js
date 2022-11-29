@@ -20,7 +20,7 @@ const Labels = [
 ];
 
 const MSdata = {
-    labels: Labels,
+    // labels: Labels,
     datasets: [{
         label: ' Count',
         data: [104, 17, 15, 1],
@@ -35,7 +35,7 @@ const MSdata = {
 };
 
 const UGdata = {
-    labels: Labels,
+    // labels: Labels,
     datasets: [{
         label: ' Count',
         data: [263, 80, 55, 19],
