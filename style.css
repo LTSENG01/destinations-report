@@ -37,3 +37,24 @@
     background-color: #EEEEEE;
     color: black;
 }
+.float-container {
+    width: 1000px;
+    padding: 10px;
+    margin: 60px;
+}
+
+
+.float-child {
+    text-align: center;
+    text-decoration-color: #212121;
+    background-color: #e1f3f8;
+    border-style: solid;
+    width: 45%;
+    float: left;
+    padding: 20px;
+    margin: 10px;
+}
+
+.space{
+    padding: 100px;
+}
