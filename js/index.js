@@ -38,7 +38,7 @@ const UGdata = {
     // labels: Labels,
     datasets: [{
         label: ' Count',
-        data: [263, 80, 55, 19],
+        data: [268, 83, 60, 29],
         backgroundColor: [
             UMassColors.GREEN,
             UMassColors.TEAL,
