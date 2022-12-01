@@ -11,16 +11,14 @@
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+
     <style>
         .center {
             margin: auto;
-            width: 60%;
+            /*width: 60%;*/
             text-align: center;
         }
-
 
     </style>
 </head>
@@ -28,37 +26,32 @@
 
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container-fluid w-100 justify-content-center">
-<!--        <a class="navbar-brand" href="#">Navbar</a>-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
-            <ul class="navbar-nav">
-                <li class="nav-item mx-1">
-                    <a class="btn btn-outline-secondary text-white nav-link active" aria-current="page" href="#undergraduate">Undergraduate</a>
-                </li>
-                <li class="nav-item mx-1">
-                    <a class="btn btn-outline-secondary nav-link" href="#masters">Masters</a>
-                </li>
-                <li class="nav-item mx-1">
-                    <a class="btn btn-outline-secondary nav-link" href="#phd">PhD</a>
-                </li>
-            </ul>
-<!--        </div>-->
+        <ul class="navbar-nav">
+            <li class="nav-item mx-1">
+                <a class="btn btn-outline-secondary text-white nav-link active" aria-current="page" href="#undergraduate">Undergraduate</a>
+            </li>
+            <li class="nav-item mx-1">
+                <a class="btn btn-outline-secondary nav-link" href="#masters">Masters</a>
+            </li>
+            <li class="nav-item mx-1">
+                <a class="btn btn-outline-secondary nav-link" href="#phd">PhD</a>
+            </li>
+        </ul>
     </div>
-    <span class="badge bg-secondary rounded-pill">Beta</span>
+    <span class="badge bg-secondary rounded-pill mx-2">Beta</span>
 </nav>
 
-<div class="container">
+<div class="container-fluid">
     <div id="undergraduate">
-        <div class="mt-4 mb-3 center">
-            <h1>Class of 2022 — Undergraduate Report</h1>
+        <div class="mt-4 mb-4 center">
+            <h1>Undergraduate Report</h1>
+            <h3>Class of 2022</h3>
         </div>
         <div>
-            <ul class="list-unstyled center-two">
+            <ul class="list-unstyled">
                 <li><i class="fa-solid fa-user-graduate fa-fw" style="color: rgb(136, 28, 28)"></i> <span
                         style="color: rgb(136, 28, 28); font-weight: bold">440 Undergraduate students</span> in the
-                    Class of 2022, up <i class="fa-solid fa-arrow-up fa-fw" style="color: rgb(136, 28, 28)"></i> <span
+                    Class of 2022, up <i class="fa-solid fa-arrow-up" style="color: rgb(136, 28, 28)"></i> <span
                             style="color: rgb(136, 28, 28); font-weight: bold">40%</span> from last year!
                 </li>
                 <li><i class="fa-solid fa-laptop fa-fw" style="color: rgb(136, 28, 28)"></i> <span
@@ -84,7 +77,7 @@
                 <canvas id="UGChart"></canvas>
 
             </div>
-            <link rel="stylesheet" type="text/css" href="style.css">
+
             <div class="col-sm">
                 <div class="callout">
                     <div class="callout-working-header"> <h3>Working</h3> </div>
@@ -251,8 +244,9 @@
 
     <div id="masters">
         <div class="mt-4 mb-3">
-            <div class="center">
-                <h1>Class of 2022 — Masters Report</h1>
+            <div class="mt-4 mb-4 center">
+                <h1>Masters Report</h1>
+                <h3>Class of 2022</h3>
             </div>
 
             <div>
@@ -435,19 +429,18 @@
 <!--            </div>-->
             <hr>
 
-            <div class="container center">
+            <div class="center">
                 <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank" rel="noopener noreferrer"><img src="img/survey.png" class="img-fluid p-2" alt="Careers Survey" height=25% width=50%></a>
             </div>
 
-            <div class="container">
+<!--            <div class="container">-->
                 <div class="blockquote-footer mt-5 mb-5">
                     <h3 class="text-center">We help alumni for life. Thanks for being part of our CICS Career Community!</h3>
                 </div>
-            </div>
+<!--            </div>-->
 
         </div>
     </div>
-
 
 </div>
 
@@ -456,11 +449,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
         integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>-->
+
 <script src="https://apis.google.com/js/api.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
 <script src="./js/index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
+
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();

@@ -80,6 +80,7 @@ const headlines = [
 
 // https://www.geeksforgeeks.org/how-to-adjust-the-width-and-height-of-iframe-to-fit-with-content-in-it/
 // https://stackoverflow.com/questions/9153445/how-to-communicate-between-iframe-and-the-parent-site
+// http://shorts.jeffkreeftmeijer.com/2014/scroll-to-anchors-in-iframes/#anchor-5
 window.addEventListener("load", (e) => {
     // if (e.origin !== "https://www.cics.umass.edu") {
     //     console.log("DEBUG: Website is not https://www.cics.umass.edu, so not posting message.");
@@ -90,6 +91,23 @@ window.addEventListener("load", (e) => {
         height: window.document.body.scrollHeight,
         width: window.document.body.scrollWidth
     }
+
     window.top.postMessage(message, "*");
+
+    $(".nav-link").click((e) => {
+        e.preventDefault();
+        window.top.postMessage({
+            "setAnchor": $(this).attr('name')
+        }, "*")
+    });
 });
 
+window.addEventListener("message", (e) => {
+    let anchor = e.data["findElement"];
+    if (anchor !== undefined) {
+        let element = $(`[name="${anchor}"]`);
+        window.top.postMessage({
+            "offset": element.offset().top
+        }, "*")
+    }
+})
