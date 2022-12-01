@@ -98,7 +98,7 @@ window.addEventListener("load", (e) => {
         e.preventDefault();
         // returns "undergraduate" from "https://destinations.ltseng.me/#undergraduate"
         window.top.postMessage({
-            "setAnchor": $(this).attr('href').split('/').pop().substring(1)
+            "setAnchor": $(this).href.split('/').pop().substring(1)
         }, "*")
     });
 });
@@ -112,3 +112,5 @@ window.addEventListener("message", (e) => {
         }, "*")
     }
 })
+
+
