@@ -35,25 +35,27 @@
     color: black;
 }
 .float-container {
-    max-width: 1000px;
-    padding: 10px;
-    margin: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
 }
-
-
 .float-child {
     text-align: center;
+    font-size: 400vmin;
     text-decoration-color: #ffffff;
     background-color: #881c1c;
-    border-style: solid;
     width: 45%;
     float: left;
     padding: 20px;
     margin: 10px;
-    display: inline-block;
     color: white;
 }
-
 .space{
     padding: 100px;
+}
+.small-space{
+    padding: 25px;
+}
+.xs-space{
+    padding: 10px;
 }
