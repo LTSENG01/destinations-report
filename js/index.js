@@ -94,7 +94,7 @@ window.addEventListener("load", (e) => {
 
     window.top.postMessage(message, "*");
 
-    $(".nav-link").click((e) => {
+    $(".nav-link").on("click", function(e) {
         e.preventDefault();
         // returns "undergraduate" from "https://destinations.ltseng.me/#undergraduate"
         window.top.postMessage({
@@ -112,3 +112,5 @@ window.addEventListener("message", (e) => {
         }, "*")
     }
 })
+
+
