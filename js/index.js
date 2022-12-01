@@ -96,8 +96,9 @@ window.addEventListener("load", (e) => {
 
     $(".nav-link").click((e) => {
         e.preventDefault();
+        // returns "undergraduate" from "https://destinations.ltseng.me/#undergraduate"
         window.top.postMessage({
-            "setAnchor": $(this).attr('name')
+            "setAnchor": $(this).attr('href').split('/').pop().substring(1)
         }, "*")
     });
 });
@@ -105,7 +106,7 @@ window.addEventListener("load", (e) => {
 window.addEventListener("message", (e) => {
     let anchor = e.data["findElement"];
     if (anchor !== undefined) {
-        let element = $(`[name="${anchor}"]`);
+        let element = $(`#${anchor}`);
         window.top.postMessage({
             "offset": element.offset().top
         }, "*")
