@@ -39,17 +39,29 @@
     flex-wrap: nowrap;
     text-align: center;
 }
-.float-child {
+.float-child-green {
     text-align: center;
     font-size: 400vmin;
     text-decoration-color: #ffffff;
-    background-color: #881c1c;
+    background-color: #6ba539;
     width: 45%;
     float: left;
     padding: 20px;
     margin: 10px;
     color: white;
 }
+.float-child-yellow {
+    text-align: center;
+    font-size: 400vmin;
+    text-decoration-color: #ffffff;
+    background-color: #ffc72c;
+    width: 45%;
+    float: left;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+}
+
 .space{
     padding: 100px;
 }

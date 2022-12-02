@@ -1,3 +1,4 @@
+
 const UMassColors = {
     MAROON: 'rgb(136, 28, 28)',
     BLACK: 'rgb(33, 39, 33)',
