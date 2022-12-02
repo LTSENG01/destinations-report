@@ -2,6 +2,7 @@
   "name": "destinations-report",
   "version": "1.0.0",
   "dependencies": {
-    "chart.js": "^4.0.1"
+    "chart.js": "^4.0.1",
+    "zingchart": "^2.9.10"
   }
 }

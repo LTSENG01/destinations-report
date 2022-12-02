@@ -12,12 +12,15 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="css/index.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <style>
         .center {
             margin: auto;
             /*width: 60%;*/
             text-align: center;
+        }
+        #ugradTreemap {
+            width: 75%;
         }
     </style>
 </head>
@@ -190,6 +193,74 @@
                 </div>
             </div>
 
+            <div>
+                <div id='ugradTreemap'></div>
+                <script>
+                    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                    let ug = {
+                        "graphset": [{
+                            "type": "treemap",
+                            "plotarea": {
+                                "margin": "0 0 30 0"
+                            },
+                            "options": {
+                                "aspect-type": "random"
+                            },
+                            "series": [{
+                                "text": "Industries",
+                                "children": [{
+                                    "text": "Tech",
+                                    "children": [
+                                        {
+                                            "text": "Communications",
+                                            "value": 4
+                                        },
+                                        {
+                                            "text": "Consulting",
+                                            "value": 7
+                                        },
+                                        {
+                                            "text": "Hardware",
+                                            "value": 7
+                                        },
+                                        {
+                                            "text": "Retail",
+                                            "value": 18
+                                        },
+                                        {
+                                            "text": "Software",
+                                            "value": 25
+                                        },
+                                    ]
+                                },
+                                    {
+                                        "text": "Cybersecurity",
+                                        "value": 5
+                                    },
+                                    {
+                                        "text": "Fintech",
+                                        "value": 24
+                                    },
+                                    {
+                                        "text": "Healthcare",
+                                        "value": 9
+                                    },
+                                ]
+                            }
+                            ]
+                        }]
+                    };
+                    zingchart.render({
+                        id: 'ugradTreemap',
+                        data: ug,
+                    });
+                </script>
+            </div>
+
+            <div class="mt-5 mb-2">
+                <h3>Institutions students are getting their Advanced Degrees in:</h3>
+            </div>
+
             <h6>Continuing Their Education for their Master’s Degree at...</h6>
             <div class="row mt-3">
                 <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UMass">
@@ -233,6 +304,110 @@
 
         </div>
 
+        <div class="xs-space"></div>
+
+
+        <h3>Roles informatics majors have taken on</h3>
+
+        <div>
+            <div id="myChart"></div>
+            <script>
+                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                let ugWordcloud = {
+                    "graphset": [{
+                        "type": "wordcloud",
+                        "options": {
+                            "style": {
+                                "tooltip": {
+                                    visible: true,
+                                    text: '%text: %hits'
+                                }
+                            },
+                            "words": [{
+                                "text": "Software Engineer",
+                                "count": "4"
+                            },
+                                {
+                                    "text": "Product Manager",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "Data Engineer",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "Associate Consultant",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "UI/UX Designer/Researcher",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Technology and Data Leadership Development Program",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Statistical Programmer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Investment Analyst ",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Global Markets Analyst",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Database Analyst",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Data Analyst",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Cybersecurity Engineering & Operations Analyst",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Cyber Systems Operator",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Business Analyst",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Associate Specialist, Medical Education Systems",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Associate Software Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Associate Product Manager",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Associate Data Engineer",
+                                    "count": "1"
+                                }
+                            ]
+                        }
+                    }]
+                };
+
+                zingchart.render({
+                    id: 'myChart',
+                    data: ugWordcloud,
+                    // height: '100%',
+                    // width: '100%'
+                });
+            </script>
+        </div>
 
     </div>
 
@@ -349,6 +524,189 @@
                 </div>
             </div>
 
+            <div id='msTreemap'></div>
+            <script>
+                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                let ms = {
+                    "graphset": [{
+                        "type": "treemap",
+                        "plotarea": {
+                            "margin": "0 0 30 0"
+                        },
+                        "options": {
+                            "aspect-type": "random"
+                        },
+                        "series": [{
+                            "text": "Industries",
+                            "children": [{
+                                "text": "Tech",
+                                "children": [
+                                    {
+                                        "text": "Communications",
+                                        "value": 6
+                                    },
+                                    {
+                                        "text": "Consulting",
+                                        "value": 3
+                                    },
+                                    {
+                                        "text": "Hardware",
+                                        "value": 7
+                                    },
+                                    {
+                                        "text": "Retail",
+                                        "value": 13
+                                    },
+                                    {
+                                        "text": "Software",
+                                        "value": 51
+                                    },
+                                ]
+                            },
+                                {
+                                    "text": "Cybersecurity",
+                                    "value": 3
+                                },
+                                {
+                                    "text": "Fintech",
+                                    "value": 14
+                                },
+                                {
+                                    "text": "Healthcare",
+                                    "value": 2
+                                },
+                            ]
+                        }
+                        ]
+                    }]
+                };
+                zingchart.render({
+                    id: 'msTreemap',
+                    data: ms,
+                });
+            </script>
+
+            <div id="msWordcloud"></div>
+            <script>
+                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                let msWordcloudData = {
+                    "graphset": [{
+                        "type": "wordcloud",
+                        "options": {
+                            "style": {
+                                "tooltip": {
+                                    visible: true,
+                                    text: '%text: %hits'
+                                }
+                            },
+                            "words": [
+                                {
+                                    "text": "Software Engineer",
+                                    "count": "35"
+                                },
+                                {
+                                    "text": "Data Scientist",
+                                    "count": "7"
+                                },
+                                {
+                                    "text": "Member of Technical Staff",
+                                    "count": "3"
+                                },
+                                {
+                                    "text": "Junior Data Scientist",
+                                    "count": "3"
+                                },
+                                {
+                                    "text": "Software Development Engineer",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "Senior Software Engineer",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "Machine Learning Engineer",
+                                    "count": "2"
+                                },
+                                {
+                                    "text": "Systems Software Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Systems Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Software Engineer 2",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Software Engineer (AI/ML)",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Software Development Engineer II",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Senior Machine Learning Scientist",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Researcher",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Research Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Member of Technical Staff 3",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Machine Learning Scientist",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Machine Learning Engineer 2",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Full Stack Software Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "DSA",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Deep Learning Researcher",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Data and Applied Scientist",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Computer Vision Research Engineer",
+                                    "count": "1"
+                                },
+                                {
+                                    "text": "Automation Quality Engineer",
+                                    "count": "1"
+                                }
+                            ]
+                        }
+                    }]
+                };
+
+                zingchart.render({
+                    id: 'msWordcloud',
+                    data: msWordcloudData,
+                });
+            </script>
+
             <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
     aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
     MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
@@ -401,6 +759,7 @@
 
 
 <!-- Scripts for JS Libraries -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
         integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
