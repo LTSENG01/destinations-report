@@ -51,7 +51,7 @@ const UGdata = {
 
 const configMS = {
     type: 'doughnut',
-    data: MSdata,
+    data: MSdata
 };
 
 const configUG = {
