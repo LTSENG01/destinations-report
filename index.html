@@ -13,13 +13,21 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
 
     <style>
         .center {
             margin: auto;
             /*width: 60%;*/
             text-align: center;
+        }
+        .chart--container {
+            min-height: 850px;
+            width: 100%;
+            height: 100%;
+        }
+        .zc-ref {
+            display: none;
         }
     </style>
 </head>
@@ -92,8 +100,7 @@
                     </div>
                     <div class="callout-container">
                         <p>
-                            <span style="font-weight: bold">268</span> are working (6 months after graduation following
-                            NACE guidelines).
+                            <span style="font-weight: bold">4% increase</span> from Class of 2021; Consistently ~60% for 10 Aug ’21, 132 Dec ’21, and 298 May ’22 graduates.
                         </p>
                     </div>
                 </div>
@@ -102,7 +109,7 @@
                         <h3><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;19% Continuing Education</h3>
                     </div>
                     <div class="callout-container">
-                        <p><span style="font-weight: bold">83</span> are continuing their education.</p>
+                        <p>The Bay State Scholarship Program contributed to <span style="font-weight: bold">>50 </span>returning to UMass Amherst for their MS.</p>
                     </div>
                 </div>
                 <div class="callout">
@@ -110,7 +117,7 @@
                         <h3><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;13% Looking</h3>
                     </div>
                     <div class="callout-container">
-                        <p><span style="font-weight: bold">60</span> are searching for their next opportunity.</p>
+                        <p><span style="font-weight: bold">60</span> recent alumni are searching for their next opportunity, often with the ongoing support of CICS Careers.</p>
                     </div>
                 </div>
                 <div class="callout">
@@ -118,7 +125,7 @@
                         <h3><i class="fa-solid fa-question fa-fw"></i>&nbsp;7% Unknown</h3>
                     </div>
                     <div class="callout-container">
-                        <p><span style="font-weight: bold">29</span> statuses are unknown.</p>
+                        <p>We know post-graduations outcomes for 93% of our undergraduates, but despite our best efforts, <span style="font-weight: bold">32</span> remain a mystery.</p>
                     </div>
                 </div>
             </div>
@@ -539,7 +546,7 @@
         <!--                    <h4> 95%</h4>-->
         <!--                </div>-->
         <img src="img/ms%20Median%20Salary.png" alt="Median Salary $82,000" width=49%>
-        <img src="img/ugrad_satisfaction.png" alt="Satisfaction Rate 95%" width=49%>
+        <img src="img/ms%20satisfaction.png" alt="Satisfaction Rate 95%" width=49%>
     </div>
 
     <div class="mt-5 mb-3">
@@ -786,6 +793,163 @@
                 data: msWordcloudData,
             });
         </script>
+
+        <body class="zc-body">
+        <div id="chart" class="chart--container"></div>
+        <script>
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
+            // -----------------------------
+            let chartData = [{
+                id: 'Industries',
+                text: 'Industries',
+                parent: ''
+            }, {
+                id: 'Tech',
+                text: 'Tech',
+                parent: 'Industries',
+                value: 25
+            }, {
+                id: 'Healthcare',
+                text: 'Healthcare',
+                parent: 'Industries',
+                value: 25
+            }, {
+                id: 'FinTech',
+                text: 'FinTech',
+                parent: 'Industries',
+                value: 25
+            }, {
+                id: 'Public Interest Technology',
+                text: 'Public Interest Technology',
+                parent: 'Industries',
+                value: 25
+            }, {
+                id: 'SW',
+                text: 'SW',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'HW',
+                text: 'HW',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Robotics',
+                text: 'Robotics',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Retail',
+                text: 'Retail',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Entertainment',
+                text: 'Entertainment',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Networking',
+                text: 'Networking',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Networking',
+                text: 'Networking',
+                parent: 'Tech',
+                value: 3
+            }, {
+                id: 'Cybersecurity',
+                text: 'Cybersecurity',
+                parent: 'Tech',
+                value: 4
+            }, {
+                id: 'Software',
+                text: 'Software',
+                parent: 'Healthcare',
+                value: 8
+            }, {
+                id: 'Life Sciences',
+                text: 'Life Sciences',
+                parent: 'Healthcare',
+                value: 8
+            }, {
+                id: 'Pharmaceuticals',
+                text: 'Pharmaceuticals',
+                parent: 'Healthcare',
+                value: 9
+            }, {
+                id: 'Insurance',
+                text: 'Insurance',
+                parent: 'FinTech',
+                value: 12.5
+            }, {
+                id: 'Investment Banking',
+                text: 'Investment Banking',
+                parent: 'FinTech',
+                value: 12.5
+            }, {
+                id: 'Government',
+                text: 'Government',
+                parent: 'Public Interest Technology',
+                value: 6
+            }, {
+                id: 'Government Contractors',
+                text: 'Government Contractors',
+                parent: 'Public Interest Technology',
+                value: 6
+            }, {
+                id: 'GreenTech',
+                text: 'GreenTech',
+                parent: 'Public Interest Technology',
+                value: 6
+            }, {
+                id: 'Other “Common Good”',
+                text: 'Other “Common Good”',
+                parent: 'Public Interest Technology',
+                value: 7
+            }
+            ];
+            // full ZingChart schema can be found here:
+            // https://www.zingchart.com/docs/api/json-configuration/
+            let chartConfig = {
+                type: 'sunburst',
+                backgroundColor: '#fff',
+                title: {
+                    text: 'MS Industries'
+                },
+                options: {
+                    slice: 0,
+                    space: 0,
+                    sizeFactor: 0.9,
+                    root: 'Industries',
+                    widths: [70, 140, 180],
+                    palette: ['#ffffff', '#3F51B5', '#42A5F5', '#5C6BC0', '#64B5F6', '#7986CB', '#90CAF9', '#9FA8DA', '#BBDEFB', '#C5CAE9']
+                },
+                plot: {
+                    animation: {},
+                    valueBox: {
+                        text: '%data-vbtext',
+                        color: '#000',
+                        fontSize: '10px',
+                        visible: null
+                    },
+                    tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>Size: %node-value',
+                    alpha: 1
+                },
+                tooltip: {
+                    align: 'left',
+                    thousandsSeparator: ','
+                },
+                series: chartData,
+            };
+            zingchart.render({
+                id: 'chart',
+                data: chartConfig,
+                height: '100%',
+                width: '100%',
+            });
+    </script>
 
         <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
 aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
