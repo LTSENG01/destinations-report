@@ -56,7 +56,7 @@ const configMS = {
 
 const configUG = {
     type: 'doughnut',
-    data: UGdata,
+    data: UGdata
 };
 
 const MSChart = new Chart(

@@ -12,7 +12,9 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="css/index.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
     <style>
         .center {
             margin: auto;
@@ -29,17 +31,18 @@
     <div class="container-fluid w-100 justify-content-center">
         <ul class="navbar-nav">
             <li class="nav-item mx-1">
-                <a class="btn btn-outline-secondary text-white nav-link active" aria-current="page" href="#undergraduate">Undergraduate</a>
+                <a class="btn btn-outline-secondary text-white nav-link active" aria-current="page"
+                   href="#undergraduate">Undergraduate</a>
             </li>
             <li class="nav-item mx-1">
                 <a class="btn btn-outline-secondary nav-link" href="#masters">Masters</a>
             </li>
             <li class="nav-item mx-1">
-                <a class="btn btn-outline-secondary nav-link" href="#phd">PhD</a>
+                <a class="btn btn-outline-secondary nav-link disabled" href="">PhD — Coming Soon!</a>
             </li>
         </ul>
     </div>
-<!--    <span class="badge bg-secondary rounded-pill mx-2">Beta</span>-->
+    <!--    <span class="badge bg-secondary rounded-pill mx-2">Beta</span>-->
 </nav>
 
 <div class="container-fluid">
@@ -49,7 +52,7 @@
         </div>
         <div>
             <ul class="list-unstyled">
-                <li><i class="fa-solid fa-user-graduate fa-fw" ></i> <span
+                <li><i class="fa-solid fa-user-graduate fa-fw"></i> <span
                         style="font-weight: bold">440 Undergraduate students</span> in the
                     Class of 2022, up <i class="fa-solid fa-arrow-up"></i> <span
                             style="font-weight: bold">40%</span> from last year!
@@ -60,106 +63,129 @@
                 <li><i class="fa-solid fa-code-branch fa-fw"></i> <span
                         style="font-weight: bold">14</span> Computer Science B.A.
                 </li>
-                <li><i class="fa-solid fa-circle-info fa-fw""></i> <span
+                <li><i class="fa-solid fa-circle-info fa-fw"></i> <span
                         style="font-weight: bold">56</span> Informatics B.S.
                 </li>
             </ul>
         </div>
         <div class="row">
             <div class="col-md">
-<!--                <div class="progress mb-3 mt-4">-->
-<!--                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)"-->
-<!--                         aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">Outcome status known for 96% of Class-->
-<!--                        of 2022-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
-<!--                </div>-->
-                <canvas id="UGChart"></canvas>
-
+                <!--                <div class="progress mb-3 mt-4">-->
+                <!--                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)"-->
+                <!--                         aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">Outcome status known for 96% of Class-->
+                <!--                        of 2022-->
+                <!--                    </div>-->
+                <!--                    &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
+                <!--                </div>-->
+                <div class="position-relative">
+                    <canvas id="UGChart"></canvas>
+                    <div class="text-center text-in-donut">
+                        <h4 class="m-0">Destinations</h4>
+                    </div>
+                </div>
             </div>
 
             <div class="col-sm">
                 <div class="callout">
-                    <div class="callout-working-header"> <h3><i class="fa-solid fa-briefcase"></i>  61% Working</h3> </div>
-                    <div class="callout-container"> <p>
-                        <span style="font-weight: bold">268</span> are working (6 months after graduation following NACE guidelines).
-                    </p> </div>
+                    <div class="callout-working-header">
+                        <h3><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;61% Working</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p>
+                            <span style="font-weight: bold">268</span> are working (6 months after graduation following
+                            NACE guidelines).
+                        </p>
+                    </div>
                 </div>
                 <div class="callout">
-                    <div class="callout-continuing-ed-header"> <h3><i class="fa-solid fa-user-graduate"></i> 19% Continuing Education </h3> </div>
-                    <div class="callout-container"> <p>
-                        <span style="font-weight: bold">83</span> are continuing their education.
-                    </p> </div>
+                    <div class="callout-continuing-ed-header">
+                        <h3><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;19% Continuing Education</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">83</span> are continuing their education.</p>
+                    </div>
                 </div>
                 <div class="callout">
-                    <div class="callout-looking-header"> <h3><i class="fa-solid fa-magnifying-glass"></i> 13% Looking</h3> </div>
-                    <div class="callout-container"> <p>
-                        <span
-                            style="font-weight: bold">60</span> are searching for their next opportunity.
-                    </p> </div>
+                    <div class="callout-looking-header">
+                        <h3><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;13% Looking</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">60</span> are searching for their next opportunity.</p>
+                    </div>
                 </div>
                 <div class="callout">
-                    <div class="callout-unknown-header"> <h3><i class="fa-sharp fa-solid fa-question"></i> 7% Unknown</h3> </div>
-                    <div class="callout-container"> <p>
-                        <span
-                            style="font-weight: bold">29</span> statuses are unknown.
-                    </p> </div>
+                    <div class="callout-unknown-header">
+                        <h3><i class="fa-solid fa-question fa-fw"></i>&nbsp;7% Unknown</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">29</span> statuses are unknown.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="small-space"></div>
             <div class="col-md-8 center">
-<!--                <div class="float-child-green">-->
-<!--                    <h6>Median Salary <i class="fa-regular fa-sack-dollar"></i> </h6>-->
-<!--                    <h4>$82,000</h4>-->
-<!--                </div>-->
-<!--                <div class="float-child-yellow">-->
-<!--                    <h6>Satisfaction Rate <i class="fa-regular fa-face-smile"></i> </h6>-->
-<!--                    <h4> 95%</h4>-->
-<!--                </div>-->
-                <img src="img/ugrad_median_salary.png" alt="Median Salary $82,000" width=49% >
-                <img src="img/ugrad_satisfaction.png" alt="Satisfaction Rate 95%" width=49% >
+                <!--                <div class="float-child-green">-->
+                <!--                    <h6>Median Salary <i class="fa-regular fa-sack-dollar"></i> </h6>-->
+                <!--                    <h4>$82,000</h4>-->
+                <!--                </div>-->
+                <!--                <div class="float-child-yellow">-->
+                <!--                    <h6>Satisfaction Rate <i class="fa-regular fa-face-smile"></i> </h6>-->
+                <!--                    <h4> 95%</h4>-->
+                <!--                </div>-->
+                <img src="img/ugrad_median_salary.png" alt="Median Salary $82,000" width=49%>
+                <img src="img/ugrad_satisfaction.png" alt="Satisfaction Rate 95%" width=49%>
             </div>
 
             <div class="mt-5 mb-2">
-                <h3>163 Different Employers (36 that hired multiple) including:</h3>
+                <h3>163 Different Employers (36 that hired multiple)</h3>
             </div>
 
             <div class="mt-4 mb-3">
                 <div class="row mt-3">
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Amazon">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Amazon">
                         <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Google">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Google">
                         <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Mathworks">
-                        <img src="img/MathWorks.png" class="img-fluid p-2" alt="Mathworks">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="MathWorks">
+                        <img src="img/MathWorks.png" class="img-fluid p-2" alt="MathWorks">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="DraftKings">
-                        <img src="img/DraftKings_logo.svg.png" class="img-fluid p-2" alt="Draftkings">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="DraftKings">
+                        <img src="img/DraftKings_logo.svg.png" class="img-fluid p-2" alt="DraftKings">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="IBM">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="IBM">
                         <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Travelers">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Travelers">
                         <img src="img/Travelers-Logo.png" class="img-fluid p-2" alt="Travelers">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Liberty Mutual">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Liberty Mutual">
                         <img src="img/Liberty-Mutual-Logo.png" class="img-fluid p-2" alt="Liberty Mutual">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Akamai">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Akamai">
                         <img src="img/Akamai_logo.svg.png" class="img-fluid p-2" alt="Akamai">
                     </div>
-                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Raytheon Technologies">
-                        <img src="img/Raytheon_Technologies_logo.svg.png" class="img-fluid p-2" alt="Raytheon Technologies">
+                    <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                         title="Raytheon Technologies">
+                        <img src="img/Raytheon_Technologies_logo.svg.png" class="img-fluid p-2"
+                             alt="Raytheon Technologies">
                     </div>
                 </div>
             </div>
 
             <div class="xs-space"></div>
             <div>
-                <h5>Check out the most popular states the undergad class went to work in-</h5>
+                <h5>Check out the most popular states the undergrad class went to work in-</h5>
                 <div class="row">
                     <div class="col-md-8 center">
                         <img src="img/ugrad_map.png" class="img-fluid" alt="Where the UnderGrads ended up">
@@ -173,129 +199,147 @@
                 <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
             </div>
             <div class="row mt-3">
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Putnam Investments">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Putnam Investments">
                     <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Athenahealth">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Athenahealth">
                     <img src="img/athena-health-logo.png" class="img-fluid p-2" alt="Athenahealth">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Optum">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Optum">
                     <img src="img/optum-logo-296D11161F-seeklogo.com.png" class="img-fluid p-2" alt="Optum">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Staples">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Staples">
                     <img src="img/staples.png" class="img-fluid p-2" alt="Staples">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="TJX">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="TJX">
                     <img src="img/TJX_Companies-Logo.wine.png" class="img-fluid p-2" alt="TJX">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Massachusetts Rehabilitation Commission">
-                    <img src="img/mrc_color_wo_name.png" class="img-fluid p-2" alt="Massachusetts Rehabilitation Commission">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Massachusetts Rehabilitation Commission">
+                    <img src="img/mrc_color_wo_name.png" class="img-fluid p-2"
+                         alt="Massachusetts Rehabilitation Commission">
                 </div>
             </div>
 
-                <div id='ugradTreemap'></div>
-                <script>
-                    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-                    let ug = {
-                        "graphset": [{
-                            "type": "treemap",
-                            "plotarea": {
-                                "margin": "0 0 30 0"
-                            },
-                            "options": {
-                                "aspect-type": "random"
-                            },
-                            "series": [{
-                                "text": "Industries",
-                                "children": [{
-                                    "text": "Tech",
-                                    "children": [
-                                        {
-                                            "text": "Communications",
-                                            "value": 4
-                                        },
-                                        {
-                                            "text": "Consulting",
-                                            "value": 7
-                                        },
-                                        {
-                                            "text": "Hardware",
-                                            "value": 7
-                                        },
-                                        {
-                                            "text": "Retail",
-                                            "value": 18
-                                        },
-                                        {
-                                            "text": "Software",
-                                            "value": 25
-                                        },
-                                    ]
-                                },
+            <div id='ugradTreemap'></div>
+            <script>
+                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                let ug = {
+                    "graphset": [{
+                        "type": "treemap",
+                        "plotarea": {
+                            "margin": "0 0 30 0"
+                        },
+                        "options": {
+                            "aspect-type": "random"
+                        },
+                        "series": [{
+                            "text": "Industries",
+                            "children": [{
+                                "text": "Tech",
+                                "children": [
                                     {
-                                        "text": "Cybersecurity",
-                                        "value": 5
+                                        "text": "Communications",
+                                        "value": 4
                                     },
                                     {
-                                        "text": "Fintech",
-                                        "value": 24
+                                        "text": "Consulting",
+                                        "value": 7
                                     },
                                     {
-                                        "text": "Healthcare",
-                                        "value": 9
+                                        "text": "Hardware",
+                                        "value": 7
+                                    },
+                                    {
+                                        "text": "Retail",
+                                        "value": 18
+                                    },
+                                    {
+                                        "text": "Software",
+                                        "value": 25
                                     },
                                 ]
-                            }
+                            },
+                                {
+                                    "text": "Cybersecurity",
+                                    "value": 5
+                                },
+                                {
+                                    "text": "Fintech",
+                                    "value": 24
+                                },
+                                {
+                                    "text": "Healthcare",
+                                    "value": 9
+                                },
                             ]
-                        }]
-                    };
-                    zingchart.render({
-                        id: 'ugradTreemap',
-                        data: ug,
-                    });
-                </script>
+                        }
+                        ]
+                    }]
+                };
+                zingchart.render({
+                    id: 'ugradTreemap',
+                    data: ug,
+                });
+            </script>
 
             <div class="mt-5 mb-2">
-                <h3>Institutions students are getting their Advanced Degrees in:</h3>
+                <h3>Advanced Degrees</h3>
             </div>
 
-            <h5>Continuing Their Education for their Master’s Degree at...</h5>
+            <h5># Pursuing Masters</h5>
             <div class="row mt-3">
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UMass">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UMass">
                     <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Georgia Institute of Tech">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Georgia Institute of Tech">
                     <img src="img/georgia%20institute.png" class="img-fluid p-2" alt="Georgia Institute of Tech">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Cornell University">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Cornell University">
                     <img src="img/Cornell-University-Logo.png" class="img-fluid p-2" alt="Cornell University">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UNC">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UNC">
                     <img src="img/UNC-Logo.png" class="img-fluid p-2" alt="UNC">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="University of Michigan">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="University of Michigan">
                     <img src="img/University-of-Michigan-Logo.png" class="img-fluid p-2" alt="UMich">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Columbia University">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Columbia University">
                     <img src="img/columbia%20univ.png" class="img-fluid p-2" alt="Columbia University">
                 </div>
             </div>
 
-            <h5>Continuing Their Education for their PhD at...</h5>
+            <h5># Pursuing PhDs</h5>
             <div class="row mt-3">
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Purdue University">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Purdue University">
                     <img src="img/purdue.svg.png" class="img-fluid p-2" alt="Purdue">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UMass">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UMass">
                     <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Duke University">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Duke University">
                     <img src="img/Duke_University_logo.svg.png" class="img-fluid p-2" alt="Duke University">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UT Austin">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UT Austin">
                     <img src="img/University_of_Texas_at_Austin_logo.svg.png" class="img-fluid p-2" alt="UT Austin">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="UT Dallas">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UT Dallas">
                     <img src="img/UT_Dallas_-_Full_Mark_Texas_Logo.jpg" class="img-fluid p-2" alt="UT Dallas">
                 </div>
             </div>
@@ -305,7 +349,7 @@
         <div class="xs-space"></div>
 
 
-        <h3>Roles informatics majors have taken on-</h3>
+        <h3>Popular Informatics Roles</h3>
 
         <div>
             <div id="myChart"></div>
@@ -412,361 +456,385 @@
     <div class="space"></div>
 
 
+</div>
+
+<hr>
+
+<div id="masters">
+    <div class="mt-4 mb-3">
+        <div class="mt-4 mb-4 center">
+            <h1>Manning CICS Master's</h1>
+        </div>
+
+        <div>
+            <p><i class="fa-solid fa-user-graduate"></i> <span
+                    style="font-weight: bold">137 MS students</span> in the Class of 2022</p>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <!--                    <div class="progress mb-3 mt-4">-->
+                <!--                        <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)"-->
+                <!--                             aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class-->
+                <!--                            of 2022-->
+                <!--                        </div>-->
+                <!--                        &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
+                <!--                    </div>-->
+                <div class="position-relative">
+                    <canvas id="MSChart"></canvas>
+                    <div class="text-center text-in-donut">
+                        <h4 class="m-0">Destinations</h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm">
+                <div class="callout">
+                    <div class="callout-working-header">
+                        <h3><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;76% Working</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p>
+                            <span style="font-weight: bold">104</span> are working (6 months after graduation following
+                            NACE guidelines).
+                        </p>
+                    </div>
+                </div>
+                <div class="callout">
+                    <div class="callout-continuing-ed-header">
+                        <h3><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;12% Continuing Education</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">17</span> are continuing their education.</p>
+                    </div>
+                </div>
+                <div class="callout">
+                    <div class="callout-looking-header">
+                        <h3><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;11% Looking</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">15</span> are searching for their next opportunity.</p>
+                    </div>
+                </div>
+                <div class="callout">
+                    <div class="callout-unknown-header">
+                        <h3><i class="fa-solid fa-question fa-fw"></i>&nbsp;<1% Unknown</h3>
+                    </div>
+                    <div class="callout-container">
+                        <p><span style="font-weight: bold">1</span> status are unknown.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
-    <hr>
+    <div class="small-space"></div>
+    <div class="col-md-8 center">
+        <!--                <div class="float-child-green">-->
+        <!--                    <h6>Median Salary <i class="fa-regular fa-sack-dollar"></i> </h6>-->
+        <!--                    <h4>$82,000</h4>-->
+        <!--                </div>-->
+        <!--                <div class="float-child-yellow">-->
+        <!--                    <h6>Satisfaction Rate <i class="fa-regular fa-face-smile"></i> </h6>-->
+        <!--                    <h4> 95%</h4>-->
+        <!--                </div>-->
+        <img src="img/ms%20Median%20Salary.png" alt="Median Salary $82,000" width=49%>
+        <img src="img/ugrad_satisfaction.png" alt="Satisfaction Rate 95%" width=49%>
+    </div>
 
-    <div id="masters">
-        <div class="mt-4 mb-3">
-            <div class="mt-4 mb-4 center">
-                <h1>Manning CICS Master's</h1>
+    <div class="mt-5 mb-3">
+        <h3 class="mb-4">53 Different Employers (11 that hired multiple)</h3>
+
+        <div class="row mb-4">
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Microsoft">
+                <img src="img/Microsoft_logo_(2012).svg.png" class="img-fluid p-2" alt="Microsoft">
             </div>
-
-            <div>
-                <p><i class="fa-solid fa-user-graduate"></i> <span
-                        style="font-weight: bold">137 MS students</span> in the Class of 2022</p>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="IBM">
+                <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
             </div>
-            <div class="row">
-                <div class="col-md">
-<!--                    <div class="progress mb-3 mt-4">-->
-<!--                        <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)"-->
-<!--                             aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class-->
-<!--                            of 2022-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
-<!--                    </div>-->
-                    <canvas id="MSChart"></canvas>
-
-                </div>
-                <div class="col-sm">
-                    <div class="callout">
-                        <div class="callout-working-header"> <h3><i class="fa-solid fa-briefcase"></i>  76% Working</h3> </div>
-                        <div class="callout-container"> <p>
-                            <span
-                                style="font-weight: bold">104</span> are working (6 months after graduation following NACE guidelines).
-                        </p> </div>
-                    </div>
-                    <div class="callout">
-                        <div class="callout-continuing-ed-header"> <h3><i class="fa-solid fa-user-graduate"></i> 12% Continuing Education</h3> </div>
-                        <div class="callout-container"> <p>
-                            <span
-                                style="font-weight: bold">17</span> are continuing their education.
-                        </p> </div>
-                    </div>
-                    <div class="callout">
-                        <div class="callout-looking-header"> <h3><i class="fa-solid fa-magnifying-glass"></i> 11% Looking</h3> </div>
-                        <div class="callout-container"> <p>
-                             <span
-                                style="font-weight: bold">15</span> are searching for their next opportunity.
-                        </p> </div>
-                    </div>
-                    <div class="callout">
-                        <div class="callout-unknown-header"> <h3><i class="fa-sharp fa-solid fa-question"></i> <1% Unknown</h3> </div>
-                        <div class="callout-container"> <p>
-                            <span
-                                style="font-weight: bold">1</span> status is unknown.
-                        </p> </div>
-                    </div>
-                </div>
+            <div class="col-4 col-sm-3 col-md-2  d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Amazon">
+                <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
             </div>
-
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Google">
+                <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Salesforce">
+                <img src="img/Salesforce_logo.svg.png" class="img-fluid p-2" alt="Salesforce">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Apple">
+                <img src="img/Apple-Logo.png" class="img-fluid p-2" alt="Apple">
+            </div>
         </div>
 
-        <div class="small-space"></div>
-        <div class="col-md-8 center">
-            <!--                <div class="float-child-green">-->
-            <!--                    <h6>Median Salary <i class="fa-regular fa-sack-dollar"></i> </h6>-->
-            <!--                    <h4>$82,000</h4>-->
-            <!--                </div>-->
-            <!--                <div class="float-child-yellow">-->
-            <!--                    <h6>Satisfaction Rate <i class="fa-regular fa-face-smile"></i> </h6>-->
-            <!--                    <h4> 95%</h4>-->
-            <!--                </div>-->
-            <img src="img/ms%20Median%20Salary.png" alt="Median Salary $82,000" width=49% >
-            <img src="img/ugrad_satisfaction.png" alt="Satisfaction Rate 95%" width=49% >
+        <div class="d-inline">
+            <h5 class="d-inline">aMAzing Employers</h5>
+            <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
+        </div>
+        <div class="row mb-4">
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="MassMutual">
+                <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Lexalytics">
+                <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="PathAI">
+                <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Fidelity Investments">
+                <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Chewy">
+                <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="SimpliSafe">
+                <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
+            </div>
         </div>
 
-        <div class="mt-5 mb-3">
-            <h3 class="mb-4">53 Different Employers (11 that hired multiple) including:</h3>
-
-            <div class="row mb-4">
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Microsoft">
-                    <img src="img/Microsoft_logo_(2012).svg.png" class="img-fluid p-2" alt="Microsoft">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="IBM">
-                    <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2  d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Amazon">
-                    <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Google">
-                    <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Salesforce">
-                    <img src="img/Salesforce_logo.svg.png" class="img-fluid p-2" alt="Salesforce">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Apple">
-                    <img src="img/Apple-Logo.png" class="img-fluid p-2" alt="Apple">
-                </div>
-            </div>
-
-            <div class="d-inline">
-                <h5 class="d-inline">aMAzing Employers</h5>
-                <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
-            </div>
-            <div class="row mb-4">
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="MassMutual">
-                    <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Lexalytics">
-                    <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="PathAI">
-                    <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Fidelity Investments">
-                    <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="Chewy">
-                    <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
-                </div>
-                <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top" title="SimpliSafe">
-                    <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
-                </div>
-            </div>
-
-            <div id='msTreemap'></div>
-            <script>
-                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-                let ms = {
-                    "graphset": [{
-                        "type": "treemap",
-                        "plotarea": {
-                            "margin": "0 0 30 0"
-                        },
-                        "options": {
-                            "aspect-type": "random"
-                        },
-                        "series": [{
-                            "text": "Industries",
-                            "children": [{
-                                "text": "Tech",
-                                "children": [
-                                    {
-                                        "text": "Communications",
-                                        "value": 6
-                                    },
-                                    {
-                                        "text": "Consulting",
-                                        "value": 3
-                                    },
-                                    {
-                                        "text": "Hardware",
-                                        "value": 7
-                                    },
-                                    {
-                                        "text": "Retail",
-                                        "value": 13
-                                    },
-                                    {
-                                        "text": "Software",
-                                        "value": 51
-                                    },
-                                ]
-                            },
+        <div id='msTreemap'></div>
+        <script>
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+            let ms = {
+                "graphset": [{
+                    "type": "treemap",
+                    "plotarea": {
+                        "margin": "0 0 30 0"
+                    },
+                    "options": {
+                        "aspect-type": "random"
+                    },
+                    "series": [{
+                        "text": "Industries",
+                        "children": [{
+                            "text": "Tech",
+                            "children": [
                                 {
-                                    "text": "Cybersecurity",
+                                    "text": "Communications",
+                                    "value": 6
+                                },
+                                {
+                                    "text": "Consulting",
                                     "value": 3
                                 },
                                 {
-                                    "text": "Fintech",
-                                    "value": 14
+                                    "text": "Hardware",
+                                    "value": 7
                                 },
                                 {
-                                    "text": "Healthcare",
-                                    "value": 2
+                                    "text": "Retail",
+                                    "value": 13
+                                },
+                                {
+                                    "text": "Software",
+                                    "value": 51
                                 },
                             ]
-                        }
-                        ]
-                    }]
-                };
-                zingchart.render({
-                    id: 'msTreemap',
-                    data: ms,
-                });
-            </script>
-
-            <h3>Roles the MS students have now taken on-</h3>
-            <div id="msWordcloud"></div>
-            <script>
-                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-                let msWordcloudData = {
-                    "graphset": [{
-                        "type": "wordcloud",
-                        "options": {
-                            "style": {
-                                "tooltip": {
-                                    visible: true,
-                                    text: '%text: %hits'
-                                }
+                        },
+                            {
+                                "text": "Cybersecurity",
+                                "value": 3
                             },
-                            "words": [
-                                {
-                                    "text": "Software Engineer",
-                                    "count": "35"
-                                },
-                                {
-                                    "text": "Data Scientist",
-                                    "count": "7"
-                                },
-                                {
-                                    "text": "Member of Technical Staff",
-                                    "count": "3"
-                                },
-                                {
-                                    "text": "Junior Data Scientist",
-                                    "count": "3"
-                                },
-                                {
-                                    "text": "Software Development Engineer",
-                                    "count": "2"
-                                },
-                                {
-                                    "text": "Senior Software Engineer",
-                                    "count": "2"
-                                },
-                                {
-                                    "text": "Machine Learning Engineer",
-                                    "count": "2"
-                                },
-                                {
-                                    "text": "Systems Software Engineer",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Systems Engineer",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Software Engineer 2",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Software Engineer (AI/ML)",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Software Development Engineer II",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Senior Machine Learning Scientist",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Researcher",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Research Engineer",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Member of Technical Staff 3",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Machine Learning Scientist",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Machine Learning Engineer 2",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Full Stack Software Engineer",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "DSA",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Deep Learning Researcher",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Data and Applied Scientist",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Computer Vision Research Engineer",
-                                    "count": "1"
-                                },
-                                {
-                                    "text": "Automation Quality Engineer",
-                                    "count": "1"
-                                }
-                            ]
-                        }
-                    }]
-                };
+                            {
+                                "text": "Fintech",
+                                "value": 14
+                            },
+                            {
+                                "text": "Healthcare",
+                                "value": 2
+                            },
+                        ]
+                    }
+                    ]
+                }]
+            };
+            zingchart.render({
+                id: 'msTreemap',
+                data: ms,
+            });
+        </script>
 
-                zingchart.render({
-                    id: 'msWordcloud',
-                    data: msWordcloudData,
-                });
-            </script>
+        <h3>Popular Job Roles</h3>
+        <div id="msWordcloud"></div>
+        <script>
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+            let msWordcloudData = {
+                "graphset": [{
+                    "type": "wordcloud",
+                    "options": {
+                        "style": {
+                            "tooltip": {
+                                visible: true,
+                                text: '%text: %hits'
+                            }
+                        },
+                        "words": [
+                            {
+                                "text": "Software Engineer",
+                                "count": "35"
+                            },
+                            {
+                                "text": "Data Scientist",
+                                "count": "7"
+                            },
+                            {
+                                "text": "Member of Technical Staff",
+                                "count": "3"
+                            },
+                            {
+                                "text": "Junior Data Scientist",
+                                "count": "3"
+                            },
+                            {
+                                "text": "Software Development Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Senior Software Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Machine Learning Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Systems Software Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Systems Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Software Engineer 2",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Software Engineer (AI/ML)",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Software Development Engineer II",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Senior Machine Learning Scientist",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Researcher",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Research Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Member of Technical Staff 3",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Machine Learning Scientist",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Machine Learning Engineer 2",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Full Stack Software Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "DSA",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Deep Learning Researcher",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Data and Applied Scientist",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Computer Vision Research Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Automation Quality Engineer",
+                                "count": "1"
+                            }
+                        ]
+                    }
+                }]
+            };
 
-            <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
-    aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
-    MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
-    Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
-    Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
-    Median starting salary = $129,000
-    12% getting their PhD
-    -->
-<!--            <link rel="stylesheet" type="text/css" href="style.css">-->
-<!--            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>-->
-<!--            <div class="container">-->
-<!--                <div class="box">-->
-<!--                    <div class="icon"><i class="fa fa-sack-dollar" aria-hidden="true"></i></div>-->
-<!--                    <div class="content">-->
-<!--                        <h3>Median Salary = $129,000</h3>-->
-<!--                        <p>-->
-<!--                            Note: Many offers also include bonuses and equity in total comp-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="box">-->
-<!--                    <div class="icon"><i class="fa fa-face-smile" aria-hidden="true"></i></div>-->
-<!--                    <div class="content">-->
-<!--                        <h3>Satisfaction Rate = ____</h3>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="box">-->
-<!--                    <div class="icon"><i class="fa-duotone fa-diploma" aria-hidden="true"></i></div>-->
-<!--                    <div class="content">-->
-<!--                        <h3>12% Getting their PhD</h3>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-            <hr>
+            zingchart.render({
+                id: 'msWordcloud',
+                data: msWordcloudData,
+            });
+        </script>
 
-            <div class="center">
-                <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank" rel="noopener noreferrer"><img src="img/survey.png" class="img-fluid" alt="Careers Survey" width=50%></a>
-            </div>
+        <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
+aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
+MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
+Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
+Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
+Median starting salary = $129,000
+12% getting their PhD
+-->
+        <!--            <link rel="stylesheet" type="text/css" href="style.css">-->
+        <!--            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>-->
+        <!--            <div class="container">-->
+        <!--                <div class="box">-->
+        <!--                    <div class="icon"><i class="fa fa-sack-dollar" aria-hidden="true"></i></div>-->
+        <!--                    <div class="content">-->
+        <!--                        <h3>Median Salary = $129,000</h3>-->
+        <!--                        <p>-->
+        <!--                            Note: Many offers also include bonuses and equity in total comp-->
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="box">-->
+        <!--                    <div class="icon"><i class="fa fa-face-smile" aria-hidden="true"></i></div>-->
+        <!--                    <div class="content">-->
+        <!--                        <h3>Satisfaction Rate = ____</h3>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="box">-->
+        <!--                    <div class="icon"><i class="fa-duotone fa-diploma" aria-hidden="true"></i></div>-->
+        <!--                    <div class="content">-->
+        <!--                        <h3>12% Getting their PhD</h3>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <hr>
 
-<!--            <div class="container">-->
-                <div class="blockquote-footer mt-5 mb-5">
-                    <h3 class="text-center">We help alumni for life. Thanks for being part of our CICS Career Community!</h3>
-                </div>
-<!--            </div>-->
-
+        <div class="center">
+            <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank"
+               rel="noopener noreferrer"><img src="img/survey.png" class="img-fluid" alt="Careers Survey" width=50%></a>
         </div>
+
+        <!--            <div class="container">-->
+        <div class="blockquote-footer mt-5 mb-5">
+            <h3 class="text-center">We help alumni for life. Thanks for being part of our CICS Career Community!</h3>
+        </div>
+        <!--            </div>-->
+
     </div>
+</div>
 
 </div>
 
@@ -788,7 +856,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.1.0"></script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
