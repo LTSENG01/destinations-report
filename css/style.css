@@ -2,7 +2,7 @@
 .callout {
     position: relative;
     padding: 10px;
-    max-width: 4500px;
+    max-width: 1000px;
 }
 
 .callout-working-header {
@@ -33,6 +33,7 @@
     padding: 15px;
     background-color: #EEEEEE;
     color: black;
+    font-size: 15px;
 }
 .float-container {
     display: flex;

@@ -243,7 +243,14 @@
                             "margin": "0 0 30 0"
                         },
                         "options": {
-                            "aspect-type": "random"
+                            groupBox: {
+                                fontWeight: 'bold',
+                                fontColor: 'white',
+                                backgroundColor: '#002554',
+                                fontSize: 12
+                            },
+                            aspectType: 'palette',
+                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']
                         },
                         "series": [{
                             "text": "Industries",
@@ -252,7 +259,8 @@
                                 "children": [
                                     {
                                         "text": "Communications",
-                                        "value": 4
+                                        "value": 4,
+                                        fontSize: 15
                                     },
                                     {
                                         "text": "Consulting",
@@ -580,221 +588,6 @@
             </div>
         </div>
 
-        <div class="d-inline">
-            <h5 class="d-inline">aMAzing Employers</h5>
-            <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
-        </div>
-        <div class="row mb-4">
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="MassMutual">
-                <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
-            </div>
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Lexalytics">
-                <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
-            </div>
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="PathAI">
-                <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
-            </div>
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Fidelity Investments">
-                <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
-            </div>
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Chewy">
-                <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
-            </div>
-            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="SimpliSafe">
-                <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
-            </div>
-        </div>
-
-        <div id='msTreemap'></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-            let ms = {
-                "graphset": [{
-                    "type": "treemap",
-                    "plotarea": {
-                        "margin": "0 0 30 0"
-                    },
-                    "options": {
-                        "aspect-type": "random"
-                    },
-                    "series": [{
-                        "text": "Industries",
-                        "children": [{
-                            "text": "Tech",
-                            "children": [
-                                {
-                                    "text": "Communications",
-                                    "value": 6
-                                },
-                                {
-                                    "text": "Consulting",
-                                    "value": 3
-                                },
-                                {
-                                    "text": "Hardware",
-                                    "value": 7
-                                },
-                                {
-                                    "text": "Retail",
-                                    "value": 13
-                                },
-                                {
-                                    "text": "Software",
-                                    "value": 51
-                                },
-                            ]
-                        },
-                            {
-                                "text": "Cybersecurity",
-                                "value": 3
-                            },
-                            {
-                                "text": "Fintech",
-                                "value": 14
-                            },
-                            {
-                                "text": "Healthcare",
-                                "value": 2
-                            },
-                        ]
-                    }
-                    ]
-                }]
-            };
-            zingchart.render({
-                id: 'msTreemap',
-                data: ms,
-            });
-        </script>
-
-        <h3>Popular Job Roles</h3>
-        <div id="msWordcloud"></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-            let msWordcloudData = {
-                "graphset": [{
-                    "type": "wordcloud",
-                    "options": {
-                        "style": {
-                            "tooltip": {
-                                visible: true,
-                                text: '%text: %hits'
-                            }
-                        },
-                        "words": [
-                            {
-                                "text": "Software Engineer",
-                                "count": "35"
-                            },
-                            {
-                                "text": "Data Scientist",
-                                "count": "7"
-                            },
-                            {
-                                "text": "Member of Technical Staff",
-                                "count": "3"
-                            },
-                            {
-                                "text": "Junior Data Scientist",
-                                "count": "3"
-                            },
-                            {
-                                "text": "Software Development Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Senior Software Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Machine Learning Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Systems Software Engineer",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Systems Engineer",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Software Engineer 2",
-                                "count": "1"
-                            }
-                            // {
-                            //     "text": "Software Engineer (AI/ML)",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Software Development Engineer II",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Senior Machine Learning Scientist",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Researcher",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Research Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Member of Technical Staff 3",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Machine Learning Scientist",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Machine Learning Engineer 2",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Full Stack Software Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "DSA",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Deep Learning Researcher",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Data and Applied Scientist",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Computer Vision Research Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Automation Quality Engineer",
-                            //     "count": "1"
-                            // }
-                        ]
-                    }
-                }]
-            };
-
-            zingchart.render({
-                id: 'msWordcloud',
-                data: msWordcloudData,
-            });
-        </script>
-
         <body class="zc-body">
         <div id="chart" class="chart--container"></div>
         <script>
@@ -917,7 +710,7 @@
                 type: 'sunburst',
                 backgroundColor: '#fff',
                 title: {
-                    text: 'MS Industries'
+                    text: 'MS Industries',
                 },
                 options: {
                     slice: 0,
@@ -950,41 +743,226 @@
                 height: '100%',
                 width: '100%',
             });
-    </script>
+        </script>
 
-        <!-- Dream jobs at big tech: Amazon, Meta, PathAI, Google, Salesforce, TikTok, Uber, Oracle, Apple
-aMAzing Employers: MassMutual, SimpliSafe, PathAI, Chewy, The Hanover Insurance Group, Fidelity Investments, MAPFRE, Lexalytics, Liberty Mutual
-MS WiCS starting careers at Apple, Amazon, Meta, Google, Microsoft, Fidelity Investments, Salesforce, Yahoo
-Data Science and Machine Learning Engineers getting their start at Microsoft, MassMutual, Glassdoor, The Hanover Insurance Group, Fidelity Investments, Autodesk
-Job titles included Computer Vision Research Engineer, Software Engineer, Automation Quality Engineer, Data Scientist, Machine Learning Engineer, Deep Learning Engineer,
-Median starting salary = $129,000
-12% getting their PhD
--->
-        <!--            <link rel="stylesheet" type="text/css" href="style.css">-->
-        <!--            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>-->
-        <!--            <div class="container">-->
-        <!--                <div class="box">-->
-        <!--                    <div class="icon"><i class="fa fa-sack-dollar" aria-hidden="true"></i></div>-->
-        <!--                    <div class="content">-->
-        <!--                        <h3>Median Salary = $129,000</h3>-->
-        <!--                        <p>-->
-        <!--                            Note: Many offers also include bonuses and equity in total comp-->
-        <!--                        </p>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="box">-->
-        <!--                    <div class="icon"><i class="fa fa-face-smile" aria-hidden="true"></i></div>-->
-        <!--                    <div class="content">-->
-        <!--                        <h3>Satisfaction Rate = ____</h3>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="box">-->
-        <!--                    <div class="icon"><i class="fa-duotone fa-diploma" aria-hidden="true"></i></div>-->
-        <!--                    <div class="content">-->
-        <!--                        <h3>12% Getting their PhD</h3>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
+        <div class="d-inline">
+            <h5 class="d-inline">aMAzing Employers</h5>
+            <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
+        </div>
+        <div class="row mb-4">
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="MassMutual">
+                <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Lexalytics">
+                <img src="img/lexalytics-vector-logo-2022.png" class="img-fluid p-2" alt="Lexalytics">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="PathAI">
+                <img src="img/PathAI_Logo.svg.png" class="img-fluid p-2" alt="PathAI">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Fidelity Investments">
+                <img src="img/Fidelity-Logo.png" class="img-fluid p-2" alt="Fidelity Investments">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Chewy">
+                <img src="img/Chewy_Inc_Logo.png" class="img-fluid p-2" alt="Chewy">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="SimpliSafe">
+                <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
+            </div>
+        </div>
+
+<!--        <div id='msTreemap'></div>-->
+<!--        <script>-->
+<!--            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
+<!--            let ms = {-->
+<!--                "graphset": [{-->
+<!--                    "type": "treemap",-->
+<!--                    "plotarea": {-->
+<!--                        "margin": "0 0 30 0"-->
+<!--                    },-->
+<!--                    "options": {-->
+<!--                        "aspect-type": "random"-->
+<!--                    },-->
+<!--                    "series": [{-->
+<!--                        "text": "Industries",-->
+<!--                        "children": [{-->
+<!--                            "text": "Tech",-->
+<!--                            "children": [-->
+<!--                                {-->
+<!--                                    "text": "Communications",-->
+<!--                                    "value": 6-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Consulting",-->
+<!--                                    "value": 3-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Hardware",-->
+<!--                                    "value": 7-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Retail",-->
+<!--                                    "value": 13-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Software",-->
+<!--                                    "value": 51-->
+<!--                                },-->
+<!--                            ]-->
+<!--                        },-->
+<!--                            {-->
+<!--                                "text": "Cybersecurity",-->
+<!--                                "value": 3-->
+<!--                            },-->
+<!--                            {-->
+<!--                                "text": "Fintech",-->
+<!--                                "value": 14-->
+<!--                            },-->
+<!--                            {-->
+<!--                                "text": "Healthcare",-->
+<!--                                "value": 2-->
+<!--                            },-->
+<!--                        ]-->
+<!--                    }-->
+<!--                    ]-->
+<!--                }]-->
+<!--            };-->
+<!--            zingchart.render({-->
+<!--                id: 'msTreemap',-->
+<!--                data: ms,-->
+<!--            });-->
+<!--        </script>-->
+
+        <h3>Popular Job Roles</h3>
+        <div id="msWordcloud"></div>
+        <script>
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+            let msWordcloudData = {
+                "graphset": [{
+                    "type": "wordcloud",
+                    "options": {
+                        colorType: 'palette',
+                        palette: ['#6ba539', '#00aec7', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#00aec7'],
+                        "style": {
+                            "tooltip": {
+                                visible: true,
+                                text: '%text: %hits'
+                            }
+                        },
+                        "words": [
+                            {
+                                "text": "Software Engineer",
+                                "count": "35"
+                            },
+                            {
+                                "text": "Data Scientist",
+                                "count": "7"
+                            },
+                            {
+                                "text": "Member of Technical Staff",
+                                "count": "3"
+                            },
+                            {
+                                "text": "Junior Data Scientist",
+                                "count": "3"
+                            },
+                            {
+                                "text": "Software Development Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Senior Software Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Machine Learning Engineer",
+                                "count": "2"
+                            },
+                            {
+                                "text": "Data and Applied Scientist",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Systems Engineer",
+                                "count": "1"
+                            },
+                            {
+                                "text": "Software Engineer 2",
+                                "count": "1"
+                            }
+                            // {
+                            //     "text": "Software Engineer (AI/ML)",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Software Development Engineer II",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Senior Machine Learning Scientist",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Researcher",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Systems Software Engineer",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Research Engineer",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Member of Technical Staff 3",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Machine Learning Scientist",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Machine Learning Engineer 2",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Full Stack Software Engineer",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "DSA",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Deep Learning Researcher",
+                            //     "count": "1"
+                            // },
+                            //
+                            // {
+                            //     "text": "Computer Vision Research Engineer",
+                            //     "count": "1"
+                            // },
+                            // {
+                            //     "text": "Automation Quality Engineer",
+                            //     "count": "1"
+                            // }
+                        ]
+                    }
+                }]
+            };
+
+            zingchart.render({
+                id: 'msWordcloud',
+                data: msWordcloudData,
+            });
+        </script>
+
         <hr>
 
         <div class="center">
