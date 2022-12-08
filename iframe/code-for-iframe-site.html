@@ -1,0 +1,88 @@
+<div id="iframeContainer"><iframe id="reportIframe" scrolling="no" src="https://destinations.ltseng.me" style="border: none" title="Inline Frame Example" width="100%"></iframe></div>
+<script>
+  // https://stackoverflow.com/questions/34863788/how-to-check-if-an-element-has-been-loaded-on-a-page-before-running-a-script
+  /**
+   * Wait for an element before resolving a promise
+   * @param {String} querySelector - Selector of element to wait for
+   * @param {Integer} timeout - Milliseconds to wait before timing out, or 0 for no timeout
+   */
+  function waitForElement(querySelector, timeout){
+    return new Promise((resolve, reject)=>{
+      var timer = false;
+      if(document.querySelectorAll(querySelector).length) return resolve();
+      const observer = new MutationObserver(()=>{
+        if(document.querySelectorAll(querySelector).length){
+          observer.disconnect();
+          if(timer !== false) clearTimeout(timer);
+          return resolve();
+        }
+      });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      if(timeout) timer = setTimeout(()=>{
+        observer.disconnect();
+        reject();
+      }, timeout);
+    });
+  }
+
+  window.addEventListener("message", function(e) {
+    console.log("Window height & width received from iframe!");
+    console.log(e.data);
+
+    waitForElement("#reportIframe", 2000).then(function() {
+      // Select the iframe element
+      let frame = document.getElementById("reportIframe");
+      let container = document.getElementById("main");
+
+      // set the height of the iframe as the height of the iframe content
+      frame.style.height = e.data.height + 'px';
+
+      // set the width of the iframe as width of the container
+      frame.style.width = container.offsetWidth + 'px';
+    });
+  });
+
+  // On resize, resize iframe too
+  window.addEventListener("resize", function(e) {
+    console.log("Window resized!");
+    let frame = document.getElementById("reportIframe");
+
+    // set the width of the iframe as width of the container
+    let container = document.getElementById("main");
+    frame.style.width = Math.min(container.offsetWidth, window.innerWidth) + 'px';
+  });
+
+  window.addEventListener("message", function(e) {
+    console.log(e.data);
+    let anchor = e.data['setAnchor'];
+    let offset = e.data['offset'];
+    let iframe = document.getElementById("reportIframe");
+
+    if (anchor !== undefined) {
+      window.location.href = '#' + anchor;
+    }
+
+    if (offset !== undefined) {
+      window.scrollTo(0, iframe.getBoundingClientRect().top + offset + window.scrollY - 15);
+    }
+  });
+
+  function sendHash() {
+    let hash = window.location.hash.substring(1);
+    let iframe = document.getElementById("reportIframe");
+    iframe.contentWindow.postMessage({"findElement": hash}, '*');
+    // reset
+    window.location.hash = "";
+  }
+
+  window.addEventListener("hashchange", function(e) {
+    console.log("sending hash");
+    sendHash();
+  });
+
+
+
+</script>
