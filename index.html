@@ -22,7 +22,7 @@
             text-align: center;
         }
         .chart--container {
-            min-height: 850px;
+            min-height: 500px;
             width: 100%;
             height: 100%;
         }
@@ -240,15 +240,16 @@
                     "graphset": [{
                         "type": "treemap",
                         "plotarea": {
-                            "margin": "0 0 30 0"
+                            "margin": "30 30 30 30"
                         },
                         "options": {
                             groupBox: {
                                 fontWeight: 'bold',
                                 fontColor: 'white',
                                 backgroundColor: '#002554',
-                                fontSize: 12
+                                fontSize: 12,
                             },
+                            sizeFactor: 0.5,
                             aspectType: 'palette',
                             palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']
                         },
@@ -588,9 +589,7 @@
             </div>
         </div>
 
-<!--        <div class="zc-body"></div>-->
-        <div id="chart" class="chart--container"></div>
-
+        <div id="sunburstChart" class="chart--container"></div>
         <script>
             ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
             // -----------------------------
@@ -714,11 +713,11 @@
                     text: 'MS Industries',
                 },
                 options: {
+                    sizeFactor: .9,
                     slice: 0,
                     space: 0,
-                    sizeFactor: 0.9,
                     root: 'Industries',
-                    widths: [70, 140, 180],
+                    //widths: [70, 140, 180],
                     palette: ['#ffffff', '#3F51B5', '#42A5F5', '#5C6BC0', '#64B5F6']
                 },
                 plot: {
@@ -730,7 +729,7 @@
                         visible: null
                     },
                     tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>Size: %node-value',
-                    alpha: 1
+                    alpha: 1,
                 },
                 tooltip: {
                     align: 'left',
@@ -739,7 +738,7 @@
                 series: chartData,
             };
             zingchart.render({
-                id: 'chart',
+                id: 'sunburstChart',
                 data: chartConfig,
                 height: '100%',
                 width: '100%',
@@ -847,6 +846,8 @@
                 "graphset": [{
                     "type": "wordcloud",
                     "options": {
+                        // maxFontSize: 100,
+                        // minFontSize: 10,
                         colorType: 'palette',
                         palette: ['#6ba539', '#00aec7', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#00aec7'],
                         "style": {
