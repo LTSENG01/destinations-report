@@ -51,12 +51,20 @@ const UGdata = {
 
 const configMS = {
     type: 'doughnut',
-    data: MSdata
+    data: MSdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
 };
 
 const configUG = {
     type: 'doughnut',
-    data: UGdata
+    data: UGdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
 };
 
 const MSChart = new Chart(
