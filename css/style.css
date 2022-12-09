@@ -35,32 +35,49 @@
     color: black;
     font-size: 15px;
 }
-.float-container {
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
+
+.sscallout {
+    position: relative;
+    padding: 10px;
+    max-width: 1000px;
 }
-.float-child-green {
-    text-align: center;
-    font-size: 400vmin;
-    text-decoration-color: #ffffff;
-    background-color: #6ba539;
-    width: 45%;
+
+.callout-data-container-sal {
+    padding: 15px;
+    background-color: #f3fadc;
+    color: black;
+    font-size: 15px;
+    width: 49%;
     float: left;
-    padding: 20px;
-    margin: 10px;
-    color: white;
 }
-.float-child-yellow {
-    text-align: center;
-    font-size: 400vmin;
-    text-decoration-color: #ffffff;
-    background-color: #ffc72c;
-    width: 45%;
+.callout-data-container-sat {
+    padding: 15px;
+    background-color: #f3fadc;
+    color: black;
+    font-size: 15px;
+    width: 49%;
     float: left;
-    padding: 20px;
-    margin: 10px;
+}
+
+.callout-salary-header {
+    padding: 10px;
+    background: #6ba539;
+    font-size: 30px;
     color: white;
+    width: 49%;
+    float: left;
+}
+.callout-satisfaction-header {
+    padding: 10px;
+    background: #ffc72c;
+    font-size: 30px;
+    color: white;
+    width: 49%;
+    float: left;
+    justify-content: space-around;
+}
+.callout-space{
+    padding: 10px
 }
 
 .space{
