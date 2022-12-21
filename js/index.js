@@ -20,10 +20,10 @@ const Labels = [
 ];
 
 const MSdata = {
-    // labels: Labels,
+    labels: Labels,
     datasets: [{
-        label: ' Count',
-        data: [104, 17, 15, 1],
+        label: ' No. of Students',
+        data: [96, 12, 13, 3],
         backgroundColor: [
             UMassColors.GREEN,
             UMassColors.TEAL,
@@ -35,10 +35,10 @@ const MSdata = {
 };
 
 const UGdata = {
-    // labels: Labels,
+    labels: Labels,
     datasets: [{
-        label: ' Count',
-        data: [264, 83, 61, 32],
+        label: ' No. of Students',
+        data: [261, 85, 61, 33],
         backgroundColor: [
             UMassColors.GREEN,
             UMassColors.TEAL,
@@ -46,7 +46,10 @@ const UGdata = {
             UMassColors.LIGHTGRAY
         ],
         hoverOffset: 4
-    }]
+    }],
+    legend: {
+        display: false,
+    },
 };
 
 const configMS = {
@@ -54,7 +57,12 @@ const configMS = {
     data: MSdata,
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true
+            }
+        }
     }
 };
 
@@ -63,7 +71,12 @@ const configUG = {
     data: UGdata,
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true
+            }
+        }
     }
 };
 
