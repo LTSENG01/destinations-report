@@ -18,7 +18,7 @@
     <style>
         .center {
             margin: auto;
-            /*width: 60%;*/
+            width: 50%;
             text-align: center;
         }
         .chart--container {
@@ -29,6 +29,8 @@
         .zc-ref {
             display: none;
         }
+        .footer {}
+        body { margin: 0; padding: 0; }
     </style>
 </head>
 <body>
@@ -59,7 +61,7 @@
             <h1>Manning CICS Undergraduates</h1>
         </div>
         <div>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" style="font-size: 13px">
                 <li><i class="fa-solid fa-user-graduate fa-fw"></i> <span
                         style="font-weight: bold">440 Undergraduate students</span> in the
                     Class of 2022 up <i class="fa-solid fa-arrow-up"></i> <span
@@ -88,7 +90,7 @@
                 <div class="position-relative" style="height: 100%">
                     <canvas id="UGChart"></canvas>
                     <div class="text-center text-in-donut">
-                        <h4 class="m-0">Destinations</h4>
+                        <h4 class="m-0">Destinations<sup>I</sup></h4>
                     </div>
                 </div>
             </div>
@@ -96,7 +98,7 @@
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="callout">
                     <div class="callout-working-header">
-                        <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working</h3>
+                        <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working<sup>II</sup></h3>
                     </div>
                     <div class="callout-container">
                         <p class="m-1">
@@ -133,27 +135,17 @@
             <div class="small-space"></div>
 
             <div class="center">
-
-                <div class="sscallout">
-                    <div class="callout-salary-header">
-                        <h3 class="m-1"><i class="fa-regular fa-sack-dollar"></i>&nbsp;Median Salary</h3>
+                <div class="grid">
+                    <div>
+                        <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup>III</sup></h6>
+                        <h1>$90,000</h1>
                     </div>
-                    <div class="callout-satisfaction-header">
-                        <h3 class="m-1"><i class="fa-regular fa-face-smile"></i>&nbsp;Satisfaction Rate</h3>
-                    </div>
-                </div>
-                <div class="sscallout">
-                    <div class="callout-data-container-sal">
-                        <p class="m-1"> <span style="font-weight: bold; font-size: 40px">$90,000</span></p>
-                    </div>
-                    <div class="callout-data-container-sat">
-                        <p class="m-1"> <span style="font-weight: bold; font-size: 40px">95%</span></p>
+                    <div>
+                        <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                        <h1>95%</h1>
                     </div>
                 </div>
-
             </div>
-
-            <p style="font-size:9px;">Note: Many offers also include bonuses and equity in total compensation</p>
 
             <div class="mt-5 mb-2">
                 <h3><a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" target="_blank">163 Unique Employers</a> (36 Hired Multiple)</h3>
@@ -202,12 +194,32 @@
                          title="Putnam Investments">
                         <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
                     </div>
+                    <div class="sticky-container">
+                        <div class="sticky-outer">
+                            <div class="sticky">
+                                <svg width="0" height="0">
+                                    <defs>
+                                        <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">
+                                            <path
+                                                    d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"
+                                                    stroke-linejoin="round"
+                                                    stroke-linecap="square"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="sticky-content" style="font-size: 20px">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" style="color: black"> Check out this comprehensive list of employers!</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="xs-space"></div>
             <div>
-                <h5>Where They Went To Work </h5>
+                <h5>Where They Went To Work<sup>IV</sup> </h5>
                 <div class="row">
                     <div class="col-md-8 center">
                         <img src="img/map.png" class="img-fluid" alt="Where the UnderGrads ended up">
@@ -247,80 +259,234 @@
                          alt="Massachusetts Rehabilitation Commission">
                 </div>
             </div>
-            <div class="d-inline">
+            <div class="d-inline; center">
                 <h5 class="d-inline">The industries by count Manning CICS undergrads ended up in</h5>
-                <p>Hover/Tap to see the number of students per industry!</p>
             </div>
-            <div id='ugradTreemap'></div>
+            <div id="sunburstChartUG" class="chart--container"></div>
             <script>
-                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-                let ug = {
-                    "graphset": [{
-                        "type": "treemap",
-                        "plotarea": {
-                            "margin": "30 30 30 30"
+                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
+                // -----------------------------
+                let chartDataUG = [{
+                    id: 'Industries',
+                    text: ' ',
+                    parent: ''
+                }, {
+                    id: 'Tech',
+                    text: 'Tech',
+                    parent: 'Industries',
+                    value: 153
+                }, {
+                    id: 'Healthcare',
+                    text: 'Healthcare',
+                    parent: 'Industries',
+                    value: 23
+                }, {
+                    id: 'FinTech',
+                    text: 'FinTech',
+                    parent: 'Industries',
+                    value: 56
+                }, {
+                    id: 'Public Interest Technology',
+                    text: 'Public Interest Technology',
+                    parent: 'Industries',
+                    value: 20
+                }, {
+                    id: 'SW',
+                    text: 'Software',
+                    parent: 'Tech',
+                    value: 49
+                }, {
+                    id: 'HW',
+                    text: 'Hardware',
+                    parent: 'Tech',
+                    value: 18
+                }, {
+                    id: 'Robotics',
+                    text: 'Robotics',
+                    parent: 'Tech',
+                    value: 0
+                }, {
+                    id: 'Retail',
+                    text: 'Retail',
+                    parent: 'Tech',
+                    value: 40
+                }, {
+                    id: 'Communications',
+                    text: 'Communications',
+                    parent: 'Tech',
+                    value: 12
+                },
+                    {
+                        id: 'Gaming',
+                        text: 'Gaming',
+                        parent: 'Tech',
+                        value: 6
+                    }, {
+                        id: 'Networking',
+                        text: 'Networking',
+                        parent: 'Tech',
+                        value: 0
+                    }, {
+                        id: 'Consulting',
+                        text: 'Consulting',
+                        parent: 'Tech',
+                        value: 20
+                    }, {
+                        id: 'Cybersecurity',
+                        text: 'Cybersecurity',
+                        parent: 'Tech',
+                        value: 8
+                    }, {
+                        id: 'Software',
+                        text: 'Software',
+                        parent: 'Healthcare',
+                        value: 11
+                    }, {
+                        id: 'Life Sciences',
+                        text: 'Life Sciences',
+                        parent: 'Healthcare',
+                        value: 12
+                    }, {
+                        id: 'Pharmaceuticals',
+                        text: 'Pharmaceuticals',
+                        parent: 'Healthcare',
+                        value: 0
+                    }, {
+                        id: 'Insurance',
+                        text: 'Insurance',
+                        parent: 'FinTech',
+                        value: 16
+                    }, {
+                        id: 'Investment Banking',
+                        text: 'Investment Banking',
+                        parent: 'FinTech',
+                        value: 40
+                    }, {
+                        id: 'Government',
+                        text: 'Government',
+                        parent: 'Public Interest Technology',
+                        value: 6
+                    }, {
+                        id: 'Contractors',
+                        text: 'Contractors',
+                        parent: 'Public Interest Technology',
+                        value: 2
+                    }, {
+                        id: 'GreenTech',
+                        text: 'GreenTech',
+                        parent: 'Public Interest Technology',
+                        value: 0
+                    }, {
+                        id: '“Common Good”',
+                        text: '“Common Good”',
+                        parent: 'Public Interest Technology',
+                        value: 12
+                    }];
+                let UGchartConfig = {
+                    type: 'sunburst',
+                    backgroundColor: '#fff',
+                    options: {
+                        sizeFactor: .9,
+                        slice: 0,
+                        space: 0,
+                        root: 'Industries',
+                        //widths: [70, 140, 180],
+                        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539']
+                    },
+                    plot: {
+                        animation: {},
+                        valueBox: {
+                            text: '%data-vbtext',
+                            color: '#000',
+                            fontSize: '10px',
+                            visible: null
                         },
-                        "options": {
-                            groupBox: {
-                                fontWeight: 'bold',
-                                fontColor: 'white',
-                                backgroundColor: '#002554',
-                                fontSize: 12,
-                            },
-                            sizeFactor: 0.5,
-                            aspectType: 'palette',
-                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']
-                        },
-                        "series": [{
-                            "text": "Industries",
-                            "children": [{
-                                "text": "Tech",
-                                "children": [
-                                    {
-                                        "text": "Communications",
-                                        "value": 4,
-                                        fontSize: 15
-                                    },
-                                    {
-                                        "text": "Consulting",
-                                        "value": 7
-                                    },
-                                    {
-                                        "text": "Hardware",
-                                        "value": 7
-                                    },
-                                    {
-                                        "text": "Retail",
-                                        "value": 18
-                                    },
-                                    {
-                                        "text": "Software",
-                                        "value": 25
-                                    },
-                                ]
-                            },
-                                {
-                                    "text": "Cybersecurity",
-                                    "value": 5
-                                },
-                                {
-                                    "text": "Fintech",
-                                    "value": 24
-                                },
-                                {
-                                    "text": "Healthcare",
-                                    "value": 9
-                                },
-                            ]
-                        }
-                        ]
-                    }]
+                        tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>Size: %node-value',
+                        alpha: 1,
+                    },
+                    tooltip: {
+                        align: 'left',
+                        thousandsSeparator: ','
+                    },
+                    series: chartDataUG,
                 };
                 zingchart.render({
-                    id: 'ugradTreemap',
-                    data: ug,
+                    id: 'sunburstChartUG',
+                    data: UGchartConfig,
+                    height: '100%',
+                    width: '100%',
                 });
             </script>
+<!--            <div id='ugradTreemap'></div>-->
+<!--            <script>-->
+<!--                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
+<!--                let ug = {-->
+<!--                    "graphset": [{-->
+<!--                        "type": "treemap",-->
+<!--                        "plotarea": {-->
+<!--                            "margin": "30 30 30 30"-->
+<!--                        },-->
+<!--                        "options": {-->
+<!--                            groupBox: {-->
+<!--                                fontWeight: 'bold',-->
+<!--                                fontColor: 'white',-->
+<!--                                backgroundColor: '#002554',-->
+<!--                                fontSize: 12,-->
+<!--                            },-->
+<!--                            sizeFactor: 0.5,-->
+<!--                            aspectType: 'palette',-->
+<!--                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']-->
+<!--                        },-->
+<!--                        "series": [{-->
+<!--                            "text": "Industries",-->
+<!--                            "children": [{-->
+<!--                                "text": "Tech",-->
+<!--                                "children": [-->
+<!--                                    {-->
+<!--                                        "text": "Communications",-->
+<!--                                        "value": 4,-->
+<!--                                        fontSize: 15-->
+<!--                                    },-->
+<!--                                    {-->
+<!--                                        "text": "Consulting",-->
+<!--                                        "value": 7-->
+<!--                                    },-->
+<!--                                    {-->
+<!--                                        "text": "Hardware",-->
+<!--                                        "value": 7-->
+<!--                                    },-->
+<!--                                    {-->
+<!--                                        "text": "Retail",-->
+<!--                                        "value": 18-->
+<!--                                    },-->
+<!--                                    {-->
+<!--                                        "text": "Software",-->
+<!--                                        "value": 25-->
+<!--                                    },-->
+<!--                                ]-->
+<!--                            },-->
+<!--                                {-->
+<!--                                    "text": "Cybersecurity",-->
+<!--                                    "value": 5-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Fintech",-->
+<!--                                    "value": 24-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    "text": "Healthcare",-->
+<!--                                    "value": 9-->
+<!--                                },-->
+<!--                            ]-->
+<!--                        }-->
+<!--                        ]-->
+<!--                    }]-->
+<!--                };-->
+<!--                zingchart.render({-->
+<!--                    id: 'ugradTreemap',-->
+<!--                    data: ug,-->
+<!--                });-->
+<!--            </script>-->
 
             <div class="mt-5 mb-2">
                 <h3>Advanced Degrees <i class="fa-solid fa-user-graduate fa-fw"></i></h3>
@@ -397,8 +563,8 @@
                             },
                             "words": [
                                 {
-                                "text": "Software Engineer",
-                                "count": "4"
+                                    "text": "Software Engineer",
+                                    "count": "4"
                                 },
                                 {
                                     "text": "Product Manager",
@@ -498,7 +664,7 @@
         </div>
 
         <div>
-            <p><i class="fa-solid fa-user-graduate"></i> <span
+            <p style="font-size: 13px"><i class="fa-solid fa-user-graduate"></i> <span
                     style="font-weight: bold">124 MS students</span> in the Class of 2022</p>
         </div>
         <div class="row">
@@ -560,17 +726,17 @@
     </div>
 
     <div class="small-space"></div>
-    <div class="col-md-8 center">
-        <!--                <div class="float-child-green">-->
-        <!--                    <h6>Median Salary <i class="fa-regular fa-sack-dollar"></i> </h6>-->
-        <!--                    <h4>$82,000</h4>-->
-        <!--                </div>-->
-        <!--                <div class="float-child-yellow">-->
-        <!--                    <h6>Satisfaction Rate <i class="fa-regular fa-face-smile"></i> </h6>-->
-        <!--                    <h4> 95%</h4>-->
-        <!--                </div>-->
-        <img src="img/ms%20Median%20Salary.png" alt="Median Salary $82,000" width=49%>
-        <img src="img/ms%20satisfaction.png" alt="Satisfaction Rate 95%" width=49%>
+    <div class="center">
+            <div class="grid">
+                <div>
+                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary</h6>
+                    <h1>$129,000</h1>
+                </div>
+                <div>
+                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                    <h1>92%</h1>
+                </div>
+            </div>
     </div>
 
     <div class="mt-5 mb-3">
@@ -658,71 +824,71 @@
                 value: 5
             },
                 {
-                id: 'Entertainment',
-                text: 'Entertainment',
-                parent: 'Tech',
-                value: 0
-            }, {
-                id: 'Networking',
-                text: 'Networking',
-                parent: 'Tech',
-                value: 0
-            }, {
-                id: 'Consulting',
-                text: 'Consulting',
-                parent: 'Tech',
-                value: 3
-            }, {
-                id: 'Cybersecurity',
-                text: 'Cybersecurity',
-                parent: 'Tech',
-                value: 3
-            }, {
-                id: 'Software',
-                text: 'Software',
-                parent: 'Healthcare',
-                value: 0
-            }, {
-                id: 'Life Sciences',
-                text: 'Life Sciences',
-                parent: 'Healthcare',
-                value: 1
-            }, {
-                id: 'Pharmaceuticals',
-                text: 'Pharmaceuticals',
-                parent: 'Healthcare',
-                value: 0
-            }, {
-                id: 'Insurance',
-                text: 'Insurance',
-                parent: 'FinTech',
-                value: 10
-            }, {
-                id: 'Investment Banking',
-                text: 'Investment Banking',
-                parent: 'FinTech',
-                value: 3
-            }, {
-                id: 'Government',
-                text: 'Government',
-                parent: 'Public Interest Technology',
-                value: 1
-            }, {
-                id: 'Government Contractors',
-                text: 'Government Contractors',
-                parent: 'Public Interest Technology',
-                value: 0
-            }, {
-                id: 'GreenTech',
-                text: 'GreenTech',
-                parent: 'Public Interest Technology',
-                value: 0
-            }, {
-                id: '“Common Good”',
-                text: '“Common Good”',
-                parent: 'Public Interest Technology',
-                value: 2
-            }
+                    id: 'Entertainment',
+                    text: 'Entertainment',
+                    parent: 'Tech',
+                    value: 0
+                }, {
+                    id: 'Networking',
+                    text: 'Networking',
+                    parent: 'Tech',
+                    value: 0
+                }, {
+                    id: 'Consulting',
+                    text: 'Consulting',
+                    parent: 'Tech',
+                    value: 3
+                }, {
+                    id: 'Cybersecurity',
+                    text: 'Cybersecurity',
+                    parent: 'Tech',
+                    value: 3
+                }, {
+                    id: 'Software',
+                    text: 'Software',
+                    parent: 'Healthcare',
+                    value: 0
+                }, {
+                    id: 'Life Sciences',
+                    text: 'Life Sciences',
+                    parent: 'Healthcare',
+                    value: 1
+                }, {
+                    id: 'Pharmaceuticals',
+                    text: 'Pharmaceuticals',
+                    parent: 'Healthcare',
+                    value: 0
+                }, {
+                    id: 'Insurance',
+                    text: 'Insurance',
+                    parent: 'FinTech',
+                    value: 10
+                }, {
+                    id: 'Investment Banking',
+                    text: 'Investment Banking',
+                    parent: 'FinTech',
+                    value: 3
+                }, {
+                    id: 'Government',
+                    text: 'Government',
+                    parent: 'Public Interest Technology',
+                    value: 1
+                }, {
+                    id: 'Government Contractors',
+                    text: 'Government Contractors',
+                    parent: 'Public Interest Technology',
+                    value: 0
+                }, {
+                    id: 'GreenTech',
+                    text: 'GreenTech',
+                    parent: 'Public Interest Technology',
+                    value: 0
+                }, {
+                    id: '“Common Good”',
+                    text: '“Common Good”',
+                    parent: 'Public Interest Technology',
+                    value: 2
+                }
             ];
             // full ZingChart schema can be found here:
             // https://www.zingchart.com/docs/api/json-configuration/
@@ -796,67 +962,67 @@
             </div>
         </div>
 
-<!--        <div id='msTreemap'></div>-->
-<!--        <script>-->
-<!--            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
-<!--            let ms = {-->
-<!--                "graphset": [{-->
-<!--                    "type": "treemap",-->
-<!--                    "plotarea": {-->
-<!--                        "margin": "0 0 30 0"-->
-<!--                    },-->
-<!--                    "options": {-->
-<!--                        "aspect-type": "random"-->
-<!--                    },-->
-<!--                    "series": [{-->
-<!--                        "text": "Industries",-->
-<!--                        "children": [{-->
-<!--                            "text": "Tech",-->
-<!--                            "children": [-->
-<!--                                {-->
-<!--                                    "text": "Communications",-->
-<!--                                    "value": 6-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Consulting",-->
-<!--                                    "value": 3-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Hardware",-->
-<!--                                    "value": 7-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Retail",-->
-<!--                                    "value": 13-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Software",-->
-<!--                                    "value": 51-->
-<!--                                },-->
-<!--                            ]-->
-<!--                        },-->
-<!--                            {-->
-<!--                                "text": "Cybersecurity",-->
-<!--                                "value": 3-->
-<!--                            },-->
-<!--                            {-->
-<!--                                "text": "Fintech",-->
-<!--                                "value": 14-->
-<!--                            },-->
-<!--                            {-->
-<!--                                "text": "Healthcare",-->
-<!--                                "value": 2-->
-<!--                            },-->
-<!--                        ]-->
-<!--                    }-->
-<!--                    ]-->
-<!--                }]-->
-<!--            };-->
-<!--            zingchart.render({-->
-<!--                id: 'msTreemap',-->
-<!--                data: ms,-->
-<!--            });-->
-<!--        </script>-->
+        <!--        <div id='msTreemap'></div>-->
+        <!--        <script>-->
+        <!--            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
+        <!--            let ms = {-->
+        <!--                "graphset": [{-->
+        <!--                    "type": "treemap",-->
+        <!--                    "plotarea": {-->
+        <!--                        "margin": "0 0 30 0"-->
+        <!--                    },-->
+        <!--                    "options": {-->
+        <!--                        "aspect-type": "random"-->
+        <!--                    },-->
+        <!--                    "series": [{-->
+        <!--                        "text": "Industries",-->
+        <!--                        "children": [{-->
+        <!--                            "text": "Tech",-->
+        <!--                            "children": [-->
+        <!--                                {-->
+        <!--                                    "text": "Communications",-->
+        <!--                                    "value": 6-->
+        <!--                                },-->
+        <!--                                {-->
+        <!--                                    "text": "Consulting",-->
+        <!--                                    "value": 3-->
+        <!--                                },-->
+        <!--                                {-->
+        <!--                                    "text": "Hardware",-->
+        <!--                                    "value": 7-->
+        <!--                                },-->
+        <!--                                {-->
+        <!--                                    "text": "Retail",-->
+        <!--                                    "value": 13-->
+        <!--                                },-->
+        <!--                                {-->
+        <!--                                    "text": "Software",-->
+        <!--                                    "value": 51-->
+        <!--                                },-->
+        <!--                            ]-->
+        <!--                        },-->
+        <!--                            {-->
+        <!--                                "text": "Cybersecurity",-->
+        <!--                                "value": 3-->
+        <!--                            },-->
+        <!--                            {-->
+        <!--                                "text": "Fintech",-->
+        <!--                                "value": 14-->
+        <!--                            },-->
+        <!--                            {-->
+        <!--                                "text": "Healthcare",-->
+        <!--                                "value": 2-->
+        <!--                            },-->
+        <!--                        ]-->
+        <!--                    }-->
+        <!--                    ]-->
+        <!--                }]-->
+        <!--            };-->
+        <!--            zingchart.render({-->
+        <!--                id: 'msTreemap',-->
+        <!--                data: ms,-->
+        <!--            });-->
+        <!--        </script>-->
 
         <h3>Popular Job Roles</h3>
         <div id="msWordcloud"></div>
@@ -999,8 +1165,16 @@
         </div>
 
         <hr>
+        <div class="footer">
+            <h6>Notes</h6>
+            <p><sup style="font-size: 10px">I</sup>Data was collected and compiled through the Careers Survey<br>
+                <sup style="font-size: 10px">II</sup>10 students graduated in August, 132 in December and 298 in May <br>
+                <sup style="font-size: 10px">III</sup>Many offers also include bonuses and equity in total compensation <br>
+                <sup style="font-size: 10px">IV</sup>We are seeing a rising prevalence of remote options offered as well
+            </p>
+        </divfooter>
 
-</div>
+    </div>
 
 </div>
 
