@@ -21,16 +21,24 @@
             width: 50%;
             text-align: center;
         }
+
         .chart--container {
             min-height: 500px;
             width: 100%;
             height: 100%;
         }
+
         .zc-ref {
             display: none;
         }
-        .footer {}
-        body { margin: 0; padding: 0; }
+
+        .footer {
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -47,9 +55,9 @@
             <li class="nav-item mx-1">
                 <a class="btn btn-outline-secondary nav-link" href="#masters">Master's</a>
             </li>
-<!--            <li class="nav-item mx-1">-->
-<!--                <a class="btn btn-outline-secondary nav-link disabled" href="">PhD (Soon!)</a>-->
-<!--            </li>-->
+            <!--            <li class="nav-item mx-1">-->
+            <!--                <a class="btn btn-outline-secondary nav-link disabled" href="">PhD (Soon!)</a>-->
+            <!--            </li>-->
         </ul>
     </div>
     <!--    <span class="badge bg-secondary rounded-pill mx-2">Beta</span>-->
@@ -90,7 +98,7 @@
                 <div class="position-relative" style="height: 100%">
                     <canvas id="UGChart"></canvas>
                     <div class="text-center text-in-donut">
-                        <h4 class="m-0">Destinations<sup>I</sup></h4>
+                        <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
                     </div>
                 </div>
             </div>
@@ -98,20 +106,23 @@
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="callout">
                     <div class="callout-working-header">
-                        <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working<sup>II</sup></h3>
+                        <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working<sup class="text-secondary small-super-text">II</sup></h3>
                     </div>
                     <div class="callout-container">
                         <p class="m-1">
-                            <span style="font-weight: bold">2% increase</span> from Class of 2021; Similar statistics for students who graduated in August, December, and May.
+                            <span style="font-weight: bold">2% increase</span> from Class of 2021; Similar statistics
+                            for students who graduated in August, December, and May.
                         </p>
                     </div>
                 </div>
                 <div class="callout">
                     <div class="callout-continuing-ed-header">
-                        <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;19% Continuing Education<sup>V</sup></h3>
+                        <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;19% Continuing
+                            Education<sup class="text-secondary small-super-text">V</sup></h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1">The Bay State Scholarship Program contributed to <span style="font-weight: bold">>50 </span>students returning to UMass Amherst for their MS.</p>
+                        <p class="m-1">The Bay State Scholarship Program contributed to <span style="font-weight: bold">>50 </span>students
+                            returning to UMass Amherst for their MS.</p>
                     </div>
                 </div>
                 <div class="callout">
@@ -119,7 +130,8 @@
                         <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;14% Looking</h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1"> These recent alumni are searching for their next opportunity with the ongoing support of CICS Careers.  <span style="font-weight: bold">We help alumni for life.</span></p>
+                        <p class="m-1"> These recent alumni are searching for their next opportunity with the ongoing
+                            support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
                     </div>
                 </div>
                 <div class="callout">
@@ -127,7 +139,8 @@
                         <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;8% Unknown</h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1">We know post-graduation outcomes for 93% of our undergraduates, but despite our best efforts, <span style="font-weight: bold">32</span> remain a mystery.</p>
+                        <p class="m-1">We know post-graduation outcomes for 93% of our undergraduates, but despite our
+                            best efforts, <span style="font-weight: bold">32</span> remain a mystery.</p>
                     </div>
                 </div>
             </div>
@@ -137,7 +150,7 @@
             <div class="center">
                 <div class="grid">
                     <div>
-                        <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup>III</sup></h6>
+                        <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
                         <h1>$90,000</h1>
                     </div>
                     <div>
@@ -194,32 +207,32 @@
                          title="Putnam Investments">
                         <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
                     </div>
-<!--                    <div class="sticky-container">-->
-<!--                        <div class="sticky-outer">-->
-<!--                            <div class="sticky">-->
-<!--                                <svg width="0" height="0">-->
-<!--                                    <defs>-->
-<!--                                        <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">-->
-<!--                                            <path-->
-<!--                                                    d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"-->
-<!--                                                    stroke-linejoin="round"-->
-<!--                                                    stroke-linecap="square"-->
-<!--                                            />-->
-<!--                                        </clipPath>-->
-<!--                                    </defs>-->
-<!--                                </svg>-->
-<!--                                <div class="sticky-content" style="font-size: 20px">-->
-<!--                                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" style="color: black"> Check out this comprehensive list of employers!</a><br>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="sticky-container">-->
+                    <!--                        <div class="sticky-outer">-->
+                    <!--                            <div class="sticky">-->
+                    <!--                                <svg width="0" height="0">-->
+                    <!--                                    <defs>-->
+                    <!--                                        <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">-->
+                    <!--                                            <path-->
+                    <!--                                                    d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"-->
+                    <!--                                                    stroke-linejoin="round"-->
+                    <!--                                                    stroke-linecap="square"-->
+                    <!--                                            />-->
+                    <!--                                        </clipPath>-->
+                    <!--                                    </defs>-->
+                    <!--                                </svg>-->
+                    <!--                                <div class="sticky-content" style="font-size: 20px">-->
+                    <!--                                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" style="color: black"> Check out this comprehensive list of employers!</a><br>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                 </div>
             </div>
 
             <div class="xs-space"></div>
             <div>
-                <h5>Where They Went To Work<sup>IV</sup> </h5>
+                <h5>Where They Went To Work<sup class="text-secondary small-super-text">IV</sup></h5>
                 <div class="row">
                     <div class="col-md-8 center">
                         <img src="img/map.png" class="img-fluid" alt="Where the UnderGrads ended up">
@@ -417,76 +430,76 @@
                     width: '100%',
                 });
             </script>
-<!--            <div id='ugradTreemap'></div>-->
-<!--            <script>-->
-<!--                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
-<!--                let ug = {-->
-<!--                    "graphset": [{-->
-<!--                        "type": "treemap",-->
-<!--                        "plotarea": {-->
-<!--                            "margin": "30 30 30 30"-->
-<!--                        },-->
-<!--                        "options": {-->
-<!--                            groupBox: {-->
-<!--                                fontWeight: 'bold',-->
-<!--                                fontColor: 'white',-->
-<!--                                backgroundColor: '#002554',-->
-<!--                                fontSize: 12,-->
-<!--                            },-->
-<!--                            sizeFactor: 0.5,-->
-<!--                            aspectType: 'palette',-->
-<!--                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']-->
-<!--                        },-->
-<!--                        "series": [{-->
-<!--                            "text": "Industries",-->
-<!--                            "children": [{-->
-<!--                                "text": "Tech",-->
-<!--                                "children": [-->
-<!--                                    {-->
-<!--                                        "text": "Communications",-->
-<!--                                        "value": 4,-->
-<!--                                        fontSize: 15-->
-<!--                                    },-->
-<!--                                    {-->
-<!--                                        "text": "Consulting",-->
-<!--                                        "value": 7-->
-<!--                                    },-->
-<!--                                    {-->
-<!--                                        "text": "Hardware",-->
-<!--                                        "value": 7-->
-<!--                                    },-->
-<!--                                    {-->
-<!--                                        "text": "Retail",-->
-<!--                                        "value": 18-->
-<!--                                    },-->
-<!--                                    {-->
-<!--                                        "text": "Software",-->
-<!--                                        "value": 25-->
-<!--                                    },-->
-<!--                                ]-->
-<!--                            },-->
-<!--                                {-->
-<!--                                    "text": "Cybersecurity",-->
-<!--                                    "value": 5-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Fintech",-->
-<!--                                    "value": 24-->
-<!--                                },-->
-<!--                                {-->
-<!--                                    "text": "Healthcare",-->
-<!--                                    "value": 9-->
-<!--                                },-->
-<!--                            ]-->
-<!--                        }-->
-<!--                        ]-->
-<!--                    }]-->
-<!--                };-->
-<!--                zingchart.render({-->
-<!--                    id: 'ugradTreemap',-->
-<!--                    data: ug,-->
-<!--                });-->
-<!--            </script>-->
+            <!--            <div id='ugradTreemap'></div>-->
+            <!--            <script>-->
+            <!--                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
+            <!--                let ug = {-->
+            <!--                    "graphset": [{-->
+            <!--                        "type": "treemap",-->
+            <!--                        "plotarea": {-->
+            <!--                            "margin": "30 30 30 30"-->
+            <!--                        },-->
+            <!--                        "options": {-->
+            <!--                            groupBox: {-->
+            <!--                                fontWeight: 'bold',-->
+            <!--                                fontColor: 'white',-->
+            <!--                                backgroundColor: '#002554',-->
+            <!--                                fontSize: 12,-->
+            <!--                            },-->
+            <!--                            sizeFactor: 0.5,-->
+            <!--                            aspectType: 'palette',-->
+            <!--                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']-->
+            <!--                        },-->
+            <!--                        "series": [{-->
+            <!--                            "text": "Industries",-->
+            <!--                            "children": [{-->
+            <!--                                "text": "Tech",-->
+            <!--                                "children": [-->
+            <!--                                    {-->
+            <!--                                        "text": "Communications",-->
+            <!--                                        "value": 4,-->
+            <!--                                        fontSize: 15-->
+            <!--                                    },-->
+            <!--                                    {-->
+            <!--                                        "text": "Consulting",-->
+            <!--                                        "value": 7-->
+            <!--                                    },-->
+            <!--                                    {-->
+            <!--                                        "text": "Hardware",-->
+            <!--                                        "value": 7-->
+            <!--                                    },-->
+            <!--                                    {-->
+            <!--                                        "text": "Retail",-->
+            <!--                                        "value": 18-->
+            <!--                                    },-->
+            <!--                                    {-->
+            <!--                                        "text": "Software",-->
+            <!--                                        "value": 25-->
+            <!--                                    },-->
+            <!--                                ]-->
+            <!--                            },-->
+            <!--                                {-->
+            <!--                                    "text": "Cybersecurity",-->
+            <!--                                    "value": 5-->
+            <!--                                },-->
+            <!--                                {-->
+            <!--                                    "text": "Fintech",-->
+            <!--                                    "value": 24-->
+            <!--                                },-->
+            <!--                                {-->
+            <!--                                    "text": "Healthcare",-->
+            <!--                                    "value": 9-->
+            <!--                                },-->
+            <!--                            ]-->
+            <!--                        }-->
+            <!--                        ]-->
+            <!--                    }]-->
+            <!--                };-->
+            <!--                zingchart.render({-->
+            <!--                    id: 'ugradTreemap',-->
+            <!--                    data: ug,-->
+            <!--                });-->
+            <!--            </script>-->
 
             <div class="mt-5 mb-2">
                 <h3>Advanced Degrees <i class="fa-solid fa-user-graduate fa-fw"></i></h3>
@@ -679,7 +692,7 @@
                 <div class="position-relative" style="height: 100%">
                     <canvas id="MSChart"></canvas>
                     <div class="text-center text-in-donut">
-                        <h4 class="m-0">Destinations<sup>I</sup></h4>
+                        <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
                     </div>
                 </div>
 
@@ -697,10 +710,12 @@
                 </div>
                 <div class="callout">
                     <div class="callout-continuing-ed-header">
-                        <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;10% Continuing Education<sup>V</sup></h3>
+                        <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;10% Continuing
+                            Education<sup class="text-secondary small-super-text">V</sup></h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1"><span style="font-weight: bold">12</span> are going on to get their doctorates at institutions like Cornell & Duke University.</p>
+                        <p class="m-1"><span style="font-weight: bold">12</span> are going on to get their doctorates at
+                            institutions like Cornell & Duke University.</p>
                     </div>
                 </div>
                 <div class="callout">
@@ -708,7 +723,8 @@
                         <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;11% Looking</h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1">These recent alumni are searching for their next opportunity with the ongoing support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
+                        <p class="m-1">These recent alumni are searching for their next opportunity with the ongoing
+                            support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
                     </div>
                 </div>
                 <div class="callout">
@@ -716,7 +732,8 @@
                         <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;2% Unknown</h3>
                     </div>
                     <div class="callout-container">
-                        <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best efforts,
+                        <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best
+                            efforts,
                             <span style="font-weight: bold">3</span> remain a mystery..</p>
                     </div>
                 </div>
@@ -727,16 +744,16 @@
 
     <div class="small-space"></div>
     <div class="center">
-            <div class="grid">
-                <div>
-                    <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary</h6>
-                    <h1>$129,000</h1>
-                </div>
-                <div>
-                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
-                    <h1>92%</h1>
-                </div>
+        <div class="grid">
+            <div>
+                <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary</h6>
+                <h1>$129,000</h1>
             </div>
+            <div>
+                <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                <h1>92%</h1>
+            </div>
+        </div>
     </div>
 
     <div class="mt-5 mb-3">
@@ -1160,20 +1177,38 @@
             </a>
         </div>
 
-        <div class="blockquote-footer mt-5 mb-5">
-            <h3 class="text-center">Thanks for being part of our CICS Career Community!</h3>
+        <div class="container footer">
+            <div class="blockquote-footer mt-5 mb-5">
+                <h3 class="text-center">Thanks for being part of our CICS Career Community!</h3>
+            </div>
+
+            <div>
+                <h6>Notes</h6>
+                <ul class="p-0 mt-3">
+                    <li class="list-unstyled m-2">
+                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">I</sup>
+                        Data points were collected through the Careers Survey, Graduation Celebration Registrations, LinkedIn Profiles and Staff Knowledge.
+                    </li>
+                    <li class="list-unstyled m-2">
+                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">II</sup>
+                        10 undergraduate students graduated in August, 132 in December, and 298 in May.
+                    </li>
+                    <li class="list-unstyled m-2">
+                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">III</sup>
+                        Many offers also include bonuses and equity in total compensation.
+                    </li>
+                    <li class="list-unstyled m-2">
+                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">IV</sup>
+                        Remote work continues to be popular.
+                    </li>
+                    <li class="list-unstyled m-2">
+                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">V</sup>
+                        Continuing Ed doesn't include MS/PhD.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-        <div class="footer">
-            <h6>Notes</h6>
-            <p><sup style="font-size: 10px">I</sup> Data was collected through the Careers Survey, Graduation Celebration Registrations, LinkedIn Profiles and Staff Knowledge<br>
-                <sup style="font-size: 10px">II</sup> 10 undergraduate students graduated in August, 132 in December and 298 in May <br>
-                <sup style="font-size: 10px">III</sup> Many offers also include bonuses and equity in total compensation <br>
-                <sup style="font-size: 10px">IV</sup> Remote work continues to be popular <br>
-                <sup style="...">V</sup> Continuing Ed doesn't include MS/PhD
-            </p>
-        </divfooter>
 
     </div>
 
@@ -1182,19 +1217,21 @@
 
 <!-- Scripts for JS Libraries -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
-        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js" integrity="sha512-+Aecf3QQcWkkA8IUdym4PDvIP/ikcKdp4NCDF8PM6qr9FtqwIFCS3JAcm2+GmPMZvnlsrGv1qavSnxL8v+o86w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"-->
+<!--        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="-->
+<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
 
 <script src="https://apis.google.com/js/api.js"></script>
 
-<script src="./js/index.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.1.0"></script>
+
+
+<script src="./js/index.js"></script>
 
 <script>
     $(document).ready(function () {

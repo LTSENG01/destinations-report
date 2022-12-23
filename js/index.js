@@ -1,3 +1,6 @@
+// Register the Chart.js data labels plugin
+Chart.register(ChartDataLabels);
+
 const UMassColors = {
     MAROON: 'rgb(136, 28, 28)',
     BLACK: 'rgb(33, 39, 33)',
@@ -22,7 +25,7 @@ const Labels = [
 const MSdata = {
     labels: Labels,
     datasets: [{
-        label: ' No. of Students',
+        label: ' Number of Students',
         data: [96, 12, 13, 3],
         backgroundColor: [
             UMassColors.GREEN,
@@ -37,7 +40,7 @@ const MSdata = {
 const UGdata = {
     labels: Labels,
     datasets: [{
-        label: ' No. of Students',
+        label: ' Number of Students',
         data: [261, 85, 61, 33],
         backgroundColor: [
             UMassColors.GREEN,
@@ -61,6 +64,21 @@ const configMS = {
         plugins: {
             legend: {
                 display: true
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                textAlign: "center"
             }
         }
     }
@@ -75,6 +93,21 @@ const configUG = {
         plugins: {
             legend: {
                 display: true
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                textAlign: "center"
             }
         }
     }
