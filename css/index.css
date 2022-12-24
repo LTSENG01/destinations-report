@@ -8,3 +8,13 @@
 .small-super-text {
     font-size: small;
 }
+
+.quick-stats li {
+    font-size: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.nav-item a {
+    font-size: 15px;
+}
