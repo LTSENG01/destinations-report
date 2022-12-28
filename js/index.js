@@ -63,7 +63,7 @@ const configMS = {
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                display: true
+                display: false
             },
             datalabels: {
                 formatter: (value, ctx) => {
@@ -92,7 +92,7 @@ const configUG = {
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                display: true
+                display: false
             },
             datalabels: {
                 formatter: (value, ctx) => {

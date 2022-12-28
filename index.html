@@ -39,11 +39,12 @@
             margin: 0;
             padding: 0;
         }
+        li{
+            padding: 2px;
+        }
     </style>
 </head>
 <body>
-
-<div class="xs-space"></div>
 
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container-fluid w-100 justify-content-center">
@@ -64,10 +65,10 @@
 </nav>
 
 <div id="undergraduate">
-    <div class="mt-4 mb-4 center">
+    <div class="mt-4 mb-4 mx-auto" style="width: max-content; max-width: 62%">
         <h1>Manning CICS Undergraduates</h1>
     </div>
-    <div>
+    <div class="mb-4">
         <ul class="list-unstyled quick-stats" style="font-size: 13px">
             <li>
                 <i class="fa-solid fa-user-graduate fa-fw"></i> <span
@@ -87,6 +88,7 @@
             </li>
         </ul>
     </div>
+
     <div class="row">
         <div class="col-12 col-md-6 col-lg-7">
             <!--                <div class="progress mb-3 mt-4">-->
@@ -146,26 +148,27 @@
             </div>
         </div>
 
-        <div class="small-space"></div>
+<!--        <div class="small-space"></div>-->
 
-        <div class="center">
+        <div class="mt-4 mb-4 mx-auto" style="width: 50%; max-width: 100%">
             <div class="grid">
-                <div>
+                <div style="text-align:center">
                     <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
                     <h1>$90,000</h1>
                 </div>
-                <div>
+                <div style="text-align: center">
                     <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
                     <h1>95%</h1>
                 </div>
             </div>
         </div>
 
-        <div class="mt-5 mb-2">
+
+        <div class="mt-4">
             <h3>163 Unique Employers (36 Hired Multiple)</h3>
         </div>
 
-        <div class="mt-4 mb-3">
+        <div class="mb-5">
             <div class="row mt-3">
                 <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                      title="Amazon">
@@ -231,9 +234,8 @@
             </div>
         </div>
 
-        <div class="xs-space"></div>
-        <div>
-            <h5>Where They Went To Work<sup class="text-secondary small-super-text">IV</sup></h5>
+        <div class="mb-4">
+            <h3>Where They Went To Work<sup class="text-secondary small-super-text">IV</sup></h3>
             <div class="row">
                 <div class="col-md-8 center">
                     <img src="img/map.png" class="img-fluid" alt="Where the UnderGrads ended up">
@@ -243,10 +245,11 @@
 
 
         <div class="d-inline">
-            <h5 class="d-inline">a<strong>MA</strong>zing Employers</h5>
+            <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
             <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
         </div>
-        <div class="row mt-3">
+
+        <div class="row mb-4">
             <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                  title="Lightforge Games">
                 <img src="img/lightforge.png" class="img-fluid p-2" alt="Lightforge Games">
@@ -273,8 +276,9 @@
                      alt="Massachusetts Rehabilitation Commission">
             </div>
         </div>
-        <div class="d-inline; center">
-            <h5 class="d-inline">Industries and Sub-industries</h5>
+
+        <div class="d-inline; mx-auto" style="width: max-content; width: 32%">
+            <h3 class="d-inline">Industries and Sub-industries</h3>
         </div>
         <div id="sunburstChartUG" class="chart--container"></div>
         <script>
@@ -670,7 +674,7 @@
 
 <div id="masters">
     <div class="mt-4 mb-3">
-        <div class="mt-4 mb-4 center">
+        <div class="mt-4 mb-4 mx-auto" style="width: max-content">
             <h1>Manning CICS Master's</h1>
         </div>
 
@@ -758,7 +762,7 @@
         </div>
     </div>
 
-    <div class="mt-5 mb-3">
+    <div class="mt-5">
         <h3 class="mb-4">53 Unique Employers (11 Hired Multiple)</h3>
 
         <div class="row mb-4">
@@ -950,8 +954,8 @@
             });
         </script>
 
-        <div class="d-inline">
-            <h5 class="d-inline">a<strong>MA</strong>zing Employers</h5>
+        <div class="mt-5">
+            <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
             <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
         </div>
         <div class="row mb-4">
