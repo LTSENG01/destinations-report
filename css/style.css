@@ -107,6 +107,19 @@ body {
     font: 12px system-ui;
 }
 
+.empGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    margin: auto;
+}
+.empGrid > div {
+    background: #FFD580;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
 /* Some positioning and ratios */
 .sticky-container {
     max-width: 270px;
