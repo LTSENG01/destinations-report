@@ -90,18 +90,37 @@
     padding: 10px;
 }
 
-.grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
-    margin: auto;
-}
-.grid > div {
+/*.grid {*/
+/*    width: 100%;*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+/*    grid-gap: 1rem;*/
+/*    margin: auto;*/
+/*}*/
+
+.callout-cell {
     background: #fff3cd;
     padding: 1.5rem;
     border-radius: 1rem;
 }
+
+/* Targets Extra Small Screens */
+@media screen and (max-width: 575px) {
+    .callout-cell {
+        padding: 1.5rem 1px 1.5rem 1px;
+    }
+
+    .callout-cell-row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .callout-cell-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
 body {
     margin: 2rem;
     font: 12px system-ui;

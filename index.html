@@ -16,12 +16,6 @@
     <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
 
     <style>
-        .center {
-            margin: auto;
-            width: 50%;
-            text-align: center;
-        }
-
         .chart--container {
             min-height: 500px;
             width: 100%;
@@ -58,11 +52,10 @@
             <!--            </li>-->
         </ul>
     </div>
-    <!--    <span class="badge bg-secondary rounded-pill mx-2">Beta</span>-->
 </nav>
 
 <div id="undergraduate">
-    <div class="mt-4 mb-4 mx-auto" style="width: max-content; max-width: 62%">
+    <div class="mt-4 mb-4 text-center">
         <h1>Manning CICS Undergraduates</h1>
     </div>
     <div class="mb-4">
@@ -147,15 +140,20 @@
 
 <!--        <div class="small-space"></div>-->
 
-        <div class="mt-5 mb-4 mx-auto" style="width: 50%; max-width: 100%">
-            <div class="grid">
-                <div style="text-align:center">
-                    <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
-                    <h1>$90,000</h1>
+        <!-- Undergraduate Callout Cells for Median Salary and Satisfaction Rate -->
+        <div class="mt-5 mb-4 mx-auto">
+            <div class="row callout-cell-row">
+                <div class="col-6 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
+                    <div class="callout-cell text-center">
+                        <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                        <h1 class="mb-0">$90,000</h1>
+                    </div>
                 </div>
-                <div style="text-align: center">
-                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
-                    <h1>95%</h1>
+                <div class="col-6 col-md-4 col-lg-3 callout-cell-container">
+                    <div class="callout-cell text-center">
+                        <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                        <h1 class="mb-0">95%</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,9 +231,11 @@
 
         <div class="mb-4">
             <h3>Where They Went To Work<sup class="text-secondary small-super-text">IV</sup></h3>
-                <div class="center">
-                    <img src="img/map.png" style="max-width:100%; height:auto" alt="Where the UnderGrads ended up">
+            <div class="row">
+                <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-6 text-center">
+                    <img src="img/map.png" class="img-fluid" alt="States where undergraduates ended up. Top states include Massachusetts, California, New York, and Washington.">
                 </div>
+            </div>
         </div>
 
         <div>
@@ -663,19 +663,19 @@
     </div>
 
     <div class="mt-4 mb-5">
-        <h3 style="text-align: center">Shout out to these employers that came to the career fair 4 years in a row!</h3>
+        <h3 class="text-center">Shout out to these employers that came to the career fair 4 years in a row!</h3>
         <div class="empGrid center mt-4">
             <div class="col-sm">
-                <h3>Interactive Brokers</h3>
+                <h3 class="mb-0">Interactive Brokers</h3>
             </div>
             <div class="col-sm">
-                <h3>Fast Enterprises</h3>
+                <h3 class="mb-0">Fast Enterprises</h3>
             </div>
             <div class="col-sm">
-                <h3>Optum</h3>
+                <h3 class="mb-0">Optum</h3>
             </div>
             <div class="col-sm">
-                <h3>Arista Networks</h3>
+                <h3 class="mb-0">Arista Networks</h3>
             </div>
         </div>
     </div>
@@ -689,7 +689,7 @@
 
 <div id="masters">
     <div class="mt-4 mb-3">
-        <div class="mt-4 mb-4 mx-auto" style="width: max-content">
+        <div class="mt-4 mb-4 text-center">
             <h1>Manning CICS Master's</h1>
         </div>
 
@@ -755,7 +755,7 @@
                     <div class="callout-container">
                         <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best
                             efforts,
-                            <span style="font-weight: bold">3</span> remain a mystery..</p>
+                            <span style="font-weight: bold">3</span> remain a mystery.</p>
                     </div>
                 </div>
             </div>
@@ -764,15 +764,21 @@
     </div>
 
     <div class="small-space"></div>
-    <div class="center">
-        <div class="grid">
-            <div>
-                <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary</h6>
-                <h1>$129,000</h1>
+
+    <!-- Callout Cells for Master's Median Salary and Satisfaction Rate -->
+    <div class="mt-5 mb-4 mx-auto">
+        <div class="row callout-cell-row">
+            <div class="col-6 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
+                <div class="callout-cell text-center">
+                    <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                    <h1 class="mb-0">$129,000</h1>
+                </div>
             </div>
-            <div>
-                <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
-                <h1>92%</h1>
+            <div class="col-6 col-md-4 col-lg-3 callout-cell-container">
+                <div class="callout-cell text-center">
+                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                    <h1 class="mb-0">92%</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -1191,7 +1197,7 @@
 
         <hr>
 
-        <div class="center">
+        <div class="text-center">
             <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank"
                rel="noopener noreferrer">
                 <img src="img/survey.png" class="img-fluid" alt="Careers Survey" width=50%>
