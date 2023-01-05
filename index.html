@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CICS Careers | Destinations Report Beta</title>
+    <title>CICS Careers | Destinations Report</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -44,8 +44,9 @@
     <div class="small-padded-section row">
         <ul class="list-unstyled quick-stats offset-md-1" style="font-size: 13px">
             <li>
-                <i class="fa-solid fa-user-graduate fa-fw"></i> <span
-                    style="font-weight: bold">440 Undergraduate students</span> in the Class of 2022, up <i class="fa-solid fa-arrow-up"></i> <span style="font-weight: bold">40%</span> from last year!
+                <i class="fa-solid fa-user-graduate fa-fw"></i>
+                <span style="font-weight: bold">440 Undergraduate students</span> in the Class of 2022
+<!--                <span style="font-weight: bold">440 Undergraduate students</span> in the Class of 2022, up <i class="fa-solid fa-arrow-up"></i> <span style="font-weight: bold">40%</span> from last year!-->
             </li>
             <li class="ms-3">
                 <i class="fa-solid fa-laptop fa-fw"></i> <span
@@ -68,14 +69,14 @@
             <div class="position-relative" style="height: 100%">
                 <canvas id="UGChart"></canvas>
                 <div class="text-center text-in-donut">
-                    <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
+                    <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">1</sup></h4>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-5">
             <div class="callout">
                 <div class="callout-working-header">
-                    <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working<sup class="small-super-text">II</sup></h3>
+                    <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;59% Working<sup class="small-super-text">2</sup></h3>
                 </div>
                 <div class="callout-container">
                     <p class="m-1">
@@ -87,7 +88,7 @@
             <div class="callout">
                 <div class="callout-continuing-ed-header">
                     <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;19% Continuing
-                        Education<sup class="small-super-text">V</sup></h3>
+                        Education<sup class="small-super-text">3</sup></h3>
                 </div>
                 <div class="callout-container">
                     <p class="m-1">The Bay State Scholarship Program contributed to <span style="font-weight: bold">>50 </span>students
@@ -99,7 +100,7 @@
                     <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;14% Looking</h3>
                 </div>
                 <div class="callout-container">
-                    <p class="m-1"> These recent alumni are searching for their next opportunity with the ongoing
+                    <p class="m-1">Up to six months after graduating, these alumni are searching for their next opportunity with the ongoing
                         support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
                 </div>
             </div>
@@ -108,8 +109,7 @@
                     <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;8% Unknown</h3>
                 </div>
                 <div class="callout-container">
-                    <p class="m-1">We know post-graduation outcomes for 93% of our undergraduates, but despite our
-                        best efforts, <span style="font-weight: bold">32</span> remain a mystery.</p>
+                    <p class="m-1">We know post-graduation outcomes for 93% of our undergraduates, but <span style="font-weight: bold">32</span> remain a mystery.</p>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
         <div class="row callout-cell-row">
             <div class="col-12 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
                 <div class="callout-cell">
-                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary">4</sup></h6>
                     <h1 class="mb-0">$90,000</h1>
                 </div>
             </div>
@@ -203,7 +203,7 @@
 
     <!-- Locations -->
     <div class="padded-section text-center">
-        <h3>Where Graduates Went To Work<sup class="text-secondary small-super-text">IV</sup></h3>
+        <h3>Where Graduates Went To Work<sup class="text-secondary small-super-text">5</sup></h3>
         <div class="row">
             <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-6 text-center">
                 <img src="img/map.png" class="img-fluid" alt="States where undergraduates ended up. Top states include Massachusetts, California, New York, and Washington.">
@@ -246,7 +246,7 @@
 
     <!-- Industries -->
     <div class="padded-section text-center">
-        <h3>Industries and Sub-industries</h3>
+        <h3>Industries Breakdown</h3>
         <div id="sunburstChartUG" class="chart--container"></div>
     </div>
 
@@ -255,7 +255,7 @@
         <h3>Advanced Degrees <i class="fa-solid fa-user-graduate fa-fw"></i></h3>
 
         <div class="small-padded-section mt-4">
-            <h5>80 Pursuing Masters</h5>
+            <h5>80 Pursuing Master's Programs</h5>
             <div class="row">
                 <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                      title="UMass">
@@ -285,7 +285,7 @@
         </div>
 
         <div class="small-padded-section">
-            <h5>5 Pursuing Doctorate (PhDs)</h5>
+            <h5>5 Pursuing Doctorate (PhD) Programs</h5>
             <div class="row">
                 <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                      title="UMass">
@@ -315,19 +315,19 @@
 
     <!-- Career Fair Repeated -->
     <div class="padded-section">
-        <h3 class="text-center">Shout out to these employers that came to the career fair 4 years in a row!</h3>
+        <h3 class="text-center">Career Fair Employers 4 Years In a Row!</h3>
         <div class="empGrid h-100 d-flex flex-row flex-wrap align-items-center justify-content-center mt-4" style="text-align: center">
             <div class="col-sm">
-                <h3 class="mb-0">Interactive Brokers</h3>
+                <h6 class="mb-0">Interactive Brokers</h6>
             </div>
             <div class="col-sm">
-                <h3 class="mb-0">Fast Enterprises</h3>
+                <h6 class="mb-0">Fast Enterprises</h6>
             </div>
             <div class="col-sm">
-                <h3 class="mb-0">Optum</h3>
+                <h6 class="mb-0">Optum</h6>
             </div>
             <div class="col-sm">
-                <h3 class="mb-0">Arista Networks</h3>
+                <h6 class="mb-0">Arista Networks</h6>
             </div>
         </div>
     </div>
@@ -358,7 +358,7 @@
             <div class="position-relative" style="height: 100%">
                 <canvas id="MSChart"></canvas>
                 <div class="text-center text-in-donut">
-                    <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
+                    <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">1</sup></h4>
                 </div>
             </div>
 
@@ -377,11 +377,11 @@
             <div class="callout">
                 <div class="callout-continuing-ed-header">
                     <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;10% Continuing
-                        Education<sup class="small-super-text">V</sup></h3>
+                        Education<sup class="small-super-text">3</sup></h3>
                 </div>
                 <div class="callout-container">
                     <p class="m-1"><span style="font-weight: bold">12</span> are going on to get their doctorates at
-                        institutions like Cornell & Duke University.</p>
+                        institutions including Cornell and Duke University.</p>
                 </div>
             </div>
             <div class="callout">
@@ -389,7 +389,7 @@
                     <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;11% Looking</h3>
                 </div>
                 <div class="callout-container">
-                    <p class="m-1">These recent alumni are searching for their next opportunity with the ongoing
+                    <p class="m-1">Up to six months after graduating, these alumni are searching for their next opportunity with the ongoing
                         support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
                 </div>
             </div>
@@ -398,9 +398,7 @@
                     <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;2% Unknown</h3>
                 </div>
                 <div class="callout-container">
-                    <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best
-                        efforts,
-                        <span style="font-weight: bold">3</span> remain a mystery.</p>
+                    <p class="m-1">We know post-graduation outcomes for 98% of our graduates, but <span style="font-weight: bold">3</span> remain a mystery.</p>
                 </div>
             </div>
         </div>
@@ -411,7 +409,7 @@
         <div class="row callout-cell-row">
             <div class="col-12 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
                 <div class="callout-cell text-center">
-                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary">4</sup></h6>
                     <h1 class="mb-0">$129,000</h1>
                 </div>
             </div>
@@ -457,7 +455,7 @@
 
     <!-- Industries -->
     <div class="padded-section text-center">
-        <h3>Industries and Sub-industries</h3>
+        <h3>Industries Breakdown</h3>
         <div id="sunburstChart" class="chart--container"></div>
     </div>
 
@@ -524,25 +522,25 @@
     <div class="padded-section">
         <h6>Notes</h6>
         <ul class="p-0 padded-section">
-            <li class="list-unstyled m-2">
-                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">I</sup>
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">1</sup>
                 Data points were collected through the Careers Survey, Graduation Celebration Registrations, LinkedIn Profiles and Staff Knowledge.
             </li>
-            <li class="list-unstyled m-2">
-                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">II</sup>
-                10 undergraduate students graduated in August, 132 in December, and 298 in May.
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">2</sup>
+                10 undergraduate students graduated in August, 132 in December, and 298 in May. Graduate students also graduate in August, December, and May.
             </li>
-            <li class="list-unstyled m-2">
-                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">III</sup>
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">3</sup>
+                Continuing Ed doesn't include <a href="https://www.cics.umass.edu/grads/msphd-requirements" target="_blank">MS/PhD track</a>. PhD Destinations Report is coming soon!
+            </li>
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">4</sup>
                 Many offers also include bonuses and equity in total compensation.
             </li>
-            <li class="list-unstyled m-2">
-                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">IV</sup>
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">5</sup>
                 Remote work continues to be popular.
-            </li>
-            <li class="list-unstyled m-2">
-                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">V</sup>
-                Continuing Ed doesn't include MS/PhD.
             </li>
         </ul>
     </div>
