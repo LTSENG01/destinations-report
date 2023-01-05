@@ -123,11 +123,11 @@ let chartConfig = {
     type: 'sunburst',
     backgroundColor: '#fff',
     options: {
-        sizeFactor: 1,
+        sizeFactor: 0.9,
         slice: 0,
         space: 0,
         root: 'Industries',
-        widths: [5, 100, 130],
+        // widths: [5, 100, 130],
         palette: ['#ffffff', '#3F51B5', '#42A5F5', '#5C6BC0', '#64B5F6']
     },
     plot: {
@@ -153,7 +153,7 @@ zingchart.render({
     id: 'sunburstChart',
     data: chartConfig,
     height: '100%',
-    width: '100%',
+    width: '100%'
 });
 
 // UGRAD //
@@ -280,11 +280,11 @@ let UGchartConfig = {
     type: 'sunburst',
     backgroundColor: '#fff',
     options: {
-        sizeFactor: 1,
+        sizeFactor: 0.9,
         slice: 0,
         space: 0,
         root: 'Industries',
-        widths: [5, 115, 115],
+        // widths: [30, 115, 115],
         palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539']
     },
     plot: {
