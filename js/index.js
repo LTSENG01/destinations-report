@@ -15,6 +15,8 @@ const UMassColors = {
     GREEN: 'rgb(46,139,87)'
 }
 
+const LabelBackgroundColor = 'rgba(0, 0, 0, 0.2)';
+
 const Labels = [
     'Working',
     'Continuing Education',
@@ -78,7 +80,12 @@ const configMS = {
                     return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
                 },
                 color: "#fff",
-                textAlign: "center"
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
             }
         }
     }
@@ -107,7 +114,12 @@ const configUG = {
                     return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
                 },
                 color: "#fff",
-                textAlign: "center"
+                backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
             }
         }
     }

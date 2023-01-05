@@ -14,25 +14,6 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
-
-    <style>
-        .chart--container {
-            min-height: 500px;
-            width: 100%;
-            height: 100%;
-        }
-
-        .zc-ref {
-            display: none;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            padding: 2px;
-        }
-    </style>
 </head>
 
 <body>
@@ -54,12 +35,14 @@
     </div>
 </nav>
 
-<div id="undergraduate">
-    <div class="mt-4 mb-4 text-center">
+<div id="undergraduate" class="padded-section">
+    <div class="small-padded-section text-center">
         <h1>Manning CICS Undergraduates</h1>
     </div>
-    <div class="mb-4">
-        <ul class="list-unstyled quick-stats" style="font-size: 13px">
+
+    <!-- Quick Stats -->
+    <div class="small-padded-section row">
+        <ul class="list-unstyled quick-stats offset-md-1" style="font-size: 13px">
             <li>
                 <i class="fa-solid fa-user-graduate fa-fw"></i> <span
                     style="font-weight: bold">440 Undergraduate students</span> in the Class of 2022 up <i class="fa-solid fa-arrow-up"></i> <span style="font-weight: bold">40%</span> from last year!
@@ -79,15 +62,9 @@
         </ul>
     </div>
 
-    <div class="row">
+    <!-- Destinations Chart and Breakdown -->
+    <div class="padded-section row">
         <div class="col-12 col-md-6 col-lg-7">
-            <!--                <div class="progress mb-3 mt-4">-->
-            <!--                    <div class="progress-bar" role="progressbar" style="width: 96%; background-color: rgb(136, 28, 28)"-->
-            <!--                         aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">Outcome status known for 96% of Class-->
-            <!--                        of 2022-->
-            <!--                    </div>-->
-            <!--                    &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
-            <!--                </div>-->
             <div class="position-relative" style="height: 100%">
                 <canvas id="UGChart"></canvas>
                 <div class="text-center text-in-donut">
@@ -95,7 +72,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-12 col-md-6 col-lg-5">
             <div class="callout">
                 <div class="callout-working-header">
@@ -137,113 +113,109 @@
                 </div>
             </div>
         </div>
+    </div>
 
-<!--        <div class="small-space"></div>-->
-
-        <!-- Undergraduate Callout Cells for Median Salary and Satisfaction Rate -->
-        <div class="mt-5 mb-4 mx-auto">
-            <div class="row callout-cell-row">
-                <div class="col-6 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
-                    <div class="callout-cell text-center">
-                        <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
-                        <h1 class="mb-0">$90,000</h1>
-                    </div>
+    <!-- Undergraduate Callout Cells for Median Salary and Satisfaction Rate -->
+    <div class="padded-section text-center">
+        <div class="row callout-cell-row">
+            <div class="col-12 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
+                <div class="callout-cell">
+                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                    <h1 class="mb-0">$90,000</h1>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3 callout-cell-container">
-                    <div class="callout-cell text-center">
-                        <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
-                        <h1 class="mb-0">95%</h1>
-                    </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 callout-cell-container">
+                <div class="callout-cell">
+                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                    <h1 class="mb-0">95%</h1>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <div class="mt-4">
-            <h3>163 Unique Employers (36 Hired Multiple)</h3>
+    <!-- Employers -->
+    <div class="padded-section">
+        <h3>163 Unique Employers (36 Hired Multiple)</h3>
+        <div class="row mt-3">
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Amazon">
+                <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Google">
+                <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="MathWorks">
+                <img src="img/MathWorks.png" class="img-fluid p-2" alt="MathWorks">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="DraftKings">
+                <img src="img/DraftKings_logo.svg.png" class="img-fluid p-2" alt="DraftKings">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="IBM">
+                <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Travelers">
+                <img src="img/Travelers-Logo.png" class="img-fluid p-2" alt="Travelers">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Liberty Mutual">
+                <img src="img/Liberty-Mutual-Logo.png" class="img-fluid p-2" alt="Liberty Mutual">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Akamai">
+                <img src="img/Akamai_logo.svg.png" class="img-fluid p-2" alt="Akamai">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Raytheon Technologies">
+                <img src="img/Raytheon_Technologies_logo.svg.png" class="img-fluid p-2"
+                     alt="Raytheon Technologies">
+            </div>
+            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                 title="Putnam Investments">
+                <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
+            </div>
+            <!--                    <div class="sticky-container">-->
+            <!--                        <div class="sticky-outer">-->
+            <!--                            <div class="sticky">-->
+            <!--                                <svg width="0" height="0">-->
+            <!--                                    <defs>-->
+            <!--                                        <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">-->
+            <!--                                            <path-->
+            <!--                                                    d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"-->
+            <!--                                                    stroke-linejoin="round"-->
+            <!--                                                    stroke-linecap="square"-->
+            <!--                                            />-->
+            <!--                                        </clipPath>-->
+            <!--                                    </defs>-->
+            <!--                                </svg>-->
+            <!--                                <div class="sticky-content" style="font-size: 20px">-->
+            <!--                                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" style="color: black"> Check out this comprehensive list of employers!</a><br>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
         </div>
+    </div>
 
-        <div class="mb-5">
-            <div class="row mt-3">
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Amazon">
-                    <img src="img/Amazon_logo.svg.png" class="img-fluid p-2" alt="Amazon">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Google">
-                    <img src="img/google-logo.png" class="img-fluid p-2" alt="Google">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="MathWorks">
-                    <img src="img/MathWorks.png" class="img-fluid p-2" alt="MathWorks">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="DraftKings">
-                    <img src="img/DraftKings_logo.svg.png" class="img-fluid p-2" alt="DraftKings">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="IBM">
-                    <img src="img/IBM_logo.svg.png" class="img-fluid p-2" alt="IBM">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Travelers">
-                    <img src="img/Travelers-Logo.png" class="img-fluid p-2" alt="Travelers">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Liberty Mutual">
-                    <img src="img/Liberty-Mutual-Logo.png" class="img-fluid p-2" alt="Liberty Mutual">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Akamai">
-                    <img src="img/Akamai_logo.svg.png" class="img-fluid p-2" alt="Akamai">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Raytheon Technologies">
-                    <img src="img/Raytheon_Technologies_logo.svg.png" class="img-fluid p-2"
-                         alt="Raytheon Technologies">
-                </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Putnam Investments">
-                    <img src="img/putnam-logo.png" class="img-fluid p-2" alt="Putnam Investments">
-                </div>
-                <!--                    <div class="sticky-container">-->
-                <!--                        <div class="sticky-outer">-->
-                <!--                            <div class="sticky">-->
-                <!--                                <svg width="0" height="0">-->
-                <!--                                    <defs>-->
-                <!--                                        <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">-->
-                <!--                                            <path-->
-                <!--                                                    d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"-->
-                <!--                                                    stroke-linejoin="round"-->
-                <!--                                                    stroke-linecap="square"-->
-                <!--                                            />-->
-                <!--                                        </clipPath>-->
-                <!--                                    </defs>-->
-                <!--                                </svg>-->
-                <!--                                <div class="sticky-content" style="font-size: 20px">-->
-                <!--                                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cics.umass.edu/careers/articles/destinations-dashboard" style="color: black"> Check out this comprehensive list of employers!</a><br>-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
+    <!-- Locations -->
+    <div class="padded-section text-center">
+        <h3>Where Graduates Went To Work<sup class="text-secondary small-super-text">IV</sup></h3>
+        <div class="row">
+            <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-6 text-center">
+                <img src="img/map.png" class="img-fluid" alt="States where undergraduates ended up. Top states include Massachusetts, California, New York, and Washington.">
             </div>
         </div>
+    </div>
 
-        <div class="mb-4">
-            <h3>Where They Went To Work<sup class="text-secondary small-super-text">IV</sup></h3>
-            <div class="row">
-                <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-6 text-center">
-                    <img src="img/map.png" class="img-fluid" alt="States where undergraduates ended up. Top states include Massachusetts, California, New York, and Washington.">
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
-            <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
-        </div>
-
-        <div class="row mb-4">
+    <!-- aMAzing Employers -->
+    <div class="padded-section">
+        <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
+        <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
+        <div class="row">
             <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                  title="Lightforge Games">
                 <img src="img/lightforge.png" class="img-fluid p-2" alt="Lightforge Games">
@@ -270,399 +242,79 @@
                      alt="Massachusetts Rehabilitation Commission">
             </div>
         </div>
+    </div>
 
-        <div class="d-inline; mx-auto" style="width: max-content">
-            <h3>Industries and Sub-industries</h3>
-        </div>
+    <!-- Industries -->
+    <div class="padded-section text-center">
+        <h3>Industries and Sub-industries</h3>
         <div id="sunburstChartUG" class="chart--container"></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
-            // -----------------------------
-            let chartDataUG = [{
-                id: 'Industries',
-                text: ' ',
-                parent: ''
-            }, {
-                id: 'Tech',
-                text: 'Tech',
-                parent: 'Industries',
-                value: 153
-            }, {
-                id: 'Healthcare',
-                text: 'Healthcare',
-                parent: 'Industries',
-                value: 23
-            }, {
-                id: 'FinTech',
-                text: 'FinTech',
-                parent: 'Industries',
-                value: 56
-            }, {
-                id: 'Public Interest Technology',
-                text: 'Public Interest Technology (PIT)',
-                parent: 'Industries',
-                value: 20
-            }, {
-                id: 'SW',
-                text: 'Software',
-                parent: 'Tech',
-                value: 49
-            }, {
-                id: 'HW',
-                text: 'Hardware',
-                parent: 'Tech',
-                value: 18
-            }, {
-                id: 'Robotics',
-                text: 'Robotics',
-                parent: 'Tech',
-                value: 0
-            }, {
-                id: 'Retail',
-                text: 'Retail',
-                parent: 'Tech',
-                value: 40
-            }, {
-                id: 'Communications',
-                text: 'Communications',
-                parent: 'Tech',
-                value: 12
-            },
-                {
-                    id: 'Gaming',
-                    text: 'Gaming',
-                    parent: 'Tech',
-                    value: 6
-                }, {
-                    id: 'Networking',
-                    text: 'Networking',
-                    parent: 'Tech',
-                    value: 0
-                }, {
-                    id: 'Consulting',
-                    text: 'Consulting',
-                    parent: 'Tech',
-                    value: 20
-                }, {
-                    id: 'Cybersecurity',
-                    text: 'Cybersecurity',
-                    parent: 'Tech',
-                    value: 8
-                }, {
-                    id: 'Software',
-                    text: 'Software',
-                    parent: 'Healthcare',
-                    value: 11
-                }, {
-                    id: 'Life Sciences',
-                    text: 'Life Sciences',
-                    parent: 'Healthcare',
-                    value: 12
-                }, {
-                    id: 'Pharmaceuticals',
-                    text: 'Pharmaceuticals',
-                    parent: 'Healthcare',
-                    value: 0
-                }, {
-                    id: 'Insurance',
-                    text: 'Insurance',
-                    parent: 'FinTech',
-                    value: 16
-                }, {
-                    id: 'Investment Banking',
-                    text: 'Investment Banking',
-                    parent: 'FinTech',
-                    value: 40
-                }, {
-                    id: 'Government',
-                    text: 'Government',
-                    parent: 'Public Interest Technology',
-                    value: 6
-                }, {
-                    id: 'Contractors',
-                    text: 'Contractors',
-                    parent: 'Public Interest Technology',
-                    value: 2
-                }, {
-                    id: 'GreenTech',
-                    text: 'GreenTech',
-                    parent: 'Public Interest Technology',
-                    value: 0
-                }, {
-                    id: '“Common Good”',
-                    text: '“Common Good”',
-                    parent: 'Public Interest Technology',
-                    value: 12
-                }];
-            let UGchartConfig = {
-                type: 'sunburst',
-                backgroundColor: '#fff',
-                options: {
-                    sizeFactor: .9,
-                    slice: 0,
-                    space: 0,
-                    root: 'Industries',
-                    //widths: [70, 140, 180],
-                    palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539']
-                },
-                plot: {
-                    animation: {},
-                    valueBox: {
-                        text: '%data-vbtext',
-                        color: '#000',
-                        fontSize: '10px',
-                        visible: null
-                    },
-                    tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>No. of Students: %node-value',
-                    alpha: 1,
-                },
-                tooltip: {
-                    align: 'left',
-                    thousandsSeparator: ','
-                },
-                series: chartDataUG,
-            };
-            zingchart.render({
-                id: 'sunburstChartUG',
-                data: UGchartConfig,
-                height: '100%',
-                width: '100%',
-            });
-        </script>
-        <!--            <div id='ugradTreemap'></div>-->
-        <!--            <script>-->
-        <!--                ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
-        <!--                let ug = {-->
-        <!--                    "graphset": [{-->
-        <!--                        "type": "treemap",-->
-        <!--                        "plotarea": {-->
-        <!--                            "margin": "30 30 30 30"-->
-        <!--                        },-->
-        <!--                        "options": {-->
-        <!--                            groupBox: {-->
-        <!--                                fontWeight: 'bold',-->
-        <!--                                fontColor: 'white',-->
-        <!--                                backgroundColor: '#002554',-->
-        <!--                                fontSize: 12,-->
-        <!--                            },-->
-        <!--                            sizeFactor: 0.5,-->
-        <!--                            aspectType: 'palette',-->
-        <!--                            palette: [ '#00aec7', '#002554', '#615e9b', '#86c8bc']-->
-        <!--                        },-->
-        <!--                        "series": [{-->
-        <!--                            "text": "Industries",-->
-        <!--                            "children": [{-->
-        <!--                                "text": "Tech",-->
-        <!--                                "children": [-->
-        <!--                                    {-->
-        <!--                                        "text": "Communications",-->
-        <!--                                        "value": 4,-->
-        <!--                                        fontSize: 15-->
-        <!--                                    },-->
-        <!--                                    {-->
-        <!--                                        "text": "Consulting",-->
-        <!--                                        "value": 7-->
-        <!--                                    },-->
-        <!--                                    {-->
-        <!--                                        "text": "Hardware",-->
-        <!--                                        "value": 7-->
-        <!--                                    },-->
-        <!--                                    {-->
-        <!--                                        "text": "Retail",-->
-        <!--                                        "value": 18-->
-        <!--                                    },-->
-        <!--                                    {-->
-        <!--                                        "text": "Software",-->
-        <!--                                        "value": 25-->
-        <!--                                    },-->
-        <!--                                ]-->
-        <!--                            },-->
-        <!--                                {-->
-        <!--                                    "text": "Cybersecurity",-->
-        <!--                                    "value": 5-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Fintech",-->
-        <!--                                    "value": 24-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Healthcare",-->
-        <!--                                    "value": 9-->
-        <!--                                },-->
-        <!--                            ]-->
-        <!--                        }-->
-        <!--                        ]-->
-        <!--                    }]-->
-        <!--                };-->
-        <!--                zingchart.render({-->
-        <!--                    id: 'ugradTreemap',-->
-        <!--                    data: ug,-->
-        <!--                });-->
-        <!--            </script>-->
-
-        <div class="mt-5 mb-2">
-            <h3>Advanced Degrees <i class="fa-solid fa-user-graduate fa-fw"></i></h3>
-        </div>
-
-        <h5>80 Pursuing Masters</h5>
-        <div class="row mt-3">
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="UMass">
-                <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Georgia Institute of Technology">
-                <img src="img/georgia%20institute.png" class="img-fluid p-2" alt="Georgia Institute of Technology">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Cornell University">
-                <img src="img/Cornell-University-Logo.png" class="img-fluid p-2" alt="Cornell University">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="University of North Carolina Chapel Hill">
-                <img src="img/UNC-Logo.png" class="img-fluid p-2" alt="UNC">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="University of Michigan">
-                <img src="img/University-of-Michigan-Logo.png" class="img-fluid p-2" alt="UMich">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Columbia University">
-                <img src="img/columbia%20univ.png" class="img-fluid p-2" alt="Columbia University">
-            </div>
-        </div>
-
-        <h5>5 Pursuing Doctorate (PhDs)</h5>
-        <div class="row mt-3">
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="UMass">
-                <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Carnegie Mellon University">
-                <img src="img/cmu.png" class="img-fluid p-2" alt="CMU">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="Duke University">
-                <img src="img/Duke-University-symbol.jpg" class="img-fluid p-2" alt="Duke University">
-            </div>
-            <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                 title="UT Austin">
-                <img src="img/University_of_Texas_at_Austin_logo.svg.png" class="img-fluid p-2" alt="UT Austin">
-            </div>
-        </div>
-
     </div>
 
+    <!-- Advanced Degrees -->
+    <div class="padded-section">
+        <h3>Advanced Degrees <i class="fa-solid fa-user-graduate fa-fw"></i></h3>
 
+        <div class="small-padded-section mt-4">
+            <h5>80 Pursuing Masters</h5>
+            <div class="row">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UMass">
+                    <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Georgia Institute of Technology">
+                    <img src="img/georgia%20institute.png" class="img-fluid p-2" alt="Georgia Institute of Technology">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Cornell University">
+                    <img src="img/Cornell-University-Logo.png" class="img-fluid p-2" alt="Cornell University">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="University of North Carolina Chapel Hill">
+                    <img src="img/UNC-Logo.png" class="img-fluid p-2" alt="UNC">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="University of Michigan">
+                    <img src="img/University-of-Michigan-Logo.png" class="img-fluid p-2" alt="UMich">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Columbia University">
+                    <img src="img/columbia%20univ.png" class="img-fluid p-2" alt="Columbia University">
+                </div>
+            </div>
+        </div>
 
-    <div class="xs-space"></div>
-
-
-    <h3>Popular Informatics Roles</h3>
-
-    <div>
-        <div id="myChart"></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-            let ugWordcloud = {
-                "graphset": [{
-                    "type": "wordcloud",
-                    "options": {
-                        "style": {
-                            "tooltip": {
-                                visible: true,
-                                text: '%text: %hits'
-                            }
-                        },
-                        "words": [
-                            {
-                                "text": "Software Engineer",
-                                "count": "4"
-                            },
-                            {
-                                "text": "Product Manager",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Data Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Associate Consultant",
-                                "count": "2"
-                            },
-                            {
-                                "text": "UI/UX Designer/Researcher",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Technology and Data Leadership Development Program",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Statistical Programmer",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Investment Analyst ",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Global Markets Analyst",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Database Analyst",
-                                "count": "1"
-                            }
-                            // {
-                            //     "text": "Data Analyst",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Cybersecurity Engineering & Operations Analyst",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Cyber Systems Operator",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Business Analyst",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Associate Specialist, Medical Education Systems",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Associate Software Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Associate Product Manager",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Associate Data Engineer",
-                            //     "count": "1"
-                            // }
-                        ]
-                    }
-                }]
-            };
-
-            zingchart.render({
-                id: 'myChart',
-                data: ugWordcloud,
-                // height: '100%',
-                // width: '100%'
-            });
-        </script>
+        <div class="small-padded-section">
+            <h5>5 Pursuing Doctorate (PhDs)</h5>
+            <div class="row">
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UMass">
+                    <img src="img/UMassAmherst_logo.png" class="img-fluid p-2" alt="UMass Amherst">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Carnegie Mellon University">
+                    <img src="img/cmu.png" class="img-fluid p-2" alt="CMU">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="Duke University">
+                    <img src="img/Duke-University-symbol.jpg" class="img-fluid p-2" alt="Duke University">
+                </div>
+                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                     title="UT Austin">
+                    <img src="img/University_of_Texas_at_Austin_logo.svg.png" class="img-fluid p-2" alt="UT Austin">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="mt-4 mb-5">
+    <!-- Popular Informatics Roles -->
+    <div class="text-center small-padded-section">
+        <h3>Popular Informatics Roles</h3>
+        <div id="ug-roles-wordcloud"></div>
+    </div>
+
+    <!-- Career Fair Repeated -->
+    <div class="padded-section">
         <h3 class="text-center">Shout out to these employers that came to the career fair 4 years in a row!</h3>
         <div class="empGrid h-100 d-flex flex-row flex-wrap align-items-center justify-content-center mt-4" style="text-align: center">
             <div class="col-sm">
@@ -682,98 +334,95 @@
 
 </div>
 
-<div class="xs-space"></div>
-<div class="xs-space"></div>
-
 <hr>
 
-<div id="masters">
-    <div class="mt-4 mb-3">
-        <div class="mt-4 mb-4 text-center">
-            <h1>Manning CICS Master's</h1>
-        </div>
+<div id="masters" class="padded-section">
 
-        <div>
-            <ul class="list-unstyled quick-stats">
-                <li>
-                    <i class="fa-solid fa-user-graduate"></i> <span
-                        style="font-weight: bold">124 MS students</span> in the Class of 2022
-                </li>
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-7">
-                <!--                    <div class="progress mb-3 mt-4">-->
-                <!--                        <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)"-->
-                <!--                             aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class-->
-                <!--                            of 2022-->
-                <!--                        </div>-->
-                <!--                        &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
-                <!--                    </div>-->
-                <div class="position-relative" style="height: 100%">
-                    <canvas id="MSChart"></canvas>
-                    <div class="text-center text-in-donut">
-                        <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="callout">
-                    <div class="callout-working-header">
-                        <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;77% Working</h3>
-                    </div>
-                    <div class="callout-container">
-                        <p class="m-1">
-                            <span style="font-weight: bold">6%</span> increase from the Class of 2021.
-                        </p>
-                    </div>
-                </div>
-                <div class="callout">
-                    <div class="callout-continuing-ed-header">
-                        <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;10% Continuing
-                            Education<sup class="small-super-text">V</sup></h3>
-                    </div>
-                    <div class="callout-container">
-                        <p class="m-1"><span style="font-weight: bold">12</span> are going on to get their doctorates at
-                            institutions like Cornell & Duke University.</p>
-                    </div>
-                </div>
-                <div class="callout">
-                    <div class="callout-looking-header">
-                        <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;11% Looking</h3>
-                    </div>
-                    <div class="callout-container">
-                        <p class="m-1">These recent alumni are searching for their next opportunity with the ongoing
-                            support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
-                    </div>
-                </div>
-                <div class="callout">
-                    <div class="callout-unknown-header">
-                        <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;2% Unknown</h3>
-                    </div>
-                    <div class="callout-container">
-                        <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best
-                            efforts,
-                            <span style="font-weight: bold">3</span> remain a mystery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="small-padded-section text-center">
+        <h1>Manning CICS Master's</h1>
     </div>
 
+    <!-- Quick Stats -->
+    <div class="small-padded-section row">
+        <ul class="list-unstyled quick-stats offset-md-1">
+            <li>
+                <i class="fa-solid fa-user-graduate"></i> <span
+                    style="font-weight: bold">124 MS students</span> in the Class of 2022
+            </li>
+        </ul>
+    </div>
+
+    <!-- Destinations Chart and Breakdown -->
+    <div class="padded-section row">
+        <div class="col-12 col-md-6 col-lg-7">
+            <!--                    <div class="progress mb-3 mt-4">-->
+            <!--                        <div class="progress-bar" role="progressbar" style="width: 99%; background-color: rgb(136, 28, 28)"-->
+            <!--                             aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Outcome status known for 99% of Class-->
+            <!--                            of 2022-->
+            <!--                        </div>-->
+            <!--                        &lt;!&ndash;<div class="progress-bar" role="progressbar" style="width: 10%; background-color: rgb(136, 28, 28)" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Knowledge</div>&ndash;&gt;-->
+            <!--                    </div>-->
+            <div class="position-relative" style="height: 100%">
+                <canvas id="MSChart"></canvas>
+                <div class="text-center text-in-donut">
+                    <h4 class="m-0">Destinations<sup class="text-secondary small-super-text">I</sup></h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="callout">
+                <div class="callout-working-header">
+                    <h3 class="m-1"><i class="fa-solid fa-briefcase fa-fw"></i>&nbsp;77% Working</h3>
+                </div>
+                <div class="callout-container">
+                    <p class="m-1">
+                        <span style="font-weight: bold">6%</span> increase from the Class of 2021.
+                    </p>
+                </div>
+            </div>
+            <div class="callout">
+                <div class="callout-continuing-ed-header">
+                    <h3 class="m-1"><i class="fa-solid fa-user-graduate fa-fw"></i>&nbsp;10% Continuing
+                        Education<sup class="small-super-text">V</sup></h3>
+                </div>
+                <div class="callout-container">
+                    <p class="m-1"><span style="font-weight: bold">12</span> are going on to get their doctorates at
+                        institutions like Cornell & Duke University.</p>
+                </div>
+            </div>
+            <div class="callout">
+                <div class="callout-looking-header">
+                    <h3 class="m-1"><i class="fa-solid fa-magnifying-glass fa-fw"></i>&nbsp;11% Looking</h3>
+                </div>
+                <div class="callout-container">
+                    <p class="m-1">These recent alumni are searching for their next opportunity with the ongoing
+                        support of CICS Careers. <span style="font-weight: bold">We help alumni for life.</span></p>
+                </div>
+            </div>
+            <div class="callout">
+                <div class="callout-unknown-header">
+                    <h3 class="m-1"><i class="fa-solid fa-question fa-fw"></i>&nbsp;2% Unknown</h3>
+                </div>
+                <div class="callout-container">
+                    <p class="m-1"> We know post-graduation outcomes for 98% of our graduates, but despite our best
+                        efforts,
+                        <span style="font-weight: bold">3</span> remain a mystery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Callout Cells for Master's Median Salary and Satisfaction Rate -->
-    <div class="mt-5 mb-4 mx-auto">
+    <div class="padded-section text-center">
         <div class="row callout-cell-row">
-            <div class="col-6 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
+            <div class="col-12 offset-md-2 col-md-4 offset-lg-3 col-lg-3 callout-cell-container">
                 <div class="callout-cell text-center">
-                    <h6><i class="fa-solid fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
+                    <h6><i class="fa-regular fa-sack-dollar"></i> Median Salary<sup class="text-secondary small-super-text">III</sup></h6>
                     <h1 class="mb-0">$129,000</h1>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3 callout-cell-container">
+            <div class="col-12 col-md-4 col-lg-3 callout-cell-container">
                 <div class="callout-cell text-center">
                     <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
                     <h1 class="mb-0">92%</h1>
@@ -782,10 +431,10 @@
         </div>
     </div>
 
-    <div class="mt-5">
-        <h3 class="mb-4">53 Unique Employers (11 Hired Multiple)</h3>
-
-        <div class="row mb-4">
+    <!-- Employers -->
+    <div class="padded-section">
+        <h3>53 Unique Employers (11 Hired Multiple)</h3>
+        <div class="row mt-3">
             <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                  title="Microsoft">
                 <img src="img/Microsoft_logo_(2012).svg.png" class="img-fluid p-2" alt="Microsoft">
@@ -811,174 +460,19 @@
                 <img src="img/Apple-Logo.png" class="img-fluid p-2" alt="Apple">
             </div>
         </div>
+    </div>
 
+    <!-- Industries -->
+    <div class="padded-section text-center">
+        <h3>Industries and Sub-industries</h3>
         <div id="sunburstChart" class="chart--container"></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
-            // -----------------------------
-            let chartData = [{
-                id: 'Industries',
-                text: ' ',
-                parent: ''
-            }, {
-                id: 'Tech',
-                text: 'Tech',
-                parent: 'Industries',
-                value: 74
-            }, {
-                id: 'Healthcare',
-                text: 'Healthcare',
-                parent: 'Industries',
-                value: 1
-            }, {
-                id: 'FinTech',
-                text: 'FinTech',
-                parent: 'Industries',
-                value: 13
-            }, {
-                id: 'Public Interest Technology',
-                text: 'Public Interest Technology (PIT)',
-                parent: 'Industries',
-                value: 3
-            }, {
-                id: 'SW',
-                text: 'Software',
-                parent: 'Tech',
-                value: 44
-            }, {
-                id: 'HW',
-                text: 'Hardware',
-                parent: 'Tech',
-                value: 6
-            }, {
-                id: 'Robotics',
-                text: 'Robotics',
-                parent: 'Tech',
-                value: 2
-            }, {
-                id: 'Retail',
-                text: 'Retail',
-                parent: 'Tech',
-                value: 11
-            }, {
-                id: 'Communications',
-                text: 'Communications',
-                parent: 'Tech',
-                value: 5
-            },
-                {
-                    id: 'Entertainment',
-                    text: 'Entertainment',
-                    parent: 'Tech',
-                    value: 0
-                }, {
-                    id: 'Networking',
-                    text: 'Networking',
-                    parent: 'Tech',
-                    value: 0
-                }, {
-                    id: 'Consulting',
-                    text: 'Consulting',
-                    parent: 'Tech',
-                    value: 3
-                }, {
-                    id: 'Cybersecurity',
-                    text: 'Cybersecurity',
-                    parent: 'Tech',
-                    value: 3
-                }, {
-                    id: 'Software',
-                    text: 'Software',
-                    parent: 'Healthcare',
-                    value: 0
-                }, {
-                    id: 'Life Sciences',
-                    text: 'Life Sciences',
-                    parent: 'Healthcare',
-                    value: 1
-                }, {
-                    id: 'Pharmaceuticals',
-                    text: 'Pharmaceuticals',
-                    parent: 'Healthcare',
-                    value: 0
-                }, {
-                    id: 'Insurance',
-                    text: 'Insurance',
-                    parent: 'FinTech',
-                    value: 10
-                }, {
-                    id: 'Investment Banking',
-                    text: 'Investment Banking',
-                    parent: 'FinTech',
-                    value: 3
-                }, {
-                    id: 'Government',
-                    text: 'Government',
-                    parent: 'Public Interest Technology',
-                    value: 1
-                }, {
-                    id: 'Government Contractors',
-                    text: 'Government Contractors',
-                    parent: 'Public Interest Technology',
-                    value: 0
-                }, {
-                    id: 'GreenTech',
-                    text: 'GreenTech',
-                    parent: 'Public Interest Technology',
-                    value: 0
-                }, {
-                    id: '“Common Good”',
-                    text: '“Common Good”',
-                    parent: 'Public Interest Technology',
-                    value: 2
-                }
-            ];
-            // full ZingChart schema can be found here:
-            // https://www.zingchart.com/docs/api/json-configuration/
-            let chartConfig = {
-                type: 'sunburst',
-                backgroundColor: '#fff',
-                title: {
-                    text: 'MS Industries',
-                },
-                options: {
-                    sizeFactor: .9,
-                    slice: 0,
-                    space: 0,
-                    root: 'Industries',
-                    //widths: [70, 140, 180],
-                    palette: ['#ffffff', '#3F51B5', '#42A5F5', '#5C6BC0', '#64B5F6']
-                },
-                plot: {
-                    animation: {},
-                    valueBox: {
-                        text: '%data-vbtext',
-                        color: '#000',
-                        fontSize: '10px',
-                        visible: null
-                    },
-                    tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>No. of Students: %node-value',
-                    alpha: 1,
-                },
-                tooltip: {
-                    align: 'left',
-                    thousandsSeparator: ','
-                },
-                series: chartData,
-            };
-            zingchart.render({
-                id: 'sunburstChart',
-                data: chartConfig,
-                height: '100%',
-                width: '100%',
-            });
-        </script>
+    </div>
 
-        <div class="mt-5">
-            <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
-            <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
-        </div>
-        <div class="row mb-4">
+    <!-- aMAzing Employers -->
+    <div class="padded-section">
+        <h3 class="d-inline">a<strong>MA</strong>zing Employers</h3>
+        <img width="75px" class="p-2" src="img/massachusetts.svg" alt="Massachusetts Map"/>
+        <div class="row">
             <div class="col-4 col-sm-3 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                  title="MassMutual">
                 <img src="img/MassMutual_logo.svg.png" class="img-fluid p-2" alt="MassMutual">
@@ -1004,251 +498,67 @@
                 <img src="img/simplisafe_logo.svg" class="img-fluid p-2" alt="SimpliSafe">
             </div>
         </div>
-
-        <!--        <div id='msTreemap'></div>-->
-        <!--        <script>-->
-        <!--            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];-->
-        <!--            let ms = {-->
-        <!--                "graphset": [{-->
-        <!--                    "type": "treemap",-->
-        <!--                    "plotarea": {-->
-        <!--                        "margin": "0 0 30 0"-->
-        <!--                    },-->
-        <!--                    "options": {-->
-        <!--                        "aspect-type": "random"-->
-        <!--                    },-->
-        <!--                    "series": [{-->
-        <!--                        "text": "Industries",-->
-        <!--                        "children": [{-->
-        <!--                            "text": "Tech",-->
-        <!--                            "children": [-->
-        <!--                                {-->
-        <!--                                    "text": "Communications",-->
-        <!--                                    "value": 6-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Consulting",-->
-        <!--                                    "value": 3-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Hardware",-->
-        <!--                                    "value": 7-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Retail",-->
-        <!--                                    "value": 13-->
-        <!--                                },-->
-        <!--                                {-->
-        <!--                                    "text": "Software",-->
-        <!--                                    "value": 51-->
-        <!--                                },-->
-        <!--                            ]-->
-        <!--                        },-->
-        <!--                            {-->
-        <!--                                "text": "Cybersecurity",-->
-        <!--                                "value": 3-->
-        <!--                            },-->
-        <!--                            {-->
-        <!--                                "text": "Fintech",-->
-        <!--                                "value": 14-->
-        <!--                            },-->
-        <!--                            {-->
-        <!--                                "text": "Healthcare",-->
-        <!--                                "value": 2-->
-        <!--                            },-->
-        <!--                        ]-->
-        <!--                    }-->
-        <!--                    ]-->
-        <!--                }]-->
-        <!--            };-->
-        <!--            zingchart.render({-->
-        <!--                id: 'msTreemap',-->
-        <!--                data: ms,-->
-        <!--            });-->
-        <!--        </script>-->
-
-        <h3>Popular Job Roles</h3>
-        <div id="msWordcloud"></div>
-        <script>
-            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
-            let msWordcloudData = {
-                "graphset": [{
-                    "type": "wordcloud",
-                    "options": {
-                        // maxFontSize: 100,
-                        // minFontSize: 10,
-                        colorType: 'palette',
-                        palette: ['#6ba539', '#00aec7', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#00aec7'],
-                        "style": {
-                            "tooltip": {
-                                visible: true,
-                                text: '%text: %hits'
-                            }
-                        },
-                        "words": [
-                            {
-                                "text": "Data Scientist",
-                                "count": "7"
-                            },
-                            {
-                                "text": "Member of Technical Staff",
-                                "count": "3"
-                            },
-                            {
-                                "text": "Junior Data Scientist",
-                                "count": "3"
-                            },
-                            {
-                                "text": "Software Development Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Senior Software Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Machine Learning Engineer",
-                                "count": "2"
-                            },
-                            {
-                                "text": "Data and Applied Scientist",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Systems Engineer",
-                                "count": "1"
-                            },
-                            {
-                                "text": "Software Engineer",
-                                "count": "35"
-                            },
-                            {
-                                "text": "Software Engineer 2",
-                                "count": "1"
-                            }
-                            // {
-                            //     "text": "Software Engineer (AI/ML)",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Software Development Engineer II",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Senior Machine Learning Scientist",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Researcher",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Systems Software Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Research Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Member of Technical Staff 3",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Machine Learning Scientist",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Machine Learning Engineer 2",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Full Stack Software Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "DSA",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Deep Learning Researcher",
-                            //     "count": "1"
-                            // },
-                            //
-                            // {
-                            //     "text": "Computer Vision Research Engineer",
-                            //     "count": "1"
-                            // },
-                            // {
-                            //     "text": "Automation Quality Engineer",
-                            //     "count": "1"
-                            // }
-                        ]
-                    }
-                }]
-            };
-
-            zingchart.render({
-                id: 'msWordcloud',
-                data: msWordcloudData,
-            });
-        </script>
-
-        <hr>
-
-        <div class="text-center">
-            <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank"
-               rel="noopener noreferrer">
-                <img src="img/survey.png" class="img-fluid" alt="Careers Survey" width=50%>
-            </a>
-        </div>
-
-        <div class="container footer">
-            <div class="blockquote-footer mt-5 mb-5">
-                <h3 class="text-center">Thanks for being part of our CICS Career Community!</h3>
-            </div>
-
-            <div>
-                <h6>Notes</h6>
-                <ul class="p-0 mt-3">
-                    <li class="list-unstyled m-2">
-                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">I</sup>
-                        Data points were collected through the Careers Survey, Graduation Celebration Registrations, LinkedIn Profiles and Staff Knowledge.
-                    </li>
-                    <li class="list-unstyled m-2">
-                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">II</sup>
-                        10 undergraduate students graduated in August, 132 in December, and 298 in May.
-                    </li>
-                    <li class="list-unstyled m-2">
-                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">III</sup>
-                        Many offers also include bonuses and equity in total compensation.
-                    </li>
-                    <li class="list-unstyled m-2">
-                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">IV</sup>
-                        Remote work continues to be popular.
-                    </li>
-                    <li class="list-unstyled m-2">
-                        <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">V</sup>
-                        Continuing Ed doesn't include MS/PhD.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
     </div>
 
+
+    <!-- Popular Job Roles -->
+    <div class="text-center small-padded-section">
+        <h3>Popular Job Roles</h3>
+        <div id="ms-roles-wordcloud"></div>
+    </div>
+
+</div>
+
+<hr>
+
+<!-- Footer -->
+<div class="container footer padded-section">
+
+    <!-- Careers Survey -->
+    <div class="padded-section text-center">
+        <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_6rlcSDwiUaMgxGC" target="_blank"
+           rel="noopener noreferrer">
+            <img src="img/survey.png" class="img-fluid" alt="Careers Survey" width=50%>
+        </a>
+    </div>
+
+    <!-- Thank You -->
+    <div class="blockquote-footer small-padded-section">
+        <h3 class="text-center">Thanks for being part of our CICS Career Community!</h3>
+    </div>
+
+    <!-- Footnotes -->
+    <div class="padded-section">
+        <h6>Notes</h6>
+        <ul class="p-0 padded-section">
+            <li class="list-unstyled m-2">
+                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">I</sup>
+                Data points were collected through the Careers Survey, Graduation Celebration Registrations, LinkedIn Profiles and Staff Knowledge.
+            </li>
+            <li class="list-unstyled m-2">
+                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">II</sup>
+                10 undergraduate students graduated in August, 132 in December, and 298 in May.
+            </li>
+            <li class="list-unstyled m-2">
+                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">III</sup>
+                Many offers also include bonuses and equity in total compensation.
+            </li>
+            <li class="list-unstyled m-2">
+                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">IV</sup>
+                Remote work continues to be popular.
+            </li>
+            <li class="list-unstyled m-2">
+                <sup class="text-secondary small-super-text d-inline-block text-center" style="width: 15px">V</sup>
+                Continuing Ed doesn't include MS/PhD.
+            </li>
+        </ul>
+    </div>
 </div>
 
 
 <!-- Scripts for JS Libraries -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js" integrity="sha512-+Aecf3QQcWkkA8IUdym4PDvIP/ikcKdp4NCDF8PM6qr9FtqwIFCS3JAcm2+GmPMZvnlsrGv1qavSnxL8v+o86w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"-->
-<!--        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="-->
-<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
 
 <script src="https://apis.google.com/js/api.js"></script>
@@ -1256,13 +566,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
-
 <script src="./js/index.js"></script>
+<script src="./js/sunburst.js"></script>
+<script src="./js/wordcloud.js"></script>
 
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
+
 </body>
 </html>

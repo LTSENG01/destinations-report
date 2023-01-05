@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+/* Match font to new CICS website */
+*:not(.fa-solid, .fa-regular) {
+    font-family: "Public Sans", Arial, Helvetica, sans-serif !important;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+div.padded-section {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+div.small-padded-section {
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+}
+
 .text-in-donut {
     position: absolute;
     top: 50%;
@@ -10,7 +35,7 @@
 }
 
 .quick-stats li {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 3px;
     margin-bottom: 3px;
 }
