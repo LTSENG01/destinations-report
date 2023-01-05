@@ -80,7 +80,7 @@ const configMS = {
                     return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
                 },
                 color: "#fff",
-                backgroundColor: LabelBackgroundColor,
+                // backgroundColor: LabelBackgroundColor,
                 textAlign: "center",
                 font: {
                     family: "'Public Sans', Arial, Helvetica, sans-serif",
@@ -114,7 +114,7 @@ const configUG = {
                     return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
                 },
                 color: "#fff",
-                backgroundColor: LabelBackgroundColor,
+                // backgroundColor: LabelBackgroundColor,
                 textAlign: "center",
                 font: {
                     family: "'Public Sans', Arial, Helvetica, sans-serif",
