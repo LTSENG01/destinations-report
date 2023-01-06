@@ -127,13 +127,7 @@
 
 @media screen and (min-width: 768px) {
     .chart--container {
-        min-height: 75vh;
-    }
-}
-
-@media screen and (min-width: 2048px) {
-    .chart--container {
-        min-height: 50vw;
+        min-height: 40vw;
     }
 }
 
