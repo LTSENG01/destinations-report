@@ -14,6 +14,17 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -126,7 +137,7 @@
             </div>
             <div class="col-12 col-md-4 col-lg-3 callout-cell-container">
                 <div class="callout-cell">
-                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate</h6>
+                    <h6><i class="fa-regular fa-face-smile"></i> Satisfaction Rate<sup class="text-secondary">5</sup></h6>
                     <h1 class="mb-0">95%</h1>
                 </div>
             </div>
@@ -203,7 +214,7 @@
 
     <!-- Locations -->
     <div class="padded-section text-center">
-        <h3>Where Graduates Went To Work<sup class="text-secondary small-super-text">5</sup></h3>
+        <h3>Where Graduates Went To Work<sup class="text-secondary small-super-text">6</sup></h3>
         <div class="row">
             <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-6 text-center">
                 <img src="img/map.png" class="img-fluid" alt="States where undergraduates ended up. Top states include Massachusetts, California, New York, and Washington.">
@@ -295,10 +306,10 @@
                      title="Carnegie Mellon University">
                     <img src="img/cmu.png" class="img-fluid p-2" alt="CMU">
                 </div>
-                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
-                     title="Duke University">
-                    <img src="img/Duke-University-symbol.jpg" class="img-fluid p-2" alt="Duke University">
-                </div>
+<!--                <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"-->
+<!--                     title="Duke University">-->
+<!--                    <img src="img/Duke-University-symbol.jpg" class="img-fluid p-2" alt="Duke University">-->
+<!--                </div>-->
                 <div class="col-4 col-md-2 d-flex align-items-center" data-toggle="tooltip" data-placement="top"
                      title="UT Austin">
                     <img src="img/University_of_Texas_at_Austin_logo.svg.png" class="img-fluid p-2" alt="UT Austin">
@@ -306,6 +317,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Popular Informatics Roles -->
     <div class="text-center small-padded-section">
@@ -315,19 +327,13 @@
 
     <!-- Career Fair Repeated -->
     <div class="padded-section">
-        <h3 class="text-center">Career Fair Employers 4 Years In a Row!</h3>
+        <h3 class="text-center"><i class="fa-regular fa-handshake"></i> Career Fair Employers 4 Years In a Row!</h3>
         <div class="empGrid h-100 d-flex flex-row flex-wrap align-items-center justify-content-center mt-4" style="text-align: center">
-            <div class="col-sm">
-                <h6 class="mb-0">Interactive Brokers</h6>
-            </div>
-            <div class="col-sm">
-                <h6 class="mb-0">Fast Enterprises</h6>
-            </div>
-            <div class="col-sm">
-                <h6 class="mb-0">Optum</h6>
-            </div>
-            <div class="col-sm">
-                <h6 class="mb-0">Arista Networks</h6>
+            <div>
+                <h4 class="mb-0">- Interactive Brokers</h4>
+                <h4 class="mb-0">- Fast Enterprises</h4>
+                <h4 class="mb-0">- Arista Networks</h4>
+                <h4 class="mb-0">- Constant Contact</h4>
             </div>
         </div>
     </div>
@@ -540,8 +546,13 @@
             </li>
             <li class="list-unstyled m-2 small-text">
                 <sup class="text-secondary d-inline-block text-center" style="width: 15px">5</sup>
+                Based on replies to the question "" in the careers survey.
+            </li>
+            <li class="list-unstyled m-2 small-text">
+                <sup class="text-secondary d-inline-block text-center" style="width: 15px">6</sup>
                 Remote work continues to be popular.
             </li>
+
         </ul>
     </div>
 </div>

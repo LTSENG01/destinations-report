@@ -3,6 +3,7 @@ let ugWordcloud = {
     "graphset": [{
         "type": "wordcloud",
         "options": {
+            //fontSize: 14,
             "style": {
                 "tooltip": {
                     visible: true,
@@ -90,8 +91,10 @@ let ugWordcloud = {
 zingchart.render({
     id: 'ug-roles-wordcloud',
     data: ugWordcloud,
-    // height: '100%',
-    // width: '100%'
+    //width: 1315,
+    output: "auto",
+    minHeight: 100,
+    maxHeight: 480,
 });
 
 ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];

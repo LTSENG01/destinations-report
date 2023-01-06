@@ -135,6 +135,8 @@ const UGChart = new Chart(
     configUG
 );
 
+
+
 // Use GAPI for Google Sheets
 // https://github.com/google/google-api-javascript-client/blob/master/docs/start.md
 
