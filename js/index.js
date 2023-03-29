@@ -125,6 +125,40 @@ const configUG = {
     }
 };
 
+const configPhD = {
+    type: 'doughnut',
+    data: UGdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
 const MSChart = new Chart(
     document.getElementById('MSChart'),
     configMS
@@ -135,6 +169,10 @@ const UGChart = new Chart(
     configUG
 );
 
+const PhDChart = new Chart(
+    document.getElementById('PhDChart'),
+    configPhD
+)
 
 
 // Use GAPI for Google Sheets
