@@ -26,8 +26,7 @@ const Labels = [
 
 const PhDLabels = [
     'Working',
-    'Continuing Education',
-    'Unknown'
+    'Cont. Education'
 ];
 
 const MSdata = {
@@ -67,11 +66,10 @@ const PhDdata = {
     labels: PhDLabels,
     datasets: [{
         label: ' Number of Students',
-        data: [21, 7, 7],
+        data: [21, 7],
         backgroundColor: [
             UMassColors.GREEN,
-            UMassColors.TEAL,
-            UMassColors.MAROON
+            UMassColors.TEAL
         ],
         hoverOffset: 4
     }],
