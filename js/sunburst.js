@@ -311,3 +311,73 @@ zingchart.render({
     height: '100%',
     width: '100%',
 });
+
+// PhD //
+
+ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
+// -----------------------------
+let chartDataPhD = [{
+    id: 'Roles',
+    text: 'Roles',
+    parent: ''
+}, {
+    id: 'Research Scientist',
+    text: 'Research Scientist',
+    parent: 'Roles',
+    value: 7
+}, {
+    id: 'Software Engineer',
+    text: 'Software Engineer',
+    parent: 'Roles',
+    value: 3
+}, {
+    id: 'Applied Scietist',
+    text: 'Applied Scietist',
+    parent: 'Roles',
+    value: 2
+}, {
+    id: 'Post Doctoral Research',
+    text: 'Post Doctoral Research',
+    parent: 'Roles',
+    value: 7
+}, {
+    id: 'Professorship',
+    text: 'Professor',
+    parent: 'Roles',
+    value: 2
+}];
+let PhDchartConfig = {
+    type: 'sunburst',
+    backgroundColor: '#fff',
+    options: {
+        sizeFactor: 0.9,
+        slice: 0,
+        space: 0,
+        root: 'Roles',
+        // widths: [30, 115, 115],
+        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','yellow']
+    },
+    plot: {
+        animation: {},
+        valueBox: {
+            text: '%data-vbtext',
+            color: '#000',
+            fontSize: '13px',
+            fontWeight: 400,
+            visible: null
+        },
+        tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>No. of Students: %node-value',
+        alpha: 1,
+    },
+    tooltip: {
+        align: 'left',
+        thousandsSeparator: ','
+    },
+    series: chartDataPhD,
+};
+zingchart.render({
+    id: 'sunburstChartPhD',
+    data: PhDchartConfig,
+    height: '100%',
+    width: '100%',
+});

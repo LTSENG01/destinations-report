@@ -219,3 +219,48 @@ zingchart.render({
     id: 'ms-roles-wordcloud',
     data: msWordcloudData,
 });
+
+let phdWordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            // maxFontSize: 100,
+            // minFontSize: 10,
+            colorType: 'palette',
+            palette: ['#6ba539', '#00aec7', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: true,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Post Doctoral Researcher",
+                    "count": "7"
+                },
+                {
+                    "text": "Research Scientist",
+                    "count": "7"
+                },
+                {
+                    "text": "Assistant Professor",
+                    "count": "1"
+                },
+                {
+                    "text": "Software Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Applied Scientist",
+                    "count": "2"
+                }
+            ]
+        }
+    }]
+};
+
+zingchart.render({
+    id: 'phd-roles-wordcloud',
+    data: phdWordcloudData,
+});

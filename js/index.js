@@ -24,6 +24,12 @@ const Labels = [
     'Unknown'
 ];
 
+const PhDLabels = [
+    'Working',
+    'Continuing Education',
+    'Unknown'
+];
+
 const MSdata = {
     labels: Labels,
     datasets: [{
@@ -56,6 +62,24 @@ const UGdata = {
         display: false,
     },
 };
+
+const PhDdata = {
+    labels: PhDLabels,
+    datasets: [{
+        label: ' Number of Students',
+        data: [21, 7, 7],
+        backgroundColor: [
+            UMassColors.GREEN,
+            UMassColors.TEAL,
+            UMassColors.MAROON
+        ],
+        hoverOffset: 4
+    }],
+    legend: {
+        display: false,
+    },
+};
+
 
 const configMS = {
     type: 'doughnut',
@@ -124,6 +148,45 @@ const configUG = {
         }
     }
 };
+
+const configPhD = {
+    type: 'doughnut',
+    data: PhDdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};                   
+
+const PhDChart = new Chart(
+    document.getElementById('PhDChart'),
+    configPhD
+);
 
 const MSChart = new Chart(
     document.getElementById('MSChart'),
