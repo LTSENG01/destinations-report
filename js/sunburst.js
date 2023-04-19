@@ -318,13 +318,13 @@ ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768
 // -----------------------------
 let chartDataPhD = [{
     id: 'Roles',
-    text: 'Roles',
+    text: ' ',
     parent: ''
 }, {
-    id: 'Research Scientist',
-    text: 'Research Scientist',
+    id: 'Researchers in Industry',
+    text: 'Research in Industry',
     parent: 'Roles',
-    value: 7
+    value: 9
 }, {
     id: 'Software Engineer',
     text: 'Software Engineer',
@@ -334,15 +334,15 @@ let chartDataPhD = [{
     id: 'Applied Scietist',
     text: 'Applied Scietist',
     parent: 'Roles',
-    value: 2
+    value: 3
 }, {
     id: 'Post Doctoral Research',
     text: 'Post Doctoral Research',
     parent: 'Roles',
-    value: 7
+    value: 8
 }, {
     id: 'Professorship',
-    text: 'Professor',
+    text: 'Professorship',
     parent: 'Roles',
     value: 2
 }];
