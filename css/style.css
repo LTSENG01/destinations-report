@@ -23,6 +23,12 @@
     font-size: 30px;
     color: white;
 }
+.callout-academia-header {
+    padding: 10px;
+    background: #cb6015;
+    font-size: 30px;
+    color:white
+}
 .callout-unknown-header {
     padding: 10px;
     background: rgb(162, 170, 173);
@@ -146,4 +152,7 @@
 .body {
     width: 100vw;
     height: 100vh;
+}
+.fillin{
+    height: 2em;
 }

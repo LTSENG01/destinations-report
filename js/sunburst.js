@@ -324,7 +324,7 @@ let chartDataPhD = [{
     id: 'Researchers in Industry',
     text: 'Research in Industry',
     parent: 'Roles',
-    value: 9
+    value: 10
 }, {
     id: 'Software Engineer',
     text: 'Software Engineer',
@@ -354,7 +354,7 @@ let PhDchartConfig = {
         slice: 0,
         space: 0,
         root: 'Roles',
-        // widths: [30, 115, 115],
+        //widths: [30, 115, 115],
         palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','yellow']
     },
     plot: {

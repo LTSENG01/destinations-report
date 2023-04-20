@@ -12,7 +12,8 @@ const UMassColors = {
     LIMEGREEN: 'rgb(196, 214, 0)',
     AQUA: 'rgb(134, 200, 188)',
     TEAL: 'rgb(0, 174, 199)',
-    GREEN: 'rgb(46,139,87)'
+    GREEN: 'rgb(46,139,87)',
+    DARKORANGE: '#cb6015'
 }
 
 const LabelBackgroundColor = 'rgba(0, 0, 0, 0.2)';
@@ -25,8 +26,9 @@ const Labels = [
 ];
 
 const PhDLabels = [
-    'Working',
-    'Post-Doc'
+    'Working in Industry',
+    'Post-Doc',
+    'Working in Academia'
 ];
 
 const MSdata = {
@@ -66,10 +68,11 @@ const PhDdata = {
     labels: PhDLabels,
     datasets: [{
         label: ' Number of Students',
-        data: [19, 8],
+        data: [17, 8,2],
         backgroundColor: [
             UMassColors.GREEN,
-            UMassColors.TEAL
+            UMassColors.TEAL,
+            UMassColors.DARKORANGE
         ],
         hoverOffset: 4
     }],
