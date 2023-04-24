@@ -321,30 +321,40 @@ let chartDataPhD = [{
     text: ' ',
     parent: ''
 }, {
-    id: 'Researchers in Industry',
-    text: 'Research in Industry',
+    id: 'Research Scientist',
+    text: 'Research Scientist',
     parent: 'Roles',
-    value: 10
+    value: 7
 }, {
     id: 'Software Engineer',
     text: 'Software Engineer',
     parent: 'Roles',
     value: 3
 }, {
-    id: 'Applied Scietist',
-    text: 'Applied Scietist',
-    parent: 'Roles',
-    value: 3
-}, {
-    id: 'Post Doctoral Research',
-    text: 'Post Doctoral Research',
-    parent: 'Roles',
-    value: 8
-}, {
-    id: 'Professorship',
-    text: 'Professorship',
+    id: 'Applied Scientist',
+    text: 'Applied Scientist',
     parent: 'Roles',
     value: 2
+}, {
+    id: 'Applied and Data Scientist',
+    text: 'Applied and Data Scientist',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Post Doctoral Researcher',
+    text: 'Post Doctoral Researcher',
+    parent: 'Roles',
+    value: 8
+},{
+    id: 'Senior Researcher',
+    text: 'Senior Researcher',
+    parent: 'Roles',
+    value: 1
+},{
+    id: 'Researcher',
+    text: 'Researcher',
+    parent: 'Roles',
+    value: 1
 }];
 let PhDchartConfig = {
     type: 'sunburst',
@@ -355,7 +365,7 @@ let PhDchartConfig = {
         space: 0,
         root: 'Roles',
         //widths: [30, 115, 115],
-        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','yellow']
+        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','#FEBE10','#E32636','#32de84']
     },
     plot: {
         animation: {},
