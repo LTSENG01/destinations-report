@@ -48,3 +48,28 @@ div.small-padded-section {
 .nav-item a {
     font-size: 15px;
 }
+
+/* Navigation Tabs */
+/* Sets the colors of the navigation tabs */
+.nav-pills > li > button.active, .nav-pills > .dropdown > ul > li > a.active {
+    background-color: #6c757d !important;
+}
+
+.nav-pills > li > button:not(.active), .nav-pills > li > a:not(.active) {
+    color: #6c757d !important;
+}
+
+.nav-pills > li > button:hover:not(.active) {
+    color: #8f9ba6 !important;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-pills > li {
+        flex-basis: 100%;
+    }
+    .nav-pills > li > * {
+        width: 100%;
+    }
+}
+
+
