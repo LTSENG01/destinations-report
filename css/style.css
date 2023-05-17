@@ -156,3 +156,6 @@
 .fillin{
     height: 2em;
 }
+.op-reduce{
+    opacity: 0.5;
+}
