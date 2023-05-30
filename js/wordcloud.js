@@ -220,6 +220,68 @@ zingchart.render({
     data: msWordcloudData,
 });
 
+let ms2023WordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            colorType: 'palette',
+            palette: ['#6ba539', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#6ba539', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: true,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Data Scientist",
+                    "count": "2"
+                },
+                {
+                    "text": "Member of Technical Staff",
+                    "count": "3"
+                },
+                {
+                    "text": "Junior Data Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Software Development Engineer",
+                    "count": "4"
+                },
+                {
+                    "text": "Senior Software Engineer",
+                    "count": "4"
+                },
+                {
+                    "text": "Machine Learning Engineer",
+                    "count": "2"
+                },
+                {
+                    "text": "Data and Applied Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Systems Engineer",
+                    "count": "1"
+                },
+                {
+                    "text": "Computer Vision Engineer",
+                    "count": "1"
+                },
+                {
+                    "text": "Research Fellow",
+                    "count": "1"
+                }
+            ]
+        }
+    }]
+}
+zingchart.render({
+    id: 'ms2023-roles-wordcloud',
+    data: ms2023WordcloudData,
+});
+
 let phdWordcloudData = {
     "graphset": [{
         "type": "wordcloud",
