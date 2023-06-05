@@ -159,3 +159,26 @@
 .op-reduce{
     opacity: 0.5;
 }
+.kr-wrap{
+    text-align: center;
+    /* margin: auto; */
+    /* width: 100%; */
+    font-size: 1.2em;
+    margin: 1em;
+}
+.knowledge-rate{
+    font-size: 5em;
+}
+.kr-s2{
+    margin: 1em;
+    font-size: 1.5em;
+    color: darkgoldenrod;
+    font-style: italic;
+}
+.kr-s1-wrap{
+    display: flex;
+    justify-content: center;
+}
+.kr-s1{
+    margin: auto 1em;
+}

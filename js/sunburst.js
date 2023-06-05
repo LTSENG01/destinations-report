@@ -391,3 +391,155 @@ zingchart.render({
     height: '100%',
     width: '100%',
 });
+
+var fsdata = [{
+    "id": "flare",
+    "text": "flare",
+    "parent": ""
+  },
+  {
+    "id": "analytics",
+    "text": "analytics",
+    "parent": "flare",
+    "data-xx": "xx-analytics"
+  },
+  {
+    "id": "cluster",
+    "text": "cluster",
+    "parent": "analytics",
+    "data-xx": "xx-cluster"
+  },
+  {
+    "id": "agglomerativecluster",
+    "text": "AgglomerativeCluster",
+    "parent": "cluster",
+    "value": 3938
+  },
+  {
+    "id": "communitystructure",
+    "text": "CommunityStructure",
+    "parent": "cluster",
+    "value": 3812
+  },
+  {
+    "id": "hierarchicalcluster",
+    "text": "HierarchicalCluster",
+    "parent": "cluster",
+    "value": 6714
+  },
+  {
+    "id": "mergeedge",
+    "text": "MergeEdge",
+    "parent": "cluster",
+    "value": 743
+  },
+  {
+    "id": "graph",
+    "text": "graph",
+    "parent": "analytics"
+  },
+  {
+    "id": "betweennesscentrality",
+    "text": "BetweennessCentrality",
+    "parent": "graph",
+    "value": 3534
+  },
+  {
+    "id": "linkdistance",
+    "text": "LinkDistance",
+    "parent": "graph",
+    "value": 5731
+  },
+  {
+    "id": "maxflowmincut",
+    "text": "MaxFlowMinCut",
+    "parent": "graph",
+    "value": 7840
+  },
+  {
+    "id": "shortestpaths",
+    "text": "ShortestPaths",
+    "parent": "graph",
+    "value": 5914
+  },
+  {
+    "id": "spanningtree",
+    "text": "SpanningTree",
+    "parent": "graph",
+    "value": 3416
+  },
+  {
+    "id": "optimization",
+    "text": "optimization",
+    "parent": "analytics"
+  },
+  {
+    "id": "aspectratiobanker",
+    "text": "AspectRatioBanker",
+    "parent": "optimization",
+    "value": 7074
+  },
+  {
+    "id": "animate",
+    "text": "animate",
+    "parent": "flare"
+  },
+  {
+    "id": "easing",
+    "text": "Easing",
+    "parent": "animate",
+    "value": 17010
+  },
+  {
+    "id": "functionsequence",
+    "text": "FunctionSequence",
+    "parent": "animate",
+    "value": 5842
+  },
+  {
+    "id": "interpolate",
+    "text": "interpolate",
+    "parent": "animate"
+  },
+  {
+    "id": "arrayinterpolator",
+    "text": "ArrayInterpolator",
+    "parent": "interpolate",
+    "value": 1983
+  },
+  {
+    "id": "colorinterpolator",
+    "text": "ColorInterpolator",
+    "parent": "interpolate",
+    "value": 2047
+  },
+  {
+    "id": "dateinterpolator",
+    "text": "DateInterpolator",
+    "parent": "interpolate",
+    "value": 1375
+  }
+];
+var cdata2023 = {
+    "background-color": "#fff",//"#eee #ddd",
+    "type": "bubble-pack",
+    "plotarea": {
+      "margin": 5
+    },
+    "options": {
+      "active": true,
+      "padding": 1,
+      "min-size": 1,
+      "max-items": 999,
+      "min-level": 3,
+      "max-level": 3,
+    },
+    "series": fsdata,
+  };
+  zingchart.render({
+    id: 'sunburstChart2023',
+    width: 550,
+    height: 550,
+    output: 'svg',
+    data: cdata2023
+  });
