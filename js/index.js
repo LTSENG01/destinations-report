@@ -13,7 +13,8 @@ const UMassColors = {
     AQUA: 'rgb(134, 200, 188)',
     TEAL: 'rgb(0, 174, 199)',
     GREEN: 'rgb(46,139,87)',
-    DARKORANGE: '#cb6015'
+    DARKORANGE: '#cb6015',
+    GRAY:"#808080"
 }
 
 const LabelBackgroundColor = 'rgba(0, 0, 0, 0.2)';
@@ -23,6 +24,10 @@ const Labels = [
     'Continuing Education',
     'Still Looking',
     'Unknown'
+];
+const LabelsKR = [
+    '% Known',
+    '% Unknown'
 ];
 
 const PhDLabels = [
@@ -41,6 +46,35 @@ const MSdata = {
             UMassColors.TEAL,
             UMassColors.MAROON,
             UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
+};
+
+const MSdataKR = {
+    labels: LabelsKR,
+    datasets: [{
+        label: ' Number of Students',
+        data: [88.3, 11.7],
+        backgroundColor: [
+            UMassColors.LIGHTGRAY,
+            UMassColors.GRAY
+            // UMassColors.MAROON,
+            // UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
+};
+const UGRADdataKR = {
+    labels: LabelsKR,
+    datasets: [{
+        label: ' Number of Students',
+        data: [75.7, 24.3],
+        backgroundColor: [
+            UMassColors.LIGHTGRAY,
+            UMassColors.GRAY
+            // UMassColors.MAROON,
+            // UMassColors.LIGHTGRAY
         ],
         hoverOffset: 4
     }]
@@ -85,6 +119,74 @@ const PhDdata = {
 const configMS = {
     type: 'doughnut',
     data: MSdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configMSKR = {
+    type: 'doughnut',
+    data: MSdataKR,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configUGRADKR = {
+    type: 'doughnut',
+    data: UGRADdataKR,
     options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -192,6 +294,16 @@ const PhDChart = new Chart(
 const MSChart = new Chart(
     document.getElementById('MSChart'),
     configMS
+);
+
+const MSChartKR = new Chart(
+    document.getElementById('MSChartKR'),
+    configMSKR
+);
+
+const UGRADChartKR = new Chart(
+    document.getElementById('UGRADChartKR'),
+    configUGRADKR
 );
 
 const UGChart = new Chart(

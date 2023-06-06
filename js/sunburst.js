@@ -393,131 +393,63 @@ zingchart.render({
 });
 
 var fsdata = [{
-    "id": "flare",
-    "text": "flare",
+    "id": "breakdown",
+    "text": "Industry Breakdown",
     "parent": ""
+   },
+  {
+    "id": "tech",
+    "text": "Tech",
+    "parent": "breakdown",
+    "value": 10
   },
   {
-    "id": "analytics",
-    "text": "analytics",
-    "parent": "flare",
-    "data-xx": "xx-analytics"
+    "id": "healthcare",
+    "text": "Health Care",
+    "parent": "breakdown",
+    "value": 9
   },
   {
-    "id": "cluster",
-    "text": "cluster",
-    "parent": "analytics",
-    "data-xx": "xx-cluster"
+    "id": "fintech",
+    "text": "FinTech",
+    "parent": "breakdown",
+    "value": 8
   },
   {
-    "id": "agglomerativecluster",
-    "text": "AgglomerativeCluster",
-    "parent": "cluster",
-    "value": 3938
+    "id": "retail",
+    "text": "Retail",
+    "parent": "breakdown",
+    "value": 7
   },
   {
-    "id": "communitystructure",
-    "text": "CommunityStructure",
-    "parent": "cluster",
-    "value": 3812
+    "id": "lifesciences",
+    "text": "Life Sciences",
+    "parent": "breakdown",
+    "value":6
   },
   {
-    "id": "hierarchicalcluster",
-    "text": "HierarchicalCluster",
-    "parent": "cluster",
-    "value": 6714
+    "id": "hardware",
+    "text": "Hardware",
+    "parent": "breakdown",
+    "value": 6
   },
   {
-    "id": "mergeedge",
-    "text": "MergeEdge",
-    "parent": "cluster",
-    "value": 743
+    "id": "robotics",
+    "text": "Robotics",
+    "parent": "breakdown",
+    "value": 5
   },
   {
-    "id": "graph",
-    "text": "graph",
-    "parent": "analytics"
+    "id": "investmentbanking",
+    "text": "Investment Banking",
+    "parent": "breakdown",
+    "value": 7
   },
   {
-    "id": "betweennesscentrality",
-    "text": "BetweennessCentrality",
-    "parent": "graph",
-    "value": 3534
-  },
-  {
-    "id": "linkdistance",
-    "text": "LinkDistance",
-    "parent": "graph",
-    "value": 5731
-  },
-  {
-    "id": "maxflowmincut",
-    "text": "MaxFlowMinCut",
-    "parent": "graph",
-    "value": 7840
-  },
-  {
-    "id": "shortestpaths",
-    "text": "ShortestPaths",
-    "parent": "graph",
-    "value": 5914
-  },
-  {
-    "id": "spanningtree",
-    "text": "SpanningTree",
-    "parent": "graph",
-    "value": 3416
-  },
-  {
-    "id": "optimization",
-    "text": "optimization",
-    "parent": "analytics"
-  },
-  {
-    "id": "aspectratiobanker",
-    "text": "AspectRatioBanker",
-    "parent": "optimization",
-    "value": 7074
-  },
-  {
-    "id": "animate",
-    "text": "animate",
-    "parent": "flare"
-  },
-  {
-    "id": "easing",
-    "text": "Easing",
-    "parent": "animate",
-    "value": 17010
-  },
-  {
-    "id": "functionsequence",
-    "text": "FunctionSequence",
-    "parent": "animate",
-    "value": 5842
-  },
-  {
-    "id": "interpolate",
-    "text": "interpolate",
-    "parent": "animate"
-  },
-  {
-    "id": "arrayinterpolator",
-    "text": "ArrayInterpolator",
-    "parent": "interpolate",
-    "value": 1983
-  },
-  {
-    "id": "colorinterpolator",
-    "text": "ColorInterpolator",
-    "parent": "interpolate",
-    "value": 2047
-  },
-  {
-    "id": "dateinterpolator",
-    "text": "DateInterpolator",
-    "parent": "interpolate",
-    "value": 1375
+    "id": "consulting",
+    "text": "Consulting",
+    "parent": "breakdown",
+    "value": 3
   }
 ];
 var cdata2023 = {
@@ -531,8 +463,9 @@ var cdata2023 = {
       "padding": 1,
       "min-size": 1,
       "max-items": 999,
-      "min-level": 3,
-      "max-level": 3,
+      "min-level": 1,
+      "max-level": 1,
+      palette: ['#ffab40']
     },
     "series": fsdata,
   };

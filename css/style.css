@@ -171,8 +171,8 @@
 }
 .kr-s2{
     margin: 1em;
-    font-size: 1.5em;
-    color: darkgoldenrod;
+    font-size: 1.7em;
+    color: #636363;
     font-style: italic;
 }
 .kr-s1-wrap{
@@ -181,4 +181,18 @@
 }
 .kr-s1{
     margin: auto 1em;
+}
+.chart2023{
+    display: flex;
+    justify-content: center;
+}
+/* .chart2023-wrap{
+    text-align: center;
+} */
+.dummy{
+    height: 40em;
+}
+.KR-head{
+    font-size: 3em;
+    color: #881c1c;
 }
