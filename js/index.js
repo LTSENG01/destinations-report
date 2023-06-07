@@ -296,6 +296,11 @@ const MSChart = new Chart(
     configMS
 );
 
+const UGChart = new Chart(
+    document.getElementById('UGChart'),
+    configUG
+);
+
 const MSChartKR = new Chart(
     document.getElementById('MSChartKR'),
     configMSKR
@@ -305,12 +310,6 @@ const UGRADChartKR = new Chart(
     document.getElementById('UGRADChartKR'),
     configUGRADKR
 );
-
-const UGChart = new Chart(
-    document.getElementById('UGChart'),
-    configUG
-);
-
 
 
 // Use GAPI for Google Sheets
