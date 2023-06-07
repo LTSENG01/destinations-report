@@ -51,38 +51,6 @@ let ugWordcloud = {
                     "text": "Database Analyst",
                     "count": "1"
                 }
-                // {
-                //     "text": "Data Analyst",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Cybersecurity Engineering & Operations Analyst",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Cyber Systems Operator",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Business Analyst",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Associate Specialist, Medical Education Systems",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Associate Software Engineer",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Associate Product Manager",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Associate Data Engineer",
-                //     "count": "1"
-                // }
             ]
         }
     }]
@@ -153,63 +121,6 @@ let msWordcloudData = {
                     "text": "Software Engineer 2",
                     "count": "1"
                 }
-                // {
-                //     "text": "Software Engineer (AI/ML)",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Software Development Engineer II",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Senior Machine Learning Scientist",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Researcher",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Systems Software Engineer",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Research Engineer",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Member of Technical Staff 3",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Machine Learning Scientist",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Machine Learning Engineer 2",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Full Stack Software Engineer",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "DSA",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Deep Learning Researcher",
-                //     "count": "1"
-                // },
-                //
-                // {
-                //     "text": "Computer Vision Research Engineer",
-                //     "count": "1"
-                // },
-                // {
-                //     "text": "Automation Quality Engineer",
-                //     "count": "1"
-                // }
             ]
         }
     }]
@@ -218,6 +129,148 @@ let msWordcloudData = {
 zingchart.render({
     id: 'ms-roles-wordcloud',
     data: msWordcloudData,
+});
+
+let ms2023WordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            colorType: 'palette',
+            palette: ['#6ba539', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#6ba539', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: false,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Data Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Member of Technical Staff",
+                    "count": "3"
+                },
+                {
+                    "text": "Junior Data Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Development Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Senior Software Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Machine Learning Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Data and Applied Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Systems Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Computer Vision Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Research Fellow",
+                    "count": "3"
+                }
+            ]
+        }
+    }]
+}
+zingchart.render({
+    id: 'ms2023-roles-wordcloud',
+    data: ms2023WordcloudData,
+});
+
+let ug2023WordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            colorType: 'palette',
+            //palette: ['#6ba539', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#6ba539', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: false,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Data Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Development Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Data Analyst",
+                    "count": "3"
+                },
+                {
+                    "text": "Backend Software Developer",
+                    "count": "3"
+                },
+                {
+                    "text": "Application Developer",
+                    "count": "3"
+                },
+                {
+                    "text": "Algorithms Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Solutions Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Staff Assistant",
+                    "count": "3"
+                },
+                {
+                    "text": "Vulnerability Researcher",
+                    "count": "3"
+                },
+                {
+                    "text": "Technology Development Program Associate",
+                    "count": "3"
+                },
+                {
+                    "text": "Business Intelligence Consultant",
+                    "count": "3"
+                },
+                {
+                    "text": "Risk and Regulatory Consultant ",
+                    "count": "3"
+                }
+                ,
+                {
+                    "text": "Researcher",
+                    "count": "3"
+                },
+                {
+                    "text": "Founder",
+                    "count": "3"
+                }
+            ]
+        }
+    }]
+}
+
+zingchart.render({
+    id: 'ug2023-roles-wordcloud',
+    data: ug2023WordcloudData,
 });
 
 let phdWordcloudData = {

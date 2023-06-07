@@ -391,3 +391,88 @@ zingchart.render({
     height: '100%',
     width: '100%',
 });
+
+var fsdata = [{
+    "id": "breakdown",
+    "text": "Industry Breakdown",
+    "parent": ""
+   },
+  {
+    "id": "tech",
+    "text": "Tech",
+    "parent": "breakdown",
+    "value": 10
+  },
+  {
+    "id": "healthcare",
+    "text": "Health Care",
+    "parent": "breakdown",
+    "value": 9
+  },
+  {
+    "id": "fintech",
+    "text": "FinTech",
+    "parent": "breakdown",
+    "value": 8
+  },
+  {
+    "id": "retail",
+    "text": "Retail",
+    "parent": "breakdown",
+    "value": 7
+  },
+  {
+    "id": "lifesciences",
+    "text": "Life Sciences",
+    "parent": "breakdown",
+    "value":6
+  },
+  {
+    "id": "hardware",
+    "text": "Hardware",
+    "parent": "breakdown",
+    "value": 6
+  },
+  {
+    "id": "robotics",
+    "text": "Robotics",
+    "parent": "breakdown",
+    "value": 5
+  },
+  {
+    "id": "investmentbanking",
+    "text": "Investment Banking",
+    "parent": "breakdown",
+    "value": 7
+  },
+  {
+    "id": "consulting",
+    "text": "Consulting",
+    "parent": "breakdown",
+    "value": 3
+  }
+];
+var cdata2023 = {
+    "background-color": "#fff",//"#eee #ddd",
+    "type": "bubble-pack",
+    "plotarea": {
+      "margin": 5
+    },
+    "options": {
+      "active": true,
+      "padding": 1,
+      "min-size": 1,
+      "max-items": 999,
+      "min-level": 1,
+      "max-level": 1,
+      palette: ['#ffab40']
+    },
+    "series": fsdata,
+  };
+  zingchart.render({
+    id: 'sunburstChart2023',
+    width: 550,
+    height: 550,
+    output: 'svg',
+    data: cdata2023
+  });

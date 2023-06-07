@@ -1,0 +1,75 @@
+/*
+Theme Name: Bridge Child
+Theme URI: http://demo.qodeinteractive.com/bridge/
+Description: A child theme of Bridge Theme
+Author: Qode Interactive
+Author URI: http://www.qodethemes.com/
+Version: 1.0.0
+Template: bridge
+*/
+@import url("../bridge/style.css");
+
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+.qode-banner {
+  overflow: hidden;
+  position: relative;
+}
+
+.qode-banner .qode-banner-image img {
+  vertical-align: middle;
+}
+
+.qode-banner .qode-banner-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.qode-banner .qode-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 7.2%;
+  box-sizing: border-box;
+  background-color: transparent;
+	background-image: linear-gradient(0deg, rgba(0,68,124,1), rgba(0,68,124,0.8), rgba(0,68,124,0.4), rgba(0,68,124,0));
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.qode-banner .qode-banner-content .qode-banner-content-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.qode-banner .qode-banner-content .qode-banner-text-holder {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.qode-banner .qode-banner-content .qode-banner-text-holder * {
+  color: #fff;
+}
+
+.qode-banner.qode-banner-va-bottom .qode-banner-content .qode-banner-text-holder {
+  vertical-align: bottom;
+}
+
+.qode-banner.qode-banner-va-top .qode-banner-content .qode-banner-text-holder {
+  vertical-align: top;
+}
+
+.qode-banner:hover .qode-banner-content {
+  opacity: 0;
+}
