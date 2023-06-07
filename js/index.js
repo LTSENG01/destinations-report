@@ -284,29 +284,29 @@ const configPhD = {
             }
         }
     }
-};                   
+}; 
 
-const PhDChart = new Chart(
+const PhDChart = document.getElementById('PhDChart') && new Chart(
     document.getElementById('PhDChart'),
     configPhD
 );
 
-const MSChart = new Chart(
+const MSChart = document.getElementById('MSChart') && new Chart(
     document.getElementById('MSChart'),
     configMS
 );
 
-const UGChart = new Chart(
+const UGChart = document.getElementById('UGChart') && new Chart(
     document.getElementById('UGChart'),
     configUG
 );
 
-const MSChartKR = new Chart(
+const MSChartKR = document.getElementById('MSChartKR') && new Chart(
     document.getElementById('MSChartKR'),
     configMSKR
 );
 
-const UGRADChartKR = new Chart(
+const UGRADChartKR = document.getElementById('UGRADChartKR') && new Chart(
     document.getElementById('UGRADChartKR'),
     configUGRADKR
 );
