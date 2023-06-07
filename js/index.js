@@ -55,7 +55,7 @@ const MSdataKR = {
     labels: LabelsKR,
     datasets: [{
         label: ' Number of Students',
-        data: [88.3, 11.7],
+        data: [88, 12],
         backgroundColor: [
             UMassColors.LIGHTGRAY,
             UMassColors.GRAY
@@ -69,7 +69,7 @@ const UGRADdataKR = {
     labels: LabelsKR,
     datasets: [{
         label: ' Number of Students',
-        data: [75.7, 24.3],
+        data: [76, 24],
         backgroundColor: [
             UMassColors.LIGHTGRAY,
             UMassColors.GRAY
