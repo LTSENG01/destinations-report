@@ -12,7 +12,9 @@ const UMassColors = {
     LIMEGREEN: 'rgb(196, 214, 0)',
     AQUA: 'rgb(134, 200, 188)',
     TEAL: 'rgb(0, 174, 199)',
-    GREEN: 'rgb(46,139,87)'
+    GREEN: 'rgb(46,139,87)',
+    DARKORANGE: '#cb6015',
+    GRAY:"#808080"
 }
 
 const LabelBackgroundColor = 'rgba(0, 0, 0, 0.2)';
@@ -22,6 +24,16 @@ const Labels = [
     'Continuing Education',
     'Still Looking',
     'Unknown'
+];
+const LabelsKR = [
+    '% Known',
+    '% Unknown'
+];
+
+const PhDLabels = [
+    'Working in Industry',
+    'Post-Doc',
+    'Working in Academia'
 ];
 
 const MSdata = {
@@ -34,6 +46,50 @@ const MSdata = {
             UMassColors.TEAL,
             UMassColors.MAROON,
             UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
+};
+
+const MSdata2023 = {
+    labels: Labels,
+    datasets: [{
+        label: ' Number of Students',
+        data: [166, 13, 64, 24],
+        backgroundColor: [
+            UMassColors.GREEN,
+            UMassColors.TEAL,
+            UMassColors.MAROON,
+            UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
+};
+
+const MSdataKR = {
+    labels: LabelsKR,
+    datasets: [{
+        label: ' Number of Students',
+        data: [87, 13],
+        backgroundColor: [
+            UMassColors.LIGHTGRAY,
+            UMassColors.GRAY
+            // UMassColors.MAROON,
+            // UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }]
+};
+const UGRADdataKR = {
+    labels: LabelsKR,
+    datasets: [{
+        label: ' Number of Students',
+        data: [77, 23],
+        backgroundColor: [
+            UMassColors.LIGHTGRAY,
+            UMassColors.GRAY
+            // UMassColors.MAROON,
+            // UMassColors.LIGHTGRAY
         ],
         hoverOffset: 4
     }]
@@ -57,9 +113,147 @@ const UGdata = {
     },
 };
 
+const UGdata2023 = {
+    labels: Labels,
+    datasets: [{
+        label: ' Number of Students',
+        data: [218, 83, 127, 71],
+        backgroundColor: [
+            UMassColors.GREEN,
+            UMassColors.TEAL,
+            UMassColors.MAROON,
+            UMassColors.LIGHTGRAY
+        ],
+        hoverOffset: 4
+    }],
+    legend: {
+        display: false,
+    },
+};
+
+const PhDdata = {
+    labels: PhDLabels,
+    datasets: [{
+        label: ' Number of Students',
+        data: [17, 8,2],
+        backgroundColor: [
+            UMassColors.GREEN,
+            UMassColors.TEAL,
+            UMassColors.DARKORANGE
+        ],
+        hoverOffset: 4
+    }],
+    legend: {
+        display: false,
+    },
+};
+
+
 const configMS = {
     type: 'doughnut',
     data: MSdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configMS2023 = {
+    type: 'doughnut',
+    data: MSdata2023,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configMSKR = {
+    type: 'doughnut',
+    data: MSdataKR,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configUGRADKR = {
+    type: 'doughnut',
+    data: UGRADdataKR,
     options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -125,16 +319,106 @@ const configUG = {
     }
 };
 
-const MSChart = new Chart(
+const configUG2023 = {
+    type: 'doughnut',
+    data: UGdata2023,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+};
+
+const configPhD = {
+    type: 'doughnut',
+    data: PhDdata,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: (value, ctx) => {
+                    // Uncomment this code for a percentage calculation
+                    // let sum = 0;
+                    // let dataArr = ctx.chart.data.datasets[0].data;
+                    // dataArr.map(data => {
+                    //     sum += data;
+                    // });
+                    // let percentage = (value*100 / sum).toFixed(2)+"%";
+
+                    return value + "\n" + ctx.chart.data.labels[ctx.dataIndex];
+                },
+                color: "#fff",
+                // backgroundColor: LabelBackgroundColor,
+                textAlign: "center",
+                font: {
+                    family: "'Public Sans', Arial, Helvetica, sans-serif",
+                    size: 14
+                }
+            }
+        }
+    }
+}; 
+
+const PhDChart = document.getElementById('PhDChart') && new Chart(
+    document.getElementById('PhDChart'),
+    configPhD
+);
+
+const MSChart = document.getElementById('MSChart') && new Chart(
     document.getElementById('MSChart'),
     configMS
 );
+const MSChart2023 = document.getElementById('MSChart2023') && new Chart(
+    document.getElementById('MSChart2023'),
+    configMS2023
+);
 
-const UGChart = new Chart(
+const UGChart = document.getElementById('UGChart') && new Chart(
     document.getElementById('UGChart'),
     configUG
 );
+const UGChart2023 = document.getElementById('UGChart2023') && new Chart(
+    document.getElementById('UGChart2023'),
+    configUG2023
+);
 
+const MSChartKR = document.getElementById('MSChartKR') && new Chart(
+    document.getElementById('MSChartKR'),
+    configMSKR
+);
+
+const UGRADChartKR = document.getElementById('UGRADChartKR') && new Chart(
+    document.getElementById('UGRADChartKR'),
+    configUGRADKR
+);
 
 
 // Use GAPI for Google Sheets

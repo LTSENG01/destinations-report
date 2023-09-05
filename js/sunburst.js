@@ -311,3 +311,168 @@ zingchart.render({
     height: '100%',
     width: '100%',
 });
+
+// PhD //
+
+ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
+// -----------------------------
+let chartDataPhD = [{
+    id: 'Roles',
+    text: ' ',
+    parent: ''
+}, {
+    id: 'Research Scientist',
+    text: 'Research Scientist',
+    parent: 'Roles',
+    value: 7
+}, {
+    id: 'Software Engineer',
+    text: 'Software Engineer',
+    parent: 'Roles',
+    value: 3
+}, {
+    id: 'Applied Scientist',
+    text: 'Applied Scientist',
+    parent: 'Roles',
+    value: 2
+}, {
+    id: 'Applied and Data Scientist',
+    text: 'Applied and Data Scientist',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Post Doctoral Researcher',
+    text: 'Post Doctoral Researcher',
+    parent: 'Roles',
+    value: 8
+},{
+    id: 'Senior Researcher',
+    text: 'Senior Researcher',
+    parent: 'Roles',
+    value: 1
+},{
+    id: 'Researcher',
+    text: 'Researcher',
+    parent: 'Roles',
+    value: 1
+}];
+let PhDchartConfig = {
+    type: 'sunburst',
+    backgroundColor: '#fff',
+    options: {
+        sizeFactor: 0.9,
+        slice: 0,
+        space: 0,
+        root: 'Roles',
+        //widths: [30, 115, 115],
+        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','#FEBE10','#E32636','#32de84']
+    },
+    plot: {
+        animation: {},
+        valueBox: {
+            text: '%data-vbtext',
+            color: '#000',
+            fontSize: '13px',
+            fontWeight: 400,
+            visible: null
+        },
+        tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>No. of Students: %node-value',
+        alpha: 1,
+    },
+    tooltip: {
+        align: 'left',
+        thousandsSeparator: ','
+    },
+    series: chartDataPhD,
+};
+zingchart.render({
+    id: 'sunburstChartPhD',
+    data: PhDchartConfig,
+    height: '100%',
+    width: '100%',
+});
+
+var fsdata = [{
+    "id": "breakdown",
+    "text": "Industry Breakdown",
+    "parent": ""
+   },
+  {
+    "id": "tech",
+    "text": "Tech",
+    "parent": "breakdown",
+    "value": 10
+  },
+  {
+    "id": "healthcare",
+    "text": "Health Care",
+    "parent": "breakdown",
+    "value": 9
+  },
+  {
+    "id": "fintech",
+    "text": "FinTech",
+    "parent": "breakdown",
+    "value": 8
+  },
+  {
+    "id": "retail",
+    "text": "Retail",
+    "parent": "breakdown",
+    "value": 7
+  },
+  {
+    "id": "lifesciences",
+    "text": "Life Sciences",
+    "parent": "breakdown",
+    "value":6
+  },
+  {
+    "id": "hardware",
+    "text": "Hardware",
+    "parent": "breakdown",
+    "value": 6
+  },
+  {
+    "id": "robotics",
+    "text": "Robotics",
+    "parent": "breakdown",
+    "value": 5
+  },
+  {
+    "id": "investmentbanking",
+    "text": "Investment Banking",
+    "parent": "breakdown",
+    "value": 7
+  },
+  {
+    "id": "consulting",
+    "text": "Consulting",
+    "parent": "breakdown",
+    "value": 3
+  }
+];
+var cdata2023 = {
+    "background-color": "#fff",//"#eee #ddd",
+    "type": "bubble-pack",
+    "plotarea": {
+      "margin": 5
+    },
+    "options": {
+      "active": true,
+      "padding": 1,
+      "min-size": 1,
+      "max-items": 999,
+      "min-level": 1,
+      "max-level": 1,
+      palette: ['#ffab40']
+    },
+    "series": fsdata,
+  };
+  zingchart.render({
+    id: 'sunburstChart2023',
+    width: 550,
+    height: 550,
+    output: 'svg',
+    data: cdata2023
+  });
