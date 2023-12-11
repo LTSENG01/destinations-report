@@ -183,6 +183,10 @@ let ms2023WordcloudData = {
                 {
                     "text": "Research Fellow",
                     "count": "3"
+                },
+                {
+                    "text": "UX Designer",
+                    "count": "3"
                 }
             ]
         }
