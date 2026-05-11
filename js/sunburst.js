@@ -391,6 +391,98 @@ zingchart.render({
     height: '100%',
     width: '100%',
 });
+let chartDataPhD2023 = [{
+    id: 'Roles',
+    text: ' ',
+    parent: ''
+}, {
+    id: 'AI/ML Research Scientist',
+    text: 'AI/ML Research Scientist',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Applied Scientist',
+    text: 'Applied Scientist',
+    parent: 'Roles',
+    value: 4
+},{
+    id: 'Applied Scientist II',
+    text: 'Applied Scientist II',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Architect',
+    text: 'Architect',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Research Scientist',
+    text: 'Research Scientist',
+    parent: 'Roles',
+    value: 7
+}, {
+    id: 'Health Sensing ML Scientist',
+    text: 'Health Sensing ML Scientist',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Postdoctoral Scientist',
+    text: 'Postdoctoral Scientist',
+    parent: 'Roles',
+    value: 2
+}, {
+    id: 'Research Data Scientist & Technical Group Lead',
+    text: 'Research Data Scientist & Technical Group Lead',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Senior Researcher',
+    text: 'Senior Researcher',
+    parent: 'Roles',
+    value: 1
+}, {
+    id: 'Young Investigator',
+    text: 'Young Investigator',
+    parent: 'Roles',
+    value: 1
+}];
+
+let PhDchartConfig2023 = {
+    type: 'sunburst',
+    backgroundColor: '#fff',
+    options: {
+        sizeFactor: 0.9,
+        slice: 0,
+        space: 0,
+        root: 'Roles',
+        //widths: [30, 115, 115],
+        palette: ['#ffffff', '#fe3b1f', '#c4d600', '#ff9e1b', '#6ba539','#FEBE10','#E32636','#32de84']
+    },
+    plot: {
+        animation: {},
+        valueBox: {
+            text: '%data-vbtext',
+            color: '#000',
+            fontSize: '13px',
+            fontWeight: 400,
+            visible: null
+        },
+        tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>No. of Students: %node-value',
+        alpha: 1,
+    },
+    tooltip: {
+        align: 'left',
+        thousandsSeparator: ','
+    },
+    series: chartDataPhD2023,
+};
+
+zingchart.render({
+    id: 'sunburstChartPhD2023',
+    data: PhDchartConfig2023,
+    height: '100%',
+    width: '100%',
+});
 
 var fsdata = [{
     "id": "breakdown",
@@ -476,3 +568,77 @@ var cdata2023 = {
     output: 'svg',
     data: cdata2023
   });
+
+
+
+
+// 
+
+let chartMSData2025 = [
+    { id: 'Industries', text: ' ', parent: '' },
+    { id: 'Software', text: 'Software', parent: 'Industries', value: 8 },
+    { id: 'Data', text: 'Data', parent: 'Industries', value: 3 },
+    { id: 'Machine Learning', text: 'Machine Learning', parent: 'Industries', value: 5 },
+    { id: 'Academics', text: 'Academics', parent: 'Industries', value: 1 },
+    { id: 'Computer Science Teacher', text: 'Computer Science Teacher', parent: 'Academics', value: 1 },
+    { id: 'AI SWE', text: 'AI Software Engineer ', parent: 'Machine Learning', value: 1 },
+    { id: 'Software Development Engineer', text: 'Software Development Engineer', parent: 'Software', value: 1 },
+    { id: 'Senior Software Engineer', text: 'Senior Software Engineer', parent: 'Software', value: 1 },
+    { id: 'Senior Software Developer', text: 'Senior Software Developer', parent: 'Software', value: 1 },
+    { id: 'Software Developer', text: 'Software Developer', parent: 'Software', value: 1 },
+    { id: 'Cloud Technical Solutions Engineer', text: 'Cloud Technical Solutions Engineer', parent: 'Software', value: 1 },
+    { id: 'Platform Engineer', text: 'Platform Engineer', parent: 'Software', value: 1 },
+    { id: 'Security Researcher', text: 'Security Researcher', parent: 'Software', value: 1 },
+    { id: 'Full Stack Developer', text: 'Full Stack Developer', parent: 'Software', value: 1 },
+    { id: 'Data Scientist', text: 'Data Scientist', parent: 'Data', value: 1 },
+    { id: 'Quantitative Strategist', text: 'Quantitative Strategist', parent: 'Data', value: 1 },
+    { id: 'Applied Scientist I', text: 'Applied Scientist I', parent: 'Data', value: 1 },
+    { id: 'Senior Associate Applied AI/ML Engineer', text: 'Senior Associate Applied AI/ML Engineer', parent: 'Machine Learning', value: 1 },
+    { id: 'Machine Learning Engineer', text: 'Machine Learning Engineer', parent: 'Machine Learning', value: 1 },
+    { id: 'Machine Learning Researcher', text: 'Machine Learning Researcher', parent: 'Machine Learning', value: 1 },
+    { id: 'Research And Development Engineer', text: 'Research And Development Engineer', parent: 'Machine Learning', value: 1 },
+  ];
+  
+  
+  
+  let MSchartConfig2025 = {
+    type: 'sunburst',
+    backgroundColor: '#fff',
+    options: {
+      sizeFactor: 0.9,
+      slice: 0.4,
+      space: 0,
+      root: 'Industries',
+      widths: [30, 60, 180],
+      palette: [
+        '#6A1B9A', '#6B5B95', '#88B04B',
+        '#DD4124', '#92A8D1', '#4A148C',
+        '#B565A7', '#009B77', '#45B8AC'
+      ]
+    },
+    plot: {
+      animation: true,
+      tooltipText: '<span style="font-size:19px">%plot-text</span>',
+      alpha: 1,
+      valueBox: {
+        text: '%plot-text',
+        visible: true,
+        color: '#ffffff',
+        wrapText: true,
+        maxChar : 10
+      }
+    },
+    tooltip: {
+      align: 'left',
+      thousandsSeparator: ','
+    },
+    series: chartMSData2025
+  };
+  
+  zingchart.render({
+    id: 'sunburstChartMS2025',
+    data: MSchartConfig2025,
+    height: '100%',
+    width: '100%'
+  });
+  

@@ -183,11 +183,16 @@ let ms2023WordcloudData = {
                 {
                     "text": "Research Fellow",
                     "count": "3"
+                },
+                {
+                    "text": "UX Designer",
+                    "count": "3"
                 }
             ]
         }
     }]
 }
+
 zingchart.render({
     id: 'ms2023-roles-wordcloud',
     data: ms2023WordcloudData,
@@ -317,3 +322,351 @@ zingchart.render({
     id: 'phd-roles-wordcloud',
     data: phdWordcloudData,
 });
+
+let phdWordcloudData2023 = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            //fontSize: 14,
+            "style": {
+                "tooltip": {
+                    visible: true,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "AI/ML Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Applied Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Applied Scientist II",
+                    "count": "1"
+                },
+                {
+                    "text": "Health Sensing ML Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Professor",
+                    "count": "1"
+                },
+                {
+                    "text": "Postdoctoral Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Research Data Scientist & Technical Group Lead",
+                    "count": "1"
+                },
+                {
+                    "text": "Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Senior Researcher",
+                    "count": "1"
+                },
+                {
+                    "text": "Young Investigator",
+                    "count": "1"
+                }
+            ]
+        }
+    }]
+};
+
+zingchart.render({
+    id: 'phd-roles-wordcloud-2023',
+    data: phdWordcloudData2023,
+    //width: 1315,
+    output: "auto",
+    minHeight: 100,
+    maxHeight: 480,
+});
+
+let ms2024WordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            colorType: 'palette',
+            palette: ['#6ba539', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#6ba539', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: false,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Senior Machine Learning Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Machine Learning Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Data Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Senior Data Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Data Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Associate Data Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Business Technology Associate Consultant",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Development Engineer II",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Engineer II",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Engineering MTS",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Engineer",
+                    "count": "3"
+                }
+            ]
+        }
+    }]
+}
+
+zingchart.render({
+    id: 'ms2024-roles-wordcloud',
+    data: ms2024WordcloudData,
+});
+
+
+let ms2025WordcloudData = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            colorType: 'palette',
+            palette: ['#6ba539', '#00aec7', '#6ba539', '#00aec7', '#00aec7', '#6ba539', '#6ba539', '#00aec7', '#6ba539', '#00aec7'],
+            "style": {
+                "tooltip": {
+                    visible: false,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "AI Software Engineer ",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Development Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Senior Software Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Senior Software Developer",
+                    "count": "3"
+                },
+                {
+                    "text": "Senior Associate Applied AI/ML Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Software Developer",
+                    "count": "3"
+                },
+                {
+                    "text": "Computer Science Teacher",
+                    "count": "3"
+                },
+                {
+                    "text": "Data Scientist",
+                    "count": "3"
+                },
+                {
+                    "text": "Quantitative Strategist",
+                    "count": "3"
+                },
+                {
+                    "text": "Applied Scientist I",
+                    "count": "3"
+                },
+                {
+                    "text": "Machine Learning Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Full Stack Developer",
+                    "count": "3"
+                },
+                {
+                    "text": "Cloud Technical Solutions Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Machine Learning Researcher",
+                    "count": "3"
+                },
+                {
+                    "text": "Platform Engineer",
+                    "count": "3"
+                },
+                {
+                    "text": "Security Researcher",
+                    "count": "3"
+                },
+                {
+                    "text": "Research And Development Engineer",
+                    "count": "3"
+                }
+            ]
+        }
+    }]
+}
+
+zingchart.render({
+    id: 'ms2025-roles-wordcloud',
+    data: ms2025WordcloudData,
+});
+
+let phdWordcloudData2024 = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            //fontSize: 14,
+            "style": {
+                "tooltip": {
+                    visible: true,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Applied Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Assistant Professor",
+                    "count": "1"
+                },
+                {
+                    "text": "ML Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Research Engineer",
+                    "count": "1"
+                },
+                {
+                    "text": "Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Senior Researcher",
+                    "count": "1"
+                },
+                {
+                    "text": "Tenure-track assistant professor",
+                    "count": "1"
+                }
+            ]
+        }
+    }]
+};
+
+zingchart.render({
+    id: 'phd-roles-wordcloud-2024',
+    data: phdWordcloudData2024,
+    //width: 1315,
+    output: "auto",
+    minHeight: 100,
+    maxHeight: 480,
+});
+
+
+
+let phdWordcloudData2025 = {
+    "graphset": [{
+        "type": "wordcloud",
+        "options": {
+            //fontSize: 14,
+            "style": {
+                "tooltip": {
+                    visible: true,
+                    text: '%text: %hits'
+                }
+            },
+            "words": [
+                {
+                    "text": "Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Applied Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Applied Researcher I",
+                    "count": "1"
+                },
+                {
+                    "text": "Senior ML Research Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "Advanced Computer Scientist",
+                    "count": "1"
+                },
+                {
+                    "text": "CTO",
+                    "count": "1"
+                },
+                {
+                    "text": "Senior ML Researcher",
+                    "count": "1"
+                },
+                {
+                    "text": "Software Engineer",
+                    "count": "1"
+                },
+                {
+                    "text": "Tenure-track assistant professor",
+                    "count": "1"
+                }
+            ]
+        }
+    }]
+};
+
+zingchart.render({
+    id: 'phd-roles-wordcloud-2025',
+    data: phdWordcloudData2025,
+    //width: 1315,
+    output: "auto",
+    minHeight: 100,
+    maxHeight: 480,
+});
+
